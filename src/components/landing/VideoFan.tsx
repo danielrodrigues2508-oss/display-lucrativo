@@ -96,7 +96,7 @@ export function VideoFan() {
             style={
               {
                 zIndex: item.z,
-                animationDelay: `${120 + i * 55}ms`,
+                animationDelay: `${80 + Math.abs(i - 3) * 70}ms`,
                 "--fan-x": `${m.x}px`,
                 "--fan-y": `${m.y}px`,
                 "--fan-rot": `${m.rot}deg`,
