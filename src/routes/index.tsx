@@ -96,7 +96,11 @@ function Index() {
             🚨 Condição especial — Aluno Fundador
           </span>
 
-          <h1 className="mx-auto mt-7 max-w-4xl font-display text-[2.1rem] leading-[1.03] font-extrabold text-balance sm:text-6xl lg:text-7xl">
+          <div className="relative mt-8 sm:mt-10">
+            <VideoFan />
+          </div>
+
+          <h1 className="mx-auto mt-10 max-w-4xl font-display text-[2.1rem] leading-[1.03] font-extrabold text-balance sm:text-6xl lg:text-7xl">
             Lucre <span className="text-lime-glow">R$1.000</span> em{" "}
             <span className="text-lime-glow">7 dias</span> vendendo Display Interativo,
             trabalhando <span className="text-lime-glow">1 hora por dia</span>.
