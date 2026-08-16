@@ -116,9 +116,6 @@ function Index() {
           </div>
         </div>
 
-        <div className="relative mt-12 sm:mt-16">
-          <VideoFan />
-        </div>
       </section>
 
       {/* ============ 02 — PROVA REAL ============ */}
