@@ -181,8 +181,9 @@
 }
 
 .animate-fan-in {
-  animation: fan-in 1.15s var(--ease-premium) both;
+  animation: fan-in 1s var(--ease-premium) both;
 }
+
 
 .reveal {
   opacity: 0;

@@ -1,19 +1,22 @@
+import { useState } from "react";
 import { cn } from "@/lib/utils";
 
 /**
  * ========= COMO SUBSTITUIR PELOS ARQUIVOS REAIS =========
- * 1. Coloque os arquivos em `public/media/` (ex: public/media/VIDEO_PROVA_01.mp4).
- * 2. Preencha o caminho no mapa abaixo (ex: VIDEO_PROVA_01: "/media/VIDEO_PROVA_01.mp4").
- * 3. Pronto — o placeholder some e o arquivo real aparece automaticamente.
+ * 1. Coloque os arquivos em `public/media/` com EXATAMENTE estes nomes:
+ *      VIDEO_PROVA_01.mp4 ... VIDEO_PROVA_07.mp4
+ *      FOTO_PROVA_01.jpg ... (etc)
+ * 2. Pronto — o placeholder some e o arquivo real aparece automaticamente.
+ *    (Se o arquivo não existir ainda, o placeholder continua aparecendo.)
  */
 export const MEDIA: Record<string, string | null> = {
-  VIDEO_PROVA_01: null,
-  VIDEO_PROVA_02: null,
-  VIDEO_PROVA_03: null,
-  VIDEO_PROVA_04: null,
-  VIDEO_PROVA_05: null,
-  VIDEO_PROVA_06: null,
-  VIDEO_PROVA_07: null,
+  VIDEO_PROVA_01: "/media/VIDEO_PROVA_01.mp4",
+  VIDEO_PROVA_02: "/media/VIDEO_PROVA_02.mp4",
+  VIDEO_PROVA_03: "/media/VIDEO_PROVA_03.mp4",
+  VIDEO_PROVA_04: "/media/VIDEO_PROVA_04.mp4",
+  VIDEO_PROVA_05: "/media/VIDEO_PROVA_05.mp4",
+  VIDEO_PROVA_06: "/media/VIDEO_PROVA_06.mp4",
+  VIDEO_PROVA_07: "/media/VIDEO_PROVA_07.mp4",
 
   FOTO_PROVA_01: null,
   FOTO_PROVA_02: null,
@@ -40,6 +43,7 @@ function Placeholder({ id }: { id: string }) {
 
 export function VideoSlot({ id, className }: { id: string; className?: string }) {
   const src = MEDIA[id];
+  const [failed, setFailed] = useState(false);
   return (
     <div
       className={cn(
@@ -47,15 +51,18 @@ export function VideoSlot({ id, className }: { id: string; className?: string })
         className,
       )}
     >
-      {src ? (
+      {src && !failed ? (
         <video
           src={src}
           autoPlay
           muted
           loop
           playsInline
+          controls={false}
+          disablePictureInPicture
           preload="metadata"
           aria-label={id}
+          onError={() => setFailed(true)}
           className="h-full w-full object-cover"
         />
       ) : (
@@ -65,6 +72,7 @@ export function VideoSlot({ id, className }: { id: string; className?: string })
     </div>
   );
 }
+
 
 export function PhotoSlot({
   id,
