@@ -300,10 +300,17 @@ function Index() {
               <div className="space-y-4 leading-relaxed text-muted-foreground lg:col-span-5">
                 <PhotoSlot id="FOTO_PEDIDOS_PRODUCAO" className="aspect-[4/3]" />
                 <p>
-                  Você vende, envia o pedido para o nosso time e nós cuidamos de toda a produção
-                  e logística.
+                  Você não compra estoque. Você vende, envia o pedido para o nosso time e nós
+                  cuidamos de toda a produção e de toda a logística.
                 </p>
-                <p>O Display será enviado diretamente para a sua casa.</p>
+                <p>
+                  O Display é produzido pelo nosso time e enviado diretamente para a sua casa.
+                  Você só precisa entregar ao seu cliente.
+                </p>
+                <p>
+                  Você não precisa produzir, armazenar Displays nem cuidar da logística de
+                  produção.
+                </p>
                 <p>
                   O mesmo processo vale para o seu Display de Demonstração e para os Displays das
                   suas vendas.
