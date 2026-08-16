@@ -312,6 +312,31 @@ function Index() {
             </div>
           </Reveal>
 
+          {/* Prova social — galeria editorial */}
+          <div className="mt-24">
+            <Reveal className="max-w-3xl">
+              <SectionLabel>Prova social</SectionLabel>
+              <h2 className="mt-4 font-display text-3xl leading-[1.08] font-extrabold text-balance sm:text-5xl">
+                Eu não quero que você acredite em mim.{" "}
+                <span className="text-primary">Quero que você veja.</span>
+              </h2>
+            </Reveal>
+
+            <Reveal delay={80} className="mt-12 columns-2 gap-3 sm:gap-4 lg:columns-3">
+              {[
+                { id: "FOTO_PROVA_01", ratio: "aspect-[4/5]" },
+                { id: "FOTO_PROVA_02", ratio: "aspect-square" },
+                { id: "FOTO_PROVA_03", ratio: "aspect-[3/4]" },
+                { id: "FOTO_PROVA_04", ratio: "aspect-[4/3]" },
+                { id: "FOTO_PROVA_05", ratio: "aspect-[9/16]" },
+              ].map((p) => (
+                <div key={p.id} className="mb-3 break-inside-avoid sm:mb-4">
+                  <PhotoSlot id={p.id} className={`${p.ratio} rounded-3xl`} />
+                </div>
+              ))}
+            </Reveal>
+          </div>
+
           {/* Mentorias + Materiais */}
           <div className="mt-20 grid gap-10 border-t border-border pt-12 sm:grid-cols-2 sm:gap-14">
             <Reveal>
