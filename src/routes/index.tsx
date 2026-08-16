@@ -126,32 +126,9 @@ function Index() {
         <div className="mx-auto max-w-6xl">
           <Reveal className="max-w-3xl">
             <SectionLabel>Prova real</SectionLabel>
-            <h2 className="mt-4 font-display text-3xl leading-[1.08] font-extrabold text-balance sm:text-5xl">
-              Eu não quero que você acredite em mim.{" "}
-              <span className="text-primary">Quero que você veja.</span>
-            </h2>
           </Reveal>
 
-          {/* composição editorial assimétrica */}
-          <div className="mt-12 grid grid-cols-6 gap-3 sm:gap-4">
-            <Reveal className="col-span-4 sm:col-span-3">
-              <PhotoSlot id="FOTO_PROVA_01" className="aspect-[4/5] h-full" />
-            </Reveal>
-            <Reveal delay={80} className="col-span-2 sm:col-span-3 flex flex-col gap-3 sm:gap-4">
-              <PhotoSlot id="FOTO_PROVA_02" className="aspect-square flex-1" />
-              <PhotoSlot id="FOTO_PROVA_03" className="aspect-[3/2] flex-1" />
-            </Reveal>
-            <Reveal delay={140} className="col-span-3 sm:col-span-2">
-              <PhotoSlot id="FOTO_PROVA_04" className="aspect-[3/4]" />
-            </Reveal>
-            <Reveal delay={200} className="col-span-3 sm:col-span-4">
-              <PhotoSlot id="FOTO_PROVA_05" className="h-full min-h-[160px]" />
-            </Reveal>
-          </div>
-
-          <div className="hairline mt-16" />
-
-          <div className="mt-14 grid gap-10 sm:grid-cols-3 sm:gap-6">
+          <div className="mt-10 grid gap-10 sm:grid-cols-3 sm:gap-6">
             {[
               { n: "4 ANOS", t: "Vendendo Display Interativo" },
               {
