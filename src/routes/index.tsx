@@ -239,6 +239,18 @@ function Index() {
                 </p>
                 <p>Você paga apenas o frete.</p>
                 <p>
+                  Você entra na comunidade, informa seu CEP e endereço completo e seleciona o
+                  Order Bump do frete no checkout. Nosso time organiza a produção e o envio.
+                </p>
+                <p>
+                  Os pedidos são fechados uma vez por semana, às sextas-feiras, e enviados em 2 a
+                  3 dias úteis após o fechamento do lote.
+                </p>
+                <p>
+                  Seu acesso à comunidade é liberado imediatamente: você já pode assistir às
+                  aulas e participar das mentorias ao vivo.
+                </p>
+                <p>
                   Você já entra com a ferramenta na mão para apresentar o produto aos
                   comerciantes.
                 </p>
