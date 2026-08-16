@@ -1,5 +1,12 @@
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import video01 from "@/assets/VIDEO_PROVA_01.mp4.asset.json";
+import video02 from "@/assets/VIDEO_PROVA_02.mp4.asset.json";
+import video03 from "@/assets/VIDEO_PROVA_03.mp4.asset.json";
+import video04 from "@/assets/VIDEO_PROVA_04.mp4.asset.json";
+import video05 from "@/assets/VIDEO_PROVA_05.mp4.asset.json";
+import video06 from "@/assets/VIDEO_PROVA_06.mp4.asset.json";
+import video07 from "@/assets/VIDEO_PROVA_07.mp4.asset.json";
 
 /**
  * ========= COMO SUBSTITUIR PELOS ARQUIVOS REAIS =========
