@@ -96,7 +96,11 @@ function Index() {
             🚨 Condição especial — Aluno Fundador
           </span>
 
-          <h1 className="mx-auto mt-7 max-w-4xl font-display text-[2.1rem] leading-[1.03] font-extrabold text-balance sm:text-6xl lg:text-7xl">
+          <div className="relative mt-8 sm:mt-10">
+            <VideoFan />
+          </div>
+
+          <h1 className="mx-auto mt-10 max-w-4xl font-display text-[2.1rem] leading-[1.03] font-extrabold text-balance sm:text-6xl lg:text-7xl">
             Lucre <span className="text-lime-glow">R$1.000</span> em{" "}
             <span className="text-lime-glow">7 dias</span> vendendo Display Interativo,
             trabalhando <span className="text-lime-glow">1 hora por dia</span>.
@@ -116,9 +120,6 @@ function Index() {
           </div>
         </div>
 
-        <div className="relative mt-12 sm:mt-16">
-          <VideoFan />
-        </div>
       </section>
 
       {/* ============ 02 — PROVA REAL ============ */}
@@ -126,32 +127,9 @@ function Index() {
         <div className="mx-auto max-w-6xl">
           <Reveal className="max-w-3xl">
             <SectionLabel>Prova real</SectionLabel>
-            <h2 className="mt-4 font-display text-3xl leading-[1.08] font-extrabold text-balance sm:text-5xl">
-              Eu não quero que você acredite em mim.{" "}
-              <span className="text-primary">Quero que você veja.</span>
-            </h2>
           </Reveal>
 
-          {/* composição editorial assimétrica */}
-          <div className="mt-12 grid grid-cols-6 gap-3 sm:gap-4">
-            <Reveal className="col-span-4 sm:col-span-3">
-              <PhotoSlot id="FOTO_PROVA_01" className="aspect-[4/5] h-full" />
-            </Reveal>
-            <Reveal delay={80} className="col-span-2 sm:col-span-3 flex flex-col gap-3 sm:gap-4">
-              <PhotoSlot id="FOTO_PROVA_02" className="aspect-square flex-1" />
-              <PhotoSlot id="FOTO_PROVA_03" className="aspect-[3/2] flex-1" />
-            </Reveal>
-            <Reveal delay={140} className="col-span-3 sm:col-span-2">
-              <PhotoSlot id="FOTO_PROVA_04" className="aspect-[3/4]" />
-            </Reveal>
-            <Reveal delay={200} className="col-span-3 sm:col-span-4">
-              <PhotoSlot id="FOTO_PROVA_05" className="h-full min-h-[160px]" />
-            </Reveal>
-          </div>
-
-          <div className="hairline mt-16" />
-
-          <div className="mt-14 grid gap-10 sm:grid-cols-3 sm:gap-6">
+          <div className="mt-10 grid gap-10 sm:grid-cols-3 sm:gap-6">
             {[
               { n: "4 ANOS", t: "Vendendo Display Interativo" },
               {
@@ -239,6 +217,18 @@ function Index() {
                 </p>
                 <p>Você paga apenas o frete.</p>
                 <p>
+                  Você entra na comunidade, informa seu CEP e endereço completo e seleciona o
+                  Order Bump do frete no checkout. Nosso time organiza a produção e o envio.
+                </p>
+                <p>
+                  Os pedidos são fechados uma vez por semana, às sextas-feiras, e enviados em 2 a
+                  3 dias úteis após o fechamento do lote.
+                </p>
+                <p>
+                  Seu acesso à comunidade é liberado imediatamente: você já pode assistir às
+                  aulas e participar das mentorias ao vivo.
+                </p>
+                <p>
                   Você já entra com a ferramenta na mão para apresentar o produto aos
                   comerciantes.
                 </p>
@@ -300,10 +290,17 @@ function Index() {
               <div className="space-y-4 leading-relaxed text-muted-foreground lg:col-span-5">
                 <PhotoSlot id="FOTO_PEDIDOS_PRODUCAO" className="aspect-[4/3]" />
                 <p>
-                  Você vende, envia o pedido para o nosso time e nós cuidamos de toda a produção
-                  e logística.
+                  Você não compra estoque. Você vende, envia o pedido para o nosso time e nós
+                  cuidamos de toda a produção e de toda a logística.
                 </p>
-                <p>O Display será enviado diretamente para a sua casa.</p>
+                <p>
+                  O Display é produzido pelo nosso time e enviado diretamente para a sua casa.
+                  Você só precisa entregar ao seu cliente.
+                </p>
+                <p>
+                  Você não precisa produzir, armazenar Displays nem cuidar da logística de
+                  produção.
+                </p>
                 <p>
                   O mesmo processo vale para o seu Display de Demonstração e para os Displays das
                   suas vendas.
@@ -311,6 +308,31 @@ function Index() {
               </div>
             </div>
           </Reveal>
+
+          {/* Prova social — galeria editorial */}
+          <div className="mt-24">
+            <Reveal className="max-w-3xl">
+              <SectionLabel>Prova social</SectionLabel>
+              <h2 className="mt-4 font-display text-3xl leading-[1.08] font-extrabold text-balance sm:text-5xl">
+                Eu não quero que você acredite em mim.{" "}
+                <span className="text-primary">Quero que você veja.</span>
+              </h2>
+            </Reveal>
+
+            <Reveal delay={80} className="mt-12 columns-2 gap-3 sm:gap-4 lg:columns-3">
+              {[
+                { id: "FOTO_PROVA_01", ratio: "aspect-[4/5]" },
+                { id: "FOTO_PROVA_02", ratio: "aspect-square" },
+                { id: "FOTO_PROVA_03", ratio: "aspect-[3/4]" },
+                { id: "FOTO_PROVA_04", ratio: "aspect-[4/3]" },
+                { id: "FOTO_PROVA_05", ratio: "aspect-[9/16]" },
+              ].map((p) => (
+                <div key={p.id} className="mb-3 break-inside-avoid sm:mb-4">
+                  <PhotoSlot id={p.id} className={`${p.ratio} rounded-3xl`} />
+                </div>
+              ))}
+            </Reveal>
+          </div>
 
           {/* Mentorias + Materiais */}
           <div className="mt-20 grid gap-10 border-t border-border pt-12 sm:grid-cols-2 sm:gap-14">

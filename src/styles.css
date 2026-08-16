@@ -145,11 +145,15 @@
 /* ---------- motion ---------- */
 
 @keyframes fan-in {
-  from {
+  0% {
     opacity: 0;
-    transform: translate(0, 26px) rotate(0deg) scale(0.86);
+    transform: translate(-50%, -50%) translate(0, 18px) rotate(0deg) scale(0.82);
   }
-  to {
+  25% {
+    opacity: 1;
+    transform: translate(-50%, -50%) translate(0, 6px) rotate(0deg) scale(0.9);
+  }
+  100% {
     opacity: 1;
     transform: var(--fan-transform);
   }
@@ -177,7 +181,7 @@
 }
 
 .animate-fan-in {
-  animation: fan-in 1s var(--ease-premium) both;
+  animation: fan-in 1.15s var(--ease-premium) both;
 }
 
 .reveal {
