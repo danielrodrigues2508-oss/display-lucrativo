@@ -10,13 +10,13 @@ import { cn } from "@/lib/utils";
  *    (Se o arquivo não existir ainda, o placeholder continua aparecendo.)
  */
 export const MEDIA: Record<string, string | null> = {
-  VIDEO_PROVA_01: "/media/VIDEO_PROVA_01.mp4",
-  VIDEO_PROVA_02: "/media/VIDEO_PROVA_02.mp4",
-  VIDEO_PROVA_03: "/media/VIDEO_PROVA_03.mp4",
-  VIDEO_PROVA_04: "/media/VIDEO_PROVA_04.mp4",
-  VIDEO_PROVA_05: "/media/VIDEO_PROVA_05.mp4",
-  VIDEO_PROVA_06: "/media/VIDEO_PROVA_06.mp4",
-  VIDEO_PROVA_07: "/media/VIDEO_PROVA_07.mp4",
+  VIDEO_PROVA_01: video01.url,
+  VIDEO_PROVA_02: video02.url,
+  VIDEO_PROVA_03: video03.url,
+  VIDEO_PROVA_04: video04.url,
+  VIDEO_PROVA_05: video05.url,
+  VIDEO_PROVA_06: video06.url,
+  VIDEO_PROVA_07: video07.url,
 
   FOTO_PROVA_01: null,
   FOTO_PROVA_02: null,
