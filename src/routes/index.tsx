@@ -579,7 +579,9 @@ function Index() {
               🏅 Entre como Aluno Fundador por R$37/mês
             </span>
             <div className="mt-7 w-full max-w-md">
-              <CtaButton>QUERO LUCRAR MEUS PRIMEIROS R$1.000</CtaButton>
+              <CtaButton className="py-6 text-base shadow-[0_0_90px_-8px_var(--lime)] sm:text-xl">
+                QUERO LUCRAR MEUS PRIMEIROS R$1.000
+              </CtaButton>
             </div>
             <p className="mt-4 text-sm text-muted-foreground">
               Sem fidelidade • Cancele quando quiser • Garantia de 7 dias

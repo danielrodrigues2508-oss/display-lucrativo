@@ -137,10 +137,26 @@ export function Simulator() {
           </div>
         </div>
 
-        <p className="mt-4 text-sm text-muted-foreground">
-          Cada Display vendido gera{" "}
-          <span className="font-semibold text-primary">R$47</span> de lucro bruto.
-        </p>
+        <div className="mt-4 rounded-2xl border border-primary/30 bg-[color-mix(in_oklab,var(--lime)_7%,var(--ink))] p-4">
+          <p className="font-display text-base font-extrabold sm:text-lg">
+            Cada Display vendido = <span className="text-lime-glow">R$47</span> de lucro bruto.
+          </p>
+          <p className="mt-2 text-sm text-muted-foreground tabular-nums">
+            Venda: R$67 — Custo: R$20 = <span className="font-semibold text-primary">R$47</span>
+          </p>
+        </div>
+
+        <div className="mt-3 rounded-2xl border border-border bg-[color-mix(in_oklab,var(--surface-2)_80%,transparent)] p-4">
+          <p className="text-[11px] font-semibold tracking-[0.18em] text-muted-foreground uppercase">
+            Exemplo
+          </p>
+          <p className="mt-1 font-display text-lg font-extrabold tabular-nums sm:text-xl">
+            22 Displays → <span className="text-lime-glow">R$1.034</span>
+          </p>
+          <p className="mt-1 text-sm text-muted-foreground">
+            É isso que está por trás da promessa de R$1.000 em 7 dias.
+          </p>
+        </div>
 
         <div className="mt-6">
           <p className="text-[11px] font-semibold tracking-[0.18em] text-muted-foreground uppercase">
