@@ -472,7 +472,7 @@ function Index() {
             </h2>
           </Reveal>
           <Reveal delay={90} className="lg:col-span-7">
-            <div className="rounded-3xl border border-border bg-[color-mix(in_oklab,var(--surface)_75%,transparent)] p-6 sm:p-9">
+            <div className="rounded-3xl border border-primary/25 bg-[color-mix(in_oklab,var(--surface-2)_85%,transparent)] p-6 shadow-[var(--shadow-deep)] sm:p-9">
               <h3 className="font-display text-xl font-extrabold text-primary sm:text-2xl">
                 Garantia Incondicional de 7 Dias
               </h3>
