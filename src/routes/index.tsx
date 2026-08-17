@@ -294,13 +294,13 @@ function Index() {
                   O Display é produzido pelo nosso time e enviado diretamente para a sua casa.
                   Você só precisa entregar ao seu cliente.
                 </p>
-                <p>
-                  Você não precisa produzir, armazenar Displays nem cuidar da logística de
-                  produção.
+                <p className="font-semibold text-foreground">
+                  Você não precisa manter estoque, produzir, procurar gráfica nem cuidar da
+                  logística. Tudo é centralizado pela nossa operação.
                 </p>
                 <p>
-                  O mesmo processo vale para o seu Display de Demonstração e para os Displays das
-                  suas vendas.
+                  O mesmo vale para o seu Display de Demonstração e para todos os Displays que
+                  você vender aos seus clientes: nosso time/fábrica produz e envia.
                 </p>
               </div>
             </div>
