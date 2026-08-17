@@ -45,7 +45,7 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
 const FAQ = [
   {
     q: "Eu nunca vendi nada. Consigo?",
-    a: "Sim.\n\nO método foi desenvolvido para quem está começando.\n\nO Display Interativo é um produto visual e se vende sozinho quando o comerciante bate o olho e entende para que serve.\n\nVocê recebe o roteiro e aprende como fazer a abordagem.",
+    a: "Sim.\n\nO método foi desenvolvido para quem está começando do zero.\n\nO Display Interativo é um produto visual e que se vende sozinho: o comerciante bate o olho e entende na hora para que serve.\n\nVocê recebe o roteiro pronto e aprende exatamente como fazer a abordagem.",
   },
   {
     q: "Trabalho o dia inteiro. Consigo fazer?",
@@ -96,11 +96,11 @@ function Index() {
             🚨 Condição especial — Aluno Fundador
           </span>
 
-          <div className="relative mt-8 sm:mt-10">
+          <div className="relative mt-6 sm:mt-8">
             <VideoFan />
           </div>
 
-          <h1 className="mx-auto mt-10 max-w-4xl font-display text-[2.1rem] leading-[1.03] font-extrabold text-balance sm:text-6xl lg:text-7xl">
+          <h1 className="mx-auto mt-2 max-w-4xl font-display text-[2.1rem] leading-[1.03] font-extrabold text-balance sm:mt-4 sm:text-6xl lg:text-7xl">
             Lucre <span className="text-lime-glow">R$1.000</span> em{" "}
             <span className="text-lime-glow">7 dias</span> vendendo Display Interativo,
             trabalhando <span className="text-lime-glow">1 hora por dia</span>.
@@ -132,11 +132,8 @@ function Index() {
           <div className="mt-10 grid gap-10 sm:grid-cols-3 sm:gap-6">
             {[
               { n: "4 ANOS", t: "Vendendo Display Interativo" },
-              {
-                n: "5+",
-                t: "Nunca voltei para casa tendo vendido menos de 5 Displays em um dia.",
-              },
-              { n: "10–13", t: "Minha média atual de Displays vendidos por dia." },
+              { n: "5+", t: "Nunca voltei para casa sem vender menos que isso" },
+              { n: "10–13", t: "Displays vendidos por dia, em média" },
             ].map((item, i) => (
               <Reveal key={item.n} delay={i * 90}>
                 <p className="text-lime-glow font-display text-5xl font-extrabold sm:text-6xl">
@@ -297,13 +294,13 @@ function Index() {
                   O Display é produzido pelo nosso time e enviado diretamente para a sua casa.
                   Você só precisa entregar ao seu cliente.
                 </p>
-                <p>
-                  Você não precisa produzir, armazenar Displays nem cuidar da logística de
-                  produção.
+                <p className="font-semibold text-foreground">
+                  Você não precisa manter estoque, produzir, procurar gráfica nem cuidar da
+                  logística. Tudo é centralizado pela nossa operação.
                 </p>
                 <p>
-                  O mesmo processo vale para o seu Display de Demonstração e para os Displays das
-                  suas vendas.
+                  O mesmo vale para o seu Display de Demonstração e para todos os Displays que
+                  você vender aos seus clientes: nosso time/fábrica produz e envia.
                 </p>
               </div>
             </div>
@@ -312,8 +309,7 @@ function Index() {
           {/* Prova social — galeria editorial */}
           <div className="mt-24">
             <Reveal className="max-w-3xl">
-              <SectionLabel>Prova social</SectionLabel>
-              <h2 className="mt-4 font-display text-3xl leading-[1.08] font-extrabold text-balance sm:text-5xl">
+              <h2 className="font-display text-3xl leading-[1.08] font-extrabold text-balance sm:text-5xl">
                 Eu não quero que você acredite em mim.{" "}
                 <span className="text-primary">Quero que você veja.</span>
               </h2>
@@ -371,104 +367,95 @@ function Index() {
         <div className="relative mx-auto max-w-5xl">
           <Reveal className="text-center">
             <h2 className="mx-auto max-w-3xl font-display text-3xl leading-[1.08] font-extrabold text-balance sm:text-5xl">
-              Quanto você pagaria para aprender um método que pode colocar{" "}
-              <span className="text-lime-glow">R$1.000</span> no seu bolso?
+              Quanto você pagaria para aprender a fazer seus primeiros{" "}
+              <span className="text-lime-glow">R$1.000</span> com Display Interativo?
             </h2>
           </Reveal>
 
           <Reveal delay={80} className="mt-12">
             <div className="surface-panel rounded-[2rem] p-6 shadow-[var(--shadow-deep)] sm:p-10">
-              <div className="text-center">
-                <span className="inline-flex rounded-full border border-primary/30 bg-[color-mix(in_oklab,var(--lime)_8%,transparent)] px-4 py-2 text-[10px] font-semibold tracking-[0.16em] text-primary uppercase sm:text-[11px]">
-                  🏅 Condição especial de Aluno Fundador
-                </span>
-                <p className="mt-7 text-muted-foreground">Os primeiros 100 alunos entram por:</p>
-                <p className="text-lime-glow mt-2 font-display text-6xl leading-none font-extrabold sm:text-8xl">
-                  R$37
-                  <span className="font-display text-2xl font-bold sm:text-3xl">/mês</span>
-                </p>
-                <p className="mt-4 text-sm text-muted-foreground">
-                  Próximo lote:{" "}
-                  <span className="text-foreground/80 line-through decoration-muted-foreground/60">
-                    R$57/mês
-                  </span>
-                </p>
-                <p className="mt-2 text-sm text-muted-foreground">
-                  O preço de R$37 fica congelado para quem entrar como Aluno Fundador.
-                </p>
+              <p className="text-center text-muted-foreground sm:text-lg">
+                Se você fosse pagar separadamente por tudo que recebe dentro da Comunidade:
+              </p>
+
+              <div className="mt-8 grid items-start gap-8 lg:grid-cols-12 lg:gap-12">
+                <div className="lg:col-span-7">
+                  <div className="space-y-2.5">
+                    {[
+                      { l: "Display de Demonstração", v: "R$67" },
+                      { l: "Aulas e método de vendas", v: "R$197" },
+                      { l: "Mentorias ao vivo", v: "R$197" },
+                      { l: "Fornecedor exclusivo + suporte", v: "R$97" },
+                    ].map((row) => (
+                      <div
+                        key={row.l}
+                        className="flex items-center justify-between gap-4 rounded-2xl border border-border bg-[color-mix(in_oklab,var(--surface-2)_75%,transparent)] px-5 py-4"
+                      >
+                        <span className="font-display text-sm font-bold tracking-wide sm:text-base">
+                          {row.l}
+                        </span>
+                        <span className="font-display text-lg font-extrabold tabular-nums">
+                          {row.v}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="mt-4 flex items-center justify-between gap-4 rounded-2xl border border-primary/40 bg-[color-mix(in_oklab,var(--lime)_10%,var(--ink))] px-5 py-5">
+                    <span className="font-display text-xs font-bold tracking-[0.16em] text-primary uppercase sm:text-sm">
+                      Valor percebido
+                    </span>
+                    <span className="text-lime-glow font-display text-3xl font-extrabold tabular-nums sm:text-4xl">
+                      R$558
+                    </span>
+                  </div>
+                </div>
+
+                <div className="lg:col-span-5">
+                  <div className="rounded-[1.5rem] border border-primary/30 bg-[color-mix(in_oklab,var(--ink)_75%,transparent)] p-6 text-center">
+                    <span className="inline-flex rounded-full border border-primary/30 bg-[color-mix(in_oklab,var(--lime)_8%,transparent)] px-4 py-2 text-[10px] font-semibold tracking-[0.16em] text-primary uppercase sm:text-[11px]">
+                      🏅 Aluno Fundador • Lote 1
+                    </span>
+                    <p className="mt-6 text-sm text-muted-foreground">
+                      Hoje, você entra por apenas:
+                    </p>
+                    <p className="text-lime-glow mt-1 font-display text-6xl leading-none font-extrabold sm:text-7xl">
+                      R$37
+                      <span className="font-display text-2xl font-bold sm:text-3xl">/mês</span>
+                    </p>
+                    <p className="mt-4 font-display text-base font-extrabold sm:text-lg">
+                      E ainda recebe o Display de Demonstração, pagando somente o frete.
+                    </p>
+                    <p className="mt-4 text-sm text-muted-foreground">
+                      Próximo lote:{" "}
+                      <span className="text-foreground/80 line-through decoration-muted-foreground/60">
+                        R$57/mês
+                      </span>{" "}
+                      • preço congelado para os primeiros 100 alunos.
+                    </p>
+                  </div>
+
+                  <ul className="mt-6 grid gap-2.5 sm:grid-cols-2 lg:grid-cols-1">
+                    {[
+                      "Método de vendas",
+                      "Fornecimento exclusivo",
+                      "Materiais de apoio",
+                      "Mentorias ao vivo",
+                    ].map((item) => (
+                      <li key={item} className="flex items-center gap-2.5 text-sm">
+                        <Check className="h-4 w-4 shrink-0 text-primary" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
 
-              {/* Ancoragem */}
-              <div className="mt-12 border-t border-border pt-10">
-                <h3 className="text-center font-display text-2xl font-extrabold sm:text-3xl">
-                  E tem mais.
-                </h3>
-
-                <div className="mt-8 grid items-center gap-8 lg:grid-cols-12 lg:gap-12">
-                  <div className="lg:col-span-6">
-                    <div className="space-y-1.5">
-                      {[
-                        { l: "DISPLAY INTERATIVO", v: "R$67" },
-                        { l: "COMUNIDADE", v: "R$37/mês" },
-                        { l: "DISPLAY DE R$67 COMO BÔNUS", v: "✓" },
-                      ].map((row, i, arr) => (
-                        <div key={row.l}>
-                          <div className="flex items-center justify-between gap-4 rounded-2xl border border-border bg-[color-mix(in_oklab,var(--ink)_60%,transparent)] px-5 py-4">
-                            <span className="font-display text-xs font-bold tracking-wide sm:text-sm">
-                              {row.l}
-                            </span>
-                            <span className="font-display font-extrabold text-primary">
-                              {row.v}
-                            </span>
-                          </div>
-                          {i < arr.length - 1 && (
-                            <div className="flex justify-center py-1">
-                              <ArrowDown className="h-4 w-4 text-primary/60" />
-                            </div>
-                          )}
-                        </div>
-                      ))}
-                    </div>
-
-                    <p className="mt-6 leading-relaxed text-muted-foreground">
-                      Você entra na comunidade por R$37/mês e recebe 1 Display de Demonstração
-                      como bônus, pagando apenas o frete.
-                    </p>
-                    <p className="mt-4 font-display text-lg font-extrabold sm:text-xl">
-                      Você paga <span className="text-primary">R$37</span> e recebe um produto
-                      vendido por <span className="text-primary">R$67</span>.
-                    </p>
-
-                    <ul className="mt-6 grid gap-2.5 sm:grid-cols-2">
-                      {[
-                        "Método de vendas",
-                        "Fornecimento exclusivo",
-                        "Materiais de apoio",
-                        "Mentorias ao vivo",
-                      ].map((item) => (
-                        <li key={item} className="flex items-center gap-2.5 text-sm">
-                          <Check className="h-4 w-4 shrink-0 text-primary" />
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="lg:col-span-6">
-                    <PhotoSlot id="FOTO_DISPLAY_OFERTA" className="aspect-[4/3]" />
-                    <p className="mt-5 font-display text-xl leading-snug font-extrabold sm:text-2xl">
-                      Você já entra lucrando em{" "}
-                      <span className="text-lime-glow">valor de produto</span>.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="mt-10 flex flex-col items-center">
-                  <CtaButton className="max-w-md">QUERO ENTRAR NO LOTE 1</CtaButton>
-                  <p className="mt-4 text-sm text-muted-foreground">
-                    Sem fidelidade. Cancele quando quiser.
-                  </p>
-                </div>
+              <div className="mt-10 flex flex-col items-center">
+                <CtaButton className="max-w-md">QUERO ENTRAR NO LOTE 1</CtaButton>
+                <p className="mt-4 text-sm text-muted-foreground">
+                  Sem fidelidade. Cancele quando quiser.
+                </p>
               </div>
             </div>
           </Reveal>
@@ -485,7 +472,7 @@ function Index() {
             </h2>
           </Reveal>
           <Reveal delay={90} className="lg:col-span-7">
-            <div className="rounded-3xl border border-border bg-[color-mix(in_oklab,var(--surface)_75%,transparent)] p-6 sm:p-9">
+            <div className="rounded-3xl border border-primary/25 bg-[color-mix(in_oklab,var(--surface-2)_85%,transparent)] p-6 shadow-[var(--shadow-deep)] sm:p-9">
               <h3 className="font-display text-xl font-extrabold text-primary sm:text-2xl">
                 Garantia Incondicional de 7 Dias
               </h3>
@@ -592,7 +579,9 @@ function Index() {
               🏅 Entre como Aluno Fundador por R$37/mês
             </span>
             <div className="mt-7 w-full max-w-md">
-              <CtaButton>QUERO LUCRAR MEUS PRIMEIROS R$1.000</CtaButton>
+              <CtaButton className="py-6 text-base shadow-[0_0_90px_-8px_var(--lime)] sm:text-xl">
+                QUERO LUCRAR MEUS PRIMEIROS R$1.000
+              </CtaButton>
             </div>
             <p className="mt-4 text-sm text-muted-foreground">
               Sem fidelidade • Cancele quando quiser • Garantia de 7 dias
