@@ -457,7 +457,6 @@ function Index() {
                   Sem fidelidade. Cancele quando quiser.
                 </p>
               </div>
-              </div>
             </div>
           </Reveal>
         </div>
