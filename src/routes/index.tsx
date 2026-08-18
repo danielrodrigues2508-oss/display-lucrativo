@@ -199,7 +199,7 @@ function Index() {
           <Reveal className="mt-16 grid items-center gap-8 lg:grid-cols-12 lg:gap-14">
             <PhotoSlot
               id="FOTO_DISPLAY_DEMONSTRACAO"
-              className="aspect-[4/3] lg:col-span-5 lg:aspect-[4/5]"
+              className="mx-auto aspect-[9/16] w-full max-w-[300px] lg:col-span-5 lg:max-w-none"
             />
             <div className="lg:col-span-7">
               <span className="font-display text-sm font-bold text-primary">01</span>
@@ -250,7 +250,7 @@ function Index() {
             </div>
             <PhotoSlot
               id="FOTO_ABORDAGEM"
-              className="aspect-[4/3] lg:col-span-5 lg:order-1 lg:aspect-[4/5]"
+              className="mx-auto aspect-[890/1109] w-full max-w-[360px] lg:col-span-5 lg:order-1 lg:max-w-none"
             />
           </Reveal>
 
