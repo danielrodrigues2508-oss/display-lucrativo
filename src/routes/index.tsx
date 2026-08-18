@@ -96,17 +96,17 @@ function Index() {
             🚨 Condição especial — Aluno Fundador
           </span>
 
-          <div className="relative mt-6 sm:mt-8">
+          <div className="relative mt-5 -mb-6 sm:mt-8 sm:mb-0">
             <VideoFan />
           </div>
 
-          <h1 className="mx-auto mt-2 max-w-4xl font-display text-[2.1rem] leading-[1.03] font-extrabold text-balance sm:mt-4 sm:text-6xl lg:text-7xl">
+          <h1 className="mx-auto mt-0 max-w-4xl font-display text-[2.1rem] leading-[1.03] font-extrabold text-balance sm:mt-4 sm:text-6xl lg:text-7xl">
             Lucre <span className="text-lime-glow">R$1.000</span> em{" "}
             <span className="text-lime-glow">7 dias</span> vendendo Display Interativo,
             trabalhando <span className="text-lime-glow">1 hora por dia</span>.
           </h1>
 
-          <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+          <p className="mx-auto mt-5 max-w-2xl text-[1.0625rem] leading-relaxed text-foreground/80 sm:mt-6 sm:text-lg">
             Você não precisa largar seu emprego, ter experiência com vendas ou investir em
             estoque. Eu vou te mostrar o método que uso há 4 anos para vender Displays para
             comércios locais.
@@ -139,7 +139,7 @@ function Index() {
                 <p className="text-lime-glow font-display text-5xl font-extrabold sm:text-6xl">
                   {item.n}
                 </p>
-                <p className="mt-3 max-w-xs text-sm leading-relaxed text-muted-foreground">
+                <p className="mt-3 max-w-xs text-[0.9375rem] leading-relaxed text-foreground/80 sm:text-base">
                   {item.t}
                 </p>
               </Reveal>
