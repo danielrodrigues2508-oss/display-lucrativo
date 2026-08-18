@@ -96,17 +96,17 @@ function Index() {
             🚨 Condição especial — Aluno Fundador
           </span>
 
-          <div className="relative mt-6 sm:mt-8">
+          <div className="relative mt-5 -mb-6 sm:mt-8 sm:mb-0">
             <VideoFan />
           </div>
 
-          <h1 className="mx-auto mt-2 max-w-4xl font-display text-[2.1rem] leading-[1.03] font-extrabold text-balance sm:mt-4 sm:text-6xl lg:text-7xl">
+          <h1 className="mx-auto mt-0 max-w-4xl font-display text-[2.1rem] leading-[1.03] font-extrabold text-balance sm:mt-4 sm:text-6xl lg:text-7xl">
             Lucre <span className="text-lime-glow">R$1.000</span> em{" "}
             <span className="text-lime-glow">7 dias</span> vendendo Display Interativo,
             trabalhando <span className="text-lime-glow">1 hora por dia</span>.
           </h1>
 
-          <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+          <p className="mx-auto mt-5 max-w-2xl text-[1.0625rem] leading-relaxed text-foreground/80 sm:mt-6 sm:text-lg">
             Você não precisa largar seu emprego, ter experiência com vendas ou investir em
             estoque. Eu vou te mostrar o método que uso há 4 anos para vender Displays para
             comércios locais.
@@ -139,7 +139,7 @@ function Index() {
                 <p className="text-lime-glow font-display text-5xl font-extrabold sm:text-6xl">
                   {item.n}
                 </p>
-                <p className="mt-3 max-w-xs text-sm leading-relaxed text-muted-foreground">
+                <p className="mt-3 max-w-xs text-[0.9375rem] leading-relaxed text-foreground/80 sm:text-base">
                   {item.t}
                 </p>
               </Reveal>
@@ -199,7 +199,7 @@ function Index() {
           <Reveal className="mt-16 grid items-center gap-8 lg:grid-cols-12 lg:gap-14">
             <PhotoSlot
               id="FOTO_DISPLAY_DEMONSTRACAO"
-              className="aspect-[4/3] lg:col-span-5 lg:aspect-[4/5]"
+              className="mx-auto aspect-[9/16] w-full max-w-[300px] lg:col-span-5 lg:max-w-none"
             />
             <div className="lg:col-span-7">
               <span className="font-display text-sm font-bold text-primary">01</span>
@@ -250,7 +250,7 @@ function Index() {
             </div>
             <PhotoSlot
               id="FOTO_ABORDAGEM"
-              className="aspect-[4/3] lg:col-span-5 lg:order-1 lg:aspect-[4/5]"
+              className="mx-auto aspect-[890/1109] w-full max-w-[360px] lg:col-span-5 lg:order-1 lg:max-w-none"
             />
           </Reveal>
 
@@ -285,7 +285,7 @@ function Index() {
                 ))}
               </ol>
               <div className="space-y-4 leading-relaxed text-muted-foreground lg:col-span-5">
-                <PhotoSlot id="FOTO_PEDIDOS_PRODUCAO" className="aspect-[4/3]" />
+                <PhotoSlot id="FOTO_PEDIDOS_PRODUCAO" className="aspect-[915/1074]" />
                 <p>
                   Você não compra estoque. Você vende, envia o pedido para o nosso time e nós
                   cuidamos de toda a produção e de toda a logística.
@@ -317,11 +317,11 @@ function Index() {
 
             <Reveal delay={80} className="mt-12 columns-2 gap-3 sm:gap-4 lg:columns-3">
               {[
-                { id: "FOTO_PROVA_01", ratio: "aspect-[4/5]" },
-                { id: "FOTO_PROVA_02", ratio: "aspect-square" },
-                { id: "FOTO_PROVA_03", ratio: "aspect-[3/4]" },
-                { id: "FOTO_PROVA_04", ratio: "aspect-[4/3]" },
-                { id: "FOTO_PROVA_05", ratio: "aspect-[9/16]" },
+                { id: "FOTO_PROVA_01", ratio: "aspect-[657/887]" },
+                { id: "FOTO_PROVA_02", ratio: "aspect-[509/679]" },
+                { id: "FOTO_PROVA_03", ratio: "aspect-[382/679]" },
+                { id: "FOTO_PROVA_04", ratio: "aspect-[637/849]" },
+                { id: "FOTO_PROVA_05", ratio: "aspect-[637/849]" },
               ].map((p) => (
                 <div key={p.id} className="mb-3 break-inside-avoid sm:mb-4">
                   <PhotoSlot id={p.id} className={`${p.ratio} rounded-3xl`} />
