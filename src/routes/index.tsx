@@ -289,11 +289,12 @@ function Index() {
                   </li>
                 ))}
               </ol>
-              <div className="space-y-4 leading-relaxed text-muted-foreground lg:col-span-5">
+              <div className="flex flex-col gap-4 leading-relaxed text-muted-foreground lg:col-span-5">
                 <PhotoSlot
                   id="FOTO_PEDIDOS_PRODUCAO"
-                  className="order-2 mx-auto aspect-[4/5] w-full max-w-[360px] lg:aspect-[915/1074] lg:max-w-none"
+                  className="order-last mx-auto aspect-[4/5] w-full max-w-[360px] lg:order-first lg:aspect-[915/1074] lg:max-w-none"
                 />
+
 
                 <p>
                   Você não compra estoque. Você vende, envia o pedido para o nosso time e nós
