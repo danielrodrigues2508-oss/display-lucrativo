@@ -6,8 +6,9 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { CtaButton, StickyMobileCta } from "@/components/landing/Cta";
+import { CtaButton } from "@/components/landing/Cta";
 import { PhotoSlot } from "@/components/landing/Media";
+import { ProofCarousel } from "@/components/landing/ProofCarousel";
 import { Reveal } from "@/components/landing/Reveal";
 import { Simulator } from "@/components/landing/Simulator";
 import { VideoFan } from "@/components/landing/VideoFan";
@@ -80,7 +81,7 @@ const FLOW = [
 
 function Index() {
   return (
-    <main className="relative overflow-x-hidden pb-24 md:pb-0">
+    <main className="relative overflow-x-hidden pb-0">
       {/* ============ 01 — HERO ============ */}
       <section className="relative px-4 pt-10 pb-16 sm:px-6 sm:pt-14 lg:pt-20 lg:pb-24">
         <div
@@ -616,7 +617,6 @@ function Index() {
         </div>
       </footer>
 
-      <StickyMobileCta />
     </main>
   );
 }
