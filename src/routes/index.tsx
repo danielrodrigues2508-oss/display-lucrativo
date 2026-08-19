@@ -253,8 +253,9 @@ function Index() {
             </div>
             <PhotoSlot
               id="FOTO_ABORDAGEM"
-              className="mx-auto aspect-[890/1109] w-full max-w-[360px] lg:col-span-5 lg:order-1 lg:max-w-none"
+              className="mx-auto aspect-[4/5] w-full max-w-[360px] lg:col-span-5 lg:order-1 lg:aspect-[890/1109] lg:max-w-none"
             />
+
           </Reveal>
 
           {/* Fornecimento exclusivo */}
@@ -288,7 +289,11 @@ function Index() {
                 ))}
               </ol>
               <div className="space-y-4 leading-relaxed text-muted-foreground lg:col-span-5">
-                <PhotoSlot id="FOTO_PEDIDOS_PRODUCAO" className="aspect-[915/1074]" />
+                <PhotoSlot
+                  id="FOTO_PEDIDOS_PRODUCAO"
+                  className="order-2 mx-auto aspect-[4/5] w-full max-w-[360px] lg:aspect-[915/1074] lg:max-w-none"
+                />
+
                 <p>
                   Você não compra estoque. Você vende, envia o pedido para o nosso time e nós
                   cuidamos de toda a produção e de toda a logística.
@@ -318,19 +323,10 @@ function Index() {
               </h2>
             </Reveal>
 
-            <Reveal delay={80} className="mt-12 columns-2 gap-3 sm:gap-4 lg:columns-3">
-              {[
-                { id: "FOTO_PROVA_01", ratio: "aspect-[657/887]" },
-                { id: "FOTO_PROVA_02", ratio: "aspect-[509/679]" },
-                { id: "FOTO_PROVA_03", ratio: "aspect-[382/679]" },
-                { id: "FOTO_PROVA_04", ratio: "aspect-[637/849]" },
-                { id: "FOTO_PROVA_05", ratio: "aspect-[637/849]" },
-              ].map((p) => (
-                <div key={p.id} className="mb-3 break-inside-avoid sm:mb-4">
-                  <PhotoSlot id={p.id} className={`${p.ratio} rounded-3xl`} />
-                </div>
-              ))}
+            <Reveal delay={80} className="mt-12">
+              <ProofCarousel />
             </Reveal>
+
           </div>
 
           {/* Mentorias + Materiais */}
