@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
 import { CHECKOUT_URL } from "@/lib/landing";
 import { cn } from "@/lib/utils";
+
 
 export function CtaButton({
   children,
@@ -27,38 +27,5 @@ export function CtaButton({
     >
       {children}
     </a>
-  );
-}
-
-export function StickyMobileCta() {
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setVisible(window.scrollY > 620);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  return (
-    <div
-      className={cn(
-        "fixed inset-x-0 bottom-0 z-50 border-t border-border bg-[color-mix(in_oklab,var(--ink)_92%,transparent)] px-4 py-3 backdrop-blur-lg md:hidden",
-        "transition-all duration-300 [transition-timing-function:var(--ease-premium)]",
-        visible
-          ? "translate-y-0 opacity-100"
-          : "pointer-events-none translate-y-full opacity-0",
-      )}
-    >
-      <div className="flex items-center gap-3">
-        <div className="leading-tight">
-          <p className="font-display text-lg font-extrabold text-primary">R$37</p>
-          <p className="text-[11px] text-muted-foreground">/mês • Lote 1</p>
-        </div>
-        <CtaButton size="sm" className="flex-1 py-3.5 text-sm">
-          QUERO ENTRAR
-        </CtaButton>
-      </div>
-    </div>
   );
 }

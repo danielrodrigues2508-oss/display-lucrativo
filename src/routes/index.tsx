@@ -6,8 +6,9 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { CtaButton, StickyMobileCta } from "@/components/landing/Cta";
+import { CtaButton } from "@/components/landing/Cta";
 import { PhotoSlot } from "@/components/landing/Media";
+import { ProofCarousel } from "@/components/landing/ProofCarousel";
 import { Reveal } from "@/components/landing/Reveal";
 import { Simulator } from "@/components/landing/Simulator";
 import { VideoFan } from "@/components/landing/VideoFan";
@@ -80,7 +81,7 @@ const FLOW = [
 
 function Index() {
   return (
-    <main className="relative overflow-x-hidden pb-24 md:pb-0">
+    <main className="relative overflow-x-hidden pb-0">
       {/* ============ 01 — HERO ============ */}
       <section className="relative px-4 pt-10 pb-16 sm:px-6 sm:pt-14 lg:pt-20 lg:pb-24">
         <div
@@ -114,10 +115,8 @@ function Index() {
 
           <div className="mt-9 flex flex-col items-center">
             <CtaButton className="max-w-md">QUERO LUCRAR MEUS PRIMEIROS R$1.000</CtaButton>
-            <p className="mt-4 text-sm text-muted-foreground">
-              R$37/mês • Lote 1 • Primeiros 100 alunos
-            </p>
           </div>
+
         </div>
 
       </section>
@@ -159,11 +158,15 @@ function Index() {
       <section className="relative px-4 py-16 sm:px-6 lg:py-28">
         <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <Reveal>
-            <SectionLabel>Faça sua própria conta</SectionLabel>
-            <h2 className="mt-4 font-display text-3xl leading-[1.08] font-extrabold text-balance sm:text-5xl">
+            <p className="font-display text-xl font-extrabold tracking-tight sm:text-2xl">
+              <span className="text-lime-glow">Faça sua própria conta</span>{" "}
+              <span className="text-foreground/80">— use o simulador abaixo</span>
+            </p>
+            <h2 className="mt-5 font-display text-3xl leading-[1.08] font-extrabold text-balance sm:text-5xl">
               Quanto você quer ganhar vendendo{" "}
               <span className="text-primary">Display Interativo?</span>
             </h2>
+
             <p className="mt-6 max-w-lg leading-relaxed text-muted-foreground">
               Você não precisa vender 10 ou 13 Displays por dia para começar. Vendendo apenas 5
               Displays por dia durante 5 dias, você já chega a{" "}
@@ -199,9 +202,10 @@ function Index() {
           <Reveal className="mt-16 grid items-center gap-8 lg:grid-cols-12 lg:gap-14">
             <PhotoSlot
               id="FOTO_DISPLAY_DEMONSTRACAO"
-              className="mx-auto aspect-[9/16] w-full max-w-[300px] lg:col-span-5 lg:max-w-none"
+              className="order-2 mx-auto aspect-[4/5] w-full max-w-[360px] lg:order-1 lg:col-span-5 lg:aspect-[9/16] lg:max-w-none"
             />
-            <div className="lg:col-span-7">
+            <div className="order-1 lg:order-2 lg:col-span-7">
+
               <span className="font-display text-sm font-bold text-primary">01</span>
               <h3 className="mt-2 font-display text-2xl font-extrabold sm:text-4xl">
                 Seu primeiro Display de Demonstração
@@ -250,8 +254,9 @@ function Index() {
             </div>
             <PhotoSlot
               id="FOTO_ABORDAGEM"
-              className="mx-auto aspect-[890/1109] w-full max-w-[360px] lg:col-span-5 lg:order-1 lg:max-w-none"
+              className="mx-auto aspect-[4/5] w-full max-w-[360px] lg:col-span-5 lg:order-1 lg:aspect-[890/1109] lg:max-w-none"
             />
+
           </Reveal>
 
           {/* Fornecimento exclusivo */}
@@ -284,8 +289,13 @@ function Index() {
                   </li>
                 ))}
               </ol>
-              <div className="space-y-4 leading-relaxed text-muted-foreground lg:col-span-5">
-                <PhotoSlot id="FOTO_PEDIDOS_PRODUCAO" className="aspect-[915/1074]" />
+              <div className="flex flex-col gap-4 leading-relaxed text-muted-foreground lg:col-span-5">
+                <PhotoSlot
+                  id="FOTO_PEDIDOS_PRODUCAO"
+                  className="order-last mx-auto aspect-[4/5] w-full max-w-[360px] lg:order-first lg:aspect-[915/1074] lg:max-w-none"
+                />
+
+
                 <p>
                   Você não compra estoque. Você vende, envia o pedido para o nosso time e nós
                   cuidamos de toda a produção e de toda a logística.
@@ -315,19 +325,10 @@ function Index() {
               </h2>
             </Reveal>
 
-            <Reveal delay={80} className="mt-12 columns-2 gap-3 sm:gap-4 lg:columns-3">
-              {[
-                { id: "FOTO_PROVA_01", ratio: "aspect-[657/887]" },
-                { id: "FOTO_PROVA_02", ratio: "aspect-[509/679]" },
-                { id: "FOTO_PROVA_03", ratio: "aspect-[382/679]" },
-                { id: "FOTO_PROVA_04", ratio: "aspect-[637/849]" },
-                { id: "FOTO_PROVA_05", ratio: "aspect-[637/849]" },
-              ].map((p) => (
-                <div key={p.id} className="mb-3 break-inside-avoid sm:mb-4">
-                  <PhotoSlot id={p.id} className={`${p.ratio} rounded-3xl`} />
-                </div>
-              ))}
+            <Reveal delay={80} className="mt-12">
+              <ProofCarousel />
             </Reveal>
+
           </div>
 
           {/* Mentorias + Materiais */}
@@ -617,7 +618,6 @@ function Index() {
         </div>
       </footer>
 
-      <StickyMobileCta />
     </main>
   );
 }
