@@ -201,9 +201,10 @@ function Index() {
           <Reveal className="mt-16 grid items-center gap-8 lg:grid-cols-12 lg:gap-14">
             <PhotoSlot
               id="FOTO_DISPLAY_DEMONSTRACAO"
-              className="mx-auto aspect-[9/16] w-full max-w-[300px] lg:col-span-5 lg:max-w-none"
+              className="order-2 mx-auto aspect-[4/5] w-full max-w-[360px] lg:order-1 lg:col-span-5 lg:aspect-[9/16] lg:max-w-none"
             />
-            <div className="lg:col-span-7">
+            <div className="order-1 lg:order-2 lg:col-span-7">
+
               <span className="font-display text-sm font-bold text-primary">01</span>
               <h3 className="mt-2 font-display text-2xl font-extrabold sm:text-4xl">
                 Seu primeiro Display de Demonstração
