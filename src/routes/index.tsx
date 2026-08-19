@@ -114,10 +114,8 @@ function Index() {
 
           <div className="mt-9 flex flex-col items-center">
             <CtaButton className="max-w-md">QUERO LUCRAR MEUS PRIMEIROS R$1.000</CtaButton>
-            <p className="mt-4 text-sm text-muted-foreground">
-              R$37/mês • Lote 1 • Primeiros 100 alunos
-            </p>
           </div>
+
         </div>
 
       </section>
@@ -159,11 +157,15 @@ function Index() {
       <section className="relative px-4 py-16 sm:px-6 lg:py-28">
         <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <Reveal>
-            <SectionLabel>Faça sua própria conta</SectionLabel>
-            <h2 className="mt-4 font-display text-3xl leading-[1.08] font-extrabold text-balance sm:text-5xl">
+            <p className="font-display text-xl font-extrabold tracking-tight sm:text-2xl">
+              <span className="text-lime-glow">Faça sua própria conta</span>{" "}
+              <span className="text-foreground/80">— use o simulador abaixo</span>
+            </p>
+            <h2 className="mt-5 font-display text-3xl leading-[1.08] font-extrabold text-balance sm:text-5xl">
               Quanto você quer ganhar vendendo{" "}
               <span className="text-primary">Display Interativo?</span>
             </h2>
+
             <p className="mt-6 max-w-lg leading-relaxed text-muted-foreground">
               Você não precisa vender 10 ou 13 Displays por dia para começar. Vendendo apenas 5
               Displays por dia durante 5 dias, você já chega a{" "}
