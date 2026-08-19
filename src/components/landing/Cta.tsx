@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
 import { CHECKOUT_URL } from "@/lib/landing";
 import { cn } from "@/lib/utils";
+
 
 export function CtaButton({
   children,
