@@ -180,7 +180,6 @@ function Index() {
               className="order-2 mx-auto aspect-[4/5] w-full max-w-[360px] lg:order-1 lg:col-span-5 lg:aspect-[9/16] lg:max-w-none"
             />
             <div className="order-1 lg:order-2 lg:col-span-7">
-
               <span className="font-display text-sm font-bold text-primary">01</span>
               <h3 className="mt-2 font-display text-2xl font-extrabold sm:text-4xl">
                 Seu primeiro Display de Demonstração
@@ -189,9 +188,8 @@ function Index() {
                 <p>
                   Você recebe um Display de{" "}
                   <span className="font-semibold text-primary">R$67</span> como bônus para
-                  começar.
+                  começar — paga apenas o frete.
                 </p>
-                <p>Você paga apenas o frete.</p>
               </div>
             </div>
           </Reveal>
