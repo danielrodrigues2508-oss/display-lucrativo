@@ -145,12 +145,6 @@ function Index() {
             ))}
           </div>
 
-          <Reveal className="mt-14">
-            <p className="max-w-2xl font-display text-xl leading-snug font-bold sm:text-2xl">
-              Isso não é uma teoria que eu criei para vender um curso. É o que eu faço todos os
-              dias.
-            </p>
-          </Reveal>
         </div>
       </section>
 
