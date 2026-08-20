@@ -95,13 +95,13 @@ export function Simulator() {
   const animProfit = useAnimatedNumber(profit);
 
   return (
-    <div className="relative">
+    <div className="relative mx-auto w-full max-w-md lg:max-w-none">
       <div
         aria-hidden
         className="pointer-events-none absolute -inset-6 rounded-[2.5rem] opacity-25 blur-3xl"
         style={{ background: "radial-gradient(closest-side, var(--lime), transparent 70%)" }}
       />
-      <div className="surface-panel relative rounded-[2rem] p-5 shadow-[var(--shadow-deep)] sm:p-8">
+      <div className="surface-panel relative overflow-hidden rounded-[2rem] p-4 shadow-[var(--shadow-deep)] sm:p-8">
         <div className="flex items-center justify-between">
           <span className="text-[11px] font-semibold tracking-[0.2em] text-primary uppercase">
             Simulador de lucro
@@ -109,7 +109,7 @@ export function Simulator() {
           <span className="h-2 w-2 rounded-full bg-primary shadow-[0_0_14px_var(--lime)]" />
         </div>
 
-        <div className="mt-6 grid gap-4 sm:grid-cols-2">
+        <div className="mt-6 grid grid-cols-2 gap-3 sm:gap-4">
           <Stepper
             label="Displays por dia"
             value={perDay}
@@ -120,18 +120,18 @@ export function Simulator() {
           <Stepper label="Dias" value={days} onChange={setDays} min={1} max={30} />
         </div>
 
-        <div className="mt-6 grid gap-3 sm:grid-cols-2">
-          <div className="rounded-2xl border border-border bg-[color-mix(in_oklab,var(--ink)_70%,transparent)] p-5">
-            <p className="text-[11px] font-semibold tracking-[0.18em] text-muted-foreground uppercase">
+        <div className="mt-6 grid grid-cols-2 gap-2 sm:gap-3">
+          <div className="rounded-2xl border border-border bg-[color-mix(in_oklab,var(--ink)_70%,transparent)] p-3 sm:p-5">
+            <p className="text-[9px] font-semibold tracking-[0.18em] text-muted-foreground uppercase sm:text-[11px]">
               Displays vendidos
             </p>
-            <p className="mt-2 font-display text-4xl font-extrabold tabular-nums">{animTotal}</p>
+            <p className="mt-1 font-display text-2xl font-extrabold tabular-nums sm:mt-2 sm:text-4xl">{animTotal}</p>
           </div>
-          <div className="relative overflow-hidden rounded-2xl border border-primary/35 bg-[color-mix(in_oklab,var(--lime)_8%,var(--ink))] p-5">
-            <p className="text-[11px] font-semibold tracking-[0.18em] text-primary/80 uppercase">
+          <div className="relative overflow-hidden rounded-2xl border border-primary/35 bg-[color-mix(in_oklab,var(--lime)_8%,var(--ink))] p-3 sm:p-5">
+            <p className="text-[9px] font-semibold tracking-[0.18em] text-primary/80 uppercase sm:text-[11px]">
               Lucro bruto
             </p>
-            <p className="text-lime-glow mt-2 font-display text-4xl font-extrabold tabular-nums sm:text-5xl">
+            <p className="text-lime-glow mt-1 font-display text-2xl font-extrabold tabular-nums sm:mt-2 sm:text-4xl lg:text-5xl">
               {brl(animProfit)}
             </p>
           </div>

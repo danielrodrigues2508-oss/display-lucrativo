@@ -168,14 +168,9 @@ function Index() {
             </h2>
 
             <p className="mt-6 max-w-lg leading-relaxed text-muted-foreground">
-              Você não precisa vender 10 ou 13 Displays por dia para começar. Vendendo apenas 5
+              Você não precisa vender 10 ou 20 Displays por dia para começar. Vendendo apenas 5
               Displays por dia durante 5 dias, você já chega a{" "}
-              <span className="font-semibold text-foreground">R$1.175</span> de lucro bruto.
-            </p>
-            <p className="mt-4 max-w-lg leading-relaxed text-muted-foreground">
-              E eu sei que isso é possível porque faço isso há 4 anos. Nunca voltei para casa
-              tendo vendido menos de 5 Displays em um dia. Minha média hoje fica entre 10 e 13
-              Displays por dia.
+              <span className="font-semibold text-foreground">R$1.175</span> de lucro no seu bolso.
             </p>
           </Reveal>
           <Reveal delay={100}>
@@ -190,12 +185,8 @@ function Index() {
           <Reveal className="max-w-3xl">
             <SectionLabel>O que você recebe</SectionLabel>
             <h2 className="mt-4 font-display text-3xl leading-[1.08] font-extrabold text-balance sm:text-5xl">
-              Eu vou te mostrar exatamente como fazer isso.
+              O que você recebe ao entrar para a comunidade:
             </h2>
-            <p className="mt-5 text-muted-foreground sm:text-lg">
-              Dentro da Comunidade Display Lucrativo, você recebe tudo o que precisa para
-              começar.
-            </p>
           </Reveal>
 
           {/* Display de demonstração */}
@@ -217,22 +208,6 @@ function Index() {
                   começar.
                 </p>
                 <p>Você paga apenas o frete.</p>
-                <p>
-                  Você entra na comunidade, informa seu CEP e endereço completo e seleciona o
-                  Order Bump do frete no checkout. Nosso time organiza a produção e o envio.
-                </p>
-                <p>
-                  Os pedidos são fechados uma vez por semana, às sextas-feiras, e enviados em 2 a
-                  3 dias úteis após o fechamento do lote.
-                </p>
-                <p>
-                  Seu acesso à comunidade é liberado imediatamente: você já pode assistir às
-                  aulas e participar das mentorias ao vivo.
-                </p>
-                <p>
-                  Você já entra com a ferramenta na mão para apresentar o produto aos
-                  comerciantes.
-                </p>
               </div>
             </div>
           </Reveal>
@@ -246,10 +221,8 @@ function Index() {
               </h3>
               <div className="mt-5 space-y-4 leading-relaxed text-muted-foreground">
                 <p>
-                  O roteiro que eu uso para abordar comerciantes, apresentar o Display, lidar com
-                  objeções e fechar a venda.
+                  Acesso ao meu roteiro de abordagem, quebras de objeções, como encantar ao apresentar o Display e como aumentar seu ticket médio por venda.
                 </p>
-                <p>Você não precisa chegar na rua sem saber o que falar.</p>
               </div>
             </div>
             <PhotoSlot
@@ -265,8 +238,8 @@ function Index() {
             <h3 className="mt-2 font-display text-2xl font-extrabold sm:text-4xl">
               Fornecimento exclusivo
             </h3>
-            <p className="mt-5 max-w-2xl font-display text-lg font-bold sm:text-2xl">
-              Você não compra estoque e não precisa se preocupar com produção.
+            <p className="mt-5 max-w-2xl font-display text-lg font-bold text-muted-foreground sm:text-2xl">
+              Você se preocupa em vender e nosso time cuida da logística e produção.
             </p>
 
             <div className="mt-10 grid gap-8 lg:grid-cols-12 lg:gap-14">
@@ -297,20 +270,7 @@ function Index() {
 
 
                 <p>
-                  Você não compra estoque. Você vende, envia o pedido para o nosso time e nós
-                  cuidamos de toda a produção e de toda a logística.
-                </p>
-                <p>
-                  O Display é produzido pelo nosso time e enviado diretamente para a sua casa.
-                  Você só precisa entregar ao seu cliente.
-                </p>
-                <p className="font-semibold text-foreground">
-                  Você não precisa manter estoque, produzir, procurar gráfica nem cuidar da
-                  logística. Tudo é centralizado pela nossa operação.
-                </p>
-                <p>
-                  O mesmo vale para o seu Display de Demonstração e para todos os Displays que
-                  você vender aos seus clientes: nosso time/fábrica produz e envia.
+                  Você vende, envia o pedido para o nosso time e nós cuidamos de toda a produção e de toda a logística.
                 </p>
               </div>
             </div>
@@ -402,23 +362,30 @@ function Index() {
                     ))}
                   </div>
 
-                  <div className="mt-4 flex items-center justify-between gap-4 rounded-2xl border border-primary/40 bg-[color-mix(in_oklab,var(--lime)_10%,var(--ink))] px-5 py-5">
-                    <span className="font-display text-xs font-bold tracking-[0.16em] text-primary uppercase sm:text-sm">
-                      Valor percebido
-                    </span>
-                    <span className="text-lime-glow font-display text-3xl font-extrabold tabular-nums sm:text-4xl">
-                      R$558
-                    </span>
+                  <div className="mt-4 flex flex-col gap-4 rounded-2xl border border-primary/40 bg-[color-mix(in_oklab,var(--lime)_10%,var(--ink))] px-5 py-5">
+                    <div className="flex items-center justify-between gap-4">
+                      <span className="font-display text-xs font-bold tracking-[0.16em] text-primary uppercase sm:text-sm">
+                        Valor percebido
+                      </span>
+                      <span className="text-lime-glow font-display text-3xl font-extrabold tabular-nums sm:text-4xl">
+                        R$558
+                      </span>
+                    </div>
+                    <div className="mt-2 text-center">
+                      <p className="text-sm font-bold text-foreground/90">
+                        Mas entrando agora, você não vai pagar R$558.
+                      </p>
+                    </div>
                   </div>
                 </div>
 
                 <div className="lg:col-span-5">
                   <div className="rounded-[1.5rem] border border-primary/30 bg-[color-mix(in_oklab,var(--ink)_75%,transparent)] p-6 text-center">
                     <span className="inline-flex rounded-full border border-primary/30 bg-[color-mix(in_oklab,var(--lime)_8%,transparent)] px-4 py-2 text-[10px] font-semibold tracking-[0.16em] text-primary uppercase sm:text-[11px]">
-                      🏅 Aluno Fundador • Lote 1
+                      🏅 Aluno Fundador
                     </span>
                     <p className="mt-6 text-sm text-muted-foreground">
-                      Hoje, você entra por apenas:
+                      Como Aluno Fundador, você entra agora por apenas:
                     </p>
                     <p className="text-lime-glow mt-1 font-display text-6xl leading-none font-extrabold sm:text-7xl">
                       R$37
@@ -426,13 +393,6 @@ function Index() {
                     </p>
                     <p className="mt-4 font-display text-base font-extrabold sm:text-lg">
                       E ainda recebe o Display de Demonstração, pagando somente o frete.
-                    </p>
-                    <p className="mt-4 text-sm text-muted-foreground">
-                      Próximo lote:{" "}
-                      <span className="text-foreground/80 line-through decoration-muted-foreground/60">
-                        R$57/mês
-                      </span>{" "}
-                      • preço congelado para os primeiros 100 alunos.
                     </p>
                   </div>
 
@@ -453,7 +413,7 @@ function Index() {
               </div>
 
               <div className="mt-10 flex flex-col items-center">
-                <CtaButton className="max-w-md">QUERO ENTRAR NO LOTE 1</CtaButton>
+                <CtaButton className="max-w-md">QUERO ENTRAR AGORA</CtaButton>
                 <p className="mt-4 text-sm text-muted-foreground">
                   Sem fidelidade. Cancele quando quiser.
                 </p>

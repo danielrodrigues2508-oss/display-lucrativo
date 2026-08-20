@@ -1,56 +1,55 @@
 ---
-name: Landing Page Refinements
-description: Final surgical adjustments to the "Comunidade Display Lucrativo" landing page, focusing on mobile optimization and copy precision.
+name: Landing Page Refinements - Final Mobile Focus
+description: Comprehensive surgical adjustments to the "Comunidade Display Lucrativo" landing page, prioritizing mobile responsiveness, copy precision, and continuous autoplay carousel.
 type: feature
 ---
 
-# Plan - Landing Page Refinements
+# Plan - Landing Page Refinements (Final Mobile Focus)
 
-Implement final surgical adjustments to the landing page as requested, focusing on mobile responsiveness, copy updates, and component behavior.
-
-## User Review Required
-
-> [!IMPORTANT]
-> - No structural changes or new sections will be added.
-> - The visual identity (Black + Neon Green) remains intact.
-> - The "Lote 1" expression will be removed globally.
+Implement specific refinements to copy, mobile layout order, and component behavior as requested, ensuring a polished mobile experience without altering the approved structure or visual identity.
 
 ## Proposed Changes
 
-### Section 1: Simulator & Hero
-- Update simulator subtitle with specific profit examples (5 displays/day for 5 days = R$1.175).
-- Compact simulator UI for mobile viewports to prevent lateral overflow and improve elegance.
-- Remove "Lote 1" and subtext from the Hero CTA area.
+### 1. Simulator Section
+- Update subtitle with specific profit examples: "Vendendo apenas 5 Displays por dia durante 5 dias, você já chega a R$1.175 de lucro no seu bolso."
+- **Mobile Optimization:**
+    - Reduce overall size and padding.
+    - Ensure it is 100% visible within viewport width (no horizontal cuts).
+    - Compact grid layout for inputs and results.
 
-### Section 2: "O que você recebe" & Blocks
-- Simplify the "O que você recebe" introduction to the specified headline.
-- **Block 01 (Display):** Update copy and ensure Title -> Text -> Image order on mobile.
-- **Block 02 (Method):** Update copy to include sales script, objection handling, and ticket increase details.
-- **Block 03 (Logistics):** Update subtitle color to be softer (muted) and list the 6-step factory-to-client flow exactly.
+### 2. "O que você recebe" Section
+- Simplify introduction to: "O que você recebe ao entrar para a comunidade:".
+- **Block 01 (Display):** 
+    - Reorder mobile layout: Title -> Text -> Image.
+    - Simplify text content.
+- **Block 02 (Method):** Update text to focus on approach script, objections, and ticket average.
+- **Block 03 (Logistics):**
+    - Set subtitle color to a softer muted tone.
+    - Explicitly list the 6-step flow from "VOCÊ VENDE" to "VOCÊ ENTREGA".
+    - Update final logistics summary text.
 
-### Section 3: Social Proof (Carousel)
-- Increase marquee transition speed.
-- Modify logic to ensure autoplay continues even after manual interaction (no pause on swipe).
-- Maintain compact mobile dimensions.
+### 3. Social Proof Carousel
+- Increase automatic transition speed (12s duration).
+- Ensure continuous loop: remove hover-pause behavior and ensure autoplay persists after manual interaction.
+- Maintain compact mobile presentation.
 
-### Section 4: Pricing & Offer
-- Update the perceived value breakdown list.
-- Insert the context text ("Mas entrando agora...") before the final offer price.
-- Correct any discrepancies in the pricing anchor.
+### 4. Pricing & Offer Section
+- Insert context text: "Mas entrando agora, você não vai pagar R$558."
+- Update call-to-action to: "Como Aluno Fundador, você entra agora por apenas:".
+- Remove all references to "Lote 1" globally.
 
-### Section 5: Global Cleanup
-- Remove the "Lote 1" tag/badge from all components.
-- Ensure the sticky mobile bottom bar is completely removed (previously requested, now reinforced).
+### 5. Mobile Global Adjustments
+- Permanently remove the sticky bottom CTA bar.
+- Ensure all "Lote 1" badges or text occurrences are removed.
+- Optimize image aspect ratios and margins for mobile flow.
 
 ## Technical Details
 
-### Simulator Mobile Optimization
-- Adjusting padding and font sizes within `src/components/landing/Simulator.tsx` using `sm:` and `max-sm:` breakpoints.
-- Reducing margin/gap spacing for the mobile view.
+### Simulator Refinement
+- Update `src/components/landing/Simulator.tsx` to use more aggressive mobile scaling (smaller fonts, tighter gaps) and `overflow-hidden` on the container to prevent any scroll leaking.
 
-### Component Logic
-- **Carousel:** Updating `src/components/landing/ProofCarousel.tsx` CSS/JS to remove `animation-play-state: paused` on hover/interaction if present.
-- **Layout Order:** Using Tailwind `order-` classes in `src/routes/index.tsx` for Block 01 mobile reordering.
+### Carousel Autoplay Persistence
+- In `src/components/landing/ProofCarousel.tsx`, remove CSS `animation-play-state: paused` on hover. Use a triple-duplicated list for a smoother high-speed loop.
 
-### Content Consistency
-- Global string search for "Lote 1" to ensure 100% removal.
+### Content Logic
+- Surgical text replacements in `src/routes/index.tsx` using Tailwind `order-` classes for mobile specific sequences.
