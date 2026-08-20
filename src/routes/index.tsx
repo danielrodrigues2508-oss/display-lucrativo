@@ -145,12 +145,6 @@ function Index() {
             ))}
           </div>
 
-          <Reveal className="mt-14">
-            <p className="max-w-2xl font-display text-xl leading-snug font-bold sm:text-2xl">
-              Isso não é uma teoria que eu criei para vender um curso. É o que eu faço todos os
-              dias.
-            </p>
-          </Reveal>
         </div>
       </section>
 
@@ -161,16 +155,6 @@ function Index() {
             <p className="font-display text-xl font-extrabold tracking-tight sm:text-2xl">
               <span className="text-lime-glow">Faça sua própria conta</span>{" "}
               <span className="text-foreground/80">— use o simulador abaixo</span>
-            </p>
-            <h2 className="mt-5 font-display text-3xl leading-[1.08] font-extrabold text-balance sm:text-5xl">
-              Quanto você quer ganhar vendendo{" "}
-              <span className="text-primary">Display Interativo?</span>
-            </h2>
-
-            <p className="mt-6 max-w-lg leading-relaxed text-muted-foreground">
-              Você não precisa vender 10 ou 20 Displays por dia para começar. Vendendo apenas 5
-              Displays por dia durante 5 dias, você já chega a{" "}
-              <span className="font-semibold text-foreground">R$1.175</span> de lucro no seu bolso.
             </p>
           </Reveal>
           <Reveal delay={100}>
@@ -196,7 +180,6 @@ function Index() {
               className="order-2 mx-auto aspect-[4/5] w-full max-w-[360px] lg:order-1 lg:col-span-5 lg:aspect-[9/16] lg:max-w-none"
             />
             <div className="order-1 lg:order-2 lg:col-span-7">
-
               <span className="font-display text-sm font-bold text-primary">01</span>
               <h3 className="mt-2 font-display text-2xl font-extrabold sm:text-4xl">
                 Seu primeiro Display de Demonstração
@@ -205,9 +188,8 @@ function Index() {
                 <p>
                   Você recebe um Display de{" "}
                   <span className="font-semibold text-primary">R$67</span> como bônus para
-                  começar.
+                  começar — paga apenas o frete.
                 </p>
-                <p>Você paga apenas o frete.</p>
               </div>
             </div>
           </Reveal>
