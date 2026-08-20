@@ -152,10 +152,10 @@ function Index() {
       <section className="relative px-4 py-16 sm:px-6 lg:py-28">
         <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <Reveal>
-            <p className="font-display text-xl font-extrabold tracking-tight sm:text-2xl">
-              <span className="text-lime-glow">Faça sua própria conta</span>{" "}
-              <span className="text-foreground/80">— use o simulador abaixo</span>
-            </p>
+            <h2 className="font-display text-2xl font-extrabold tracking-tight sm:text-4xl">
+              <span className="text-lime-glow block mb-2">Faça sua própria conta — use o simulador abaixo</span>
+              <span className="text-foreground/60 text-lg font-bold block sm:text-xl">Quanto você quer ganhar vendendo Display Interativo?</span>
+            </h2>
           </Reveal>
           <Reveal delay={100}>
             <Simulator />
@@ -225,32 +225,33 @@ function Index() {
             </p>
 
             <div className="mt-10 grid gap-8 lg:grid-cols-12 lg:gap-14">
-              <ol className="lg:col-span-7">
-                {FLOW.map((step, i) => (
-                  <li key={step}>
-                    <div className="flex items-center gap-4 rounded-2xl border border-border bg-[color-mix(in_oklab,var(--surface)_70%,transparent)] px-5 py-4">
-                      <span className="font-display text-xs font-bold text-primary tabular-nums">
-                        0{i + 1}
-                      </span>
-                      <span className="font-display text-sm font-bold tracking-wide sm:text-base">
-                        {step}
-                      </span>
-                    </div>
-                    {i < FLOW.length - 1 && (
-                      <div className="flex justify-center py-1.5">
-                        <ArrowDown className="h-4 w-4 text-primary/60" />
-                      </div>
-                    )}
-                  </li>
-                ))}
-              </ol>
-              <div className="flex flex-col gap-4 leading-relaxed text-muted-foreground lg:col-span-5">
+              <div className="flex flex-col gap-8 leading-relaxed text-muted-foreground lg:col-span-5">
                 <PhotoSlot
                   id="FOTO_PEDIDOS_PRODUCAO"
-                  className="order-last mx-auto aspect-[4/5] w-full max-w-[360px] lg:order-first lg:aspect-[915/1074] lg:max-w-none"
+                  className="mx-auto aspect-[4/5] w-full max-w-[360px] lg:aspect-[915/1074] lg:max-w-none"
                 />
+              </div>
 
-
+              <div className="lg:col-span-7">
+                <ol className="mb-8">
+                  {FLOW.map((step, i) => (
+                    <li key={step}>
+                      <div className="flex items-center gap-4 rounded-2xl border border-border bg-[color-mix(in_oklab,var(--surface)_70%,transparent)] px-5 py-4">
+                        <span className="font-display text-xs font-bold text-primary tabular-nums">
+                          0{i + 1}
+                        </span>
+                        <span className="font-display text-sm font-bold tracking-wide sm:text-base">
+                          {step}
+                        </span>
+                      </div>
+                      {i < FLOW.length - 1 && (
+                        <div className="flex justify-center py-1.5">
+                          <ArrowDown className="h-4 w-4 text-primary/60" />
+                        </div>
+                      )}
+                    </li>
+                  ))}
+                </ol>
                 <p>
                   Você vende, envia o pedido para o nosso time e nós cuidamos de toda a produção e de toda a logística.
                 </p>
@@ -353,11 +354,13 @@ function Index() {
                         R$558
                       </span>
                     </div>
-                    <div className="mt-2 text-center">
-                      <p className="text-sm font-bold text-foreground/90">
-                        Mas entrando agora, você não vai pagar R$558.
-                      </p>
-                    </div>
+                  </div>
+
+                  <div className="mt-8 mb-8 text-center px-4">
+                    <p className="text-xl font-extrabold text-foreground sm:text-2xl leading-tight">
+                      Mas entrando agora, você não vai pagar{" "}
+                      <span className="text-primary line-through decoration-2">R$558</span>.
+                    </p>
                   </div>
                 </div>
 
