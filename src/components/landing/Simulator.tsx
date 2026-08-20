@@ -141,9 +141,6 @@ export function Simulator() {
           <p className="font-display text-base font-extrabold sm:text-lg">
             Cada Display vendido = <span className="text-lime-glow">R$47</span> de lucro bruto.
           </p>
-          <p className="mt-2 text-sm text-muted-foreground tabular-nums">
-            Venda: R$67 Custo: R$20 = <span className="font-semibold text-primary">R$47</span>
-          </p>
         </div>
 
         <div className="mt-3 rounded-2xl border border-border bg-[color-mix(in_oklab,var(--surface-2)_80%,transparent)] p-4">
