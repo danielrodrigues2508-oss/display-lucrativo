@@ -104,7 +104,7 @@ export function VideoFan() {
             <div className="fan-slot">
               <VideoSlot
                 id={item.id}
-                className="aspect-[9/16] w-[110px] shadow-[var(--shadow-deep)] sm:w-[130px] lg:w-[172px]"
+                className="aspect-[9/16] w-[130px] shadow-[var(--shadow-deep)] sm:w-[150px] lg:w-[190px]"
               />
             </div>
           </div>

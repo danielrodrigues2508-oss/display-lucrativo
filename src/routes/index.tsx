@@ -152,8 +152,8 @@ function Index() {
       <section className="relative px-4 py-16 sm:px-6 lg:py-28">
         <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <Reveal>
-            <h2 className="font-display text-2xl font-extrabold tracking-tight sm:text-4xl">
-              <span className="text-lime-glow block mb-2">Faça sua própria conta — use o simulador abaixo</span>
+            <h2 className="font-display font-extrabold tracking-tight">
+              <span className="text-lime-glow block mb-2 text-3xl sm:text-5xl">Faça sua própria conta — use o simulador abaixo</span>
               <span className="text-foreground/60 text-lg font-bold block sm:text-xl">Quanto você quer ganhar vendendo Display Interativo?</span>
             </h2>
           </Reveal>
@@ -356,7 +356,7 @@ function Index() {
                     </div>
                   </div>
 
-                  <div className="mt-8 mb-8 text-center px-4">
+                  <div className="mt-12 mb-8 text-center px-4 sm:mt-16">
                     <p className="text-xl font-extrabold text-foreground sm:text-2xl leading-tight">
                       Mas entrando agora, você não vai pagar{" "}
                       <span className="text-primary line-through decoration-2">R$558</span>.
@@ -409,32 +409,32 @@ function Index() {
       </section>
 
       {/* ============ 06 — GARANTIA ============ */}
-      <section className="relative px-4 py-16 sm:px-6 lg:py-28">
-        <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-12 lg:gap-16">
+      <section className="relative px-4 py-8 sm:px-6 lg:py-28">
+        <div className="mx-auto grid max-w-6xl gap-6 lg:grid-cols-12 lg:gap-16">
           <Reveal className="lg:col-span-5">
             <SectionLabel>Garantia</SectionLabel>
-            <h2 className="mt-4 font-display text-3xl leading-[1.08] font-extrabold text-balance sm:text-4xl">
+            <h2 className="mt-2 font-display text-2xl leading-[1.08] font-extrabold text-balance sm:mt-4 sm:text-4xl">
               🤝 Você não precisa assumir o risco sozinho.
             </h2>
           </Reveal>
           <Reveal delay={90} className="lg:col-span-7">
-            <div className="rounded-3xl border border-primary/25 bg-[color-mix(in_oklab,var(--surface-2)_85%,transparent)] p-6 shadow-[var(--shadow-deep)] sm:p-9">
+            <div className="rounded-3xl border border-primary/25 bg-[color-mix(in_oklab,var(--surface-2)_85%,transparent)] p-5 shadow-[var(--shadow-deep)] sm:p-9">
               <h3 className="font-display text-xl font-extrabold text-primary sm:text-2xl">
                 Garantia Incondicional de 7 Dias
               </h3>
-              <div className="mt-4 space-y-3 leading-relaxed text-muted-foreground">
+              <div className="mt-3 space-y-2 leading-relaxed text-muted-foreground sm:mt-4 sm:space-y-3">
                 <p>Entrou, conheceu a comunidade e decidiu que não é para você?</p>
                 <p>Peça o reembolso dentro do prazo e devolvemos seu dinheiro.</p>
                 <p>Sem burocracia.</p>
               </div>
 
-              <div className="hairline my-8" />
+              <div className="hairline my-6 sm:my-8" />
 
               <p className="font-display text-lg font-extrabold tracking-tight sm:text-xl">
                 E EU VOU ALÉM.
               </p>
-              <p className="mt-4 text-muted-foreground">Se você:</p>
-              <ul className="mt-3 space-y-2.5">
+              <p className="mt-2 text-muted-foreground sm:mt-4">Se você:</p>
+              <ul className="mt-2 space-y-1.5 sm:mt-3 sm:space-y-2.5">
                 {[
                   "assistir às aulas;",
                   "utilizar seu Display de Demonstração;",
@@ -447,14 +447,14 @@ function Index() {
                   </li>
                 ))}
               </ul>
-              <p className="mt-4 text-muted-foreground">
+              <p className="mt-3 text-muted-foreground sm:mt-4">
                 e mesmo assim não conseguir vender nenhum Display para recuperar o valor da
                 assinatura...
               </p>
-              <p className="text-lime-glow mt-6 font-display text-2xl font-extrabold sm:text-3xl">
+              <p className="text-lime-glow mt-4 font-display text-2xl font-extrabold sm:mt-6 sm:text-3xl">
                 eu devolvo o seu dinheiro.
               </p>
-              <p className="mt-2 font-display text-lg font-bold">O risco é meu.</p>
+              <p className="mt-1 font-display text-lg font-bold sm:mt-2">O risco é meu.</p>
             </div>
           </Reveal>
         </div>
