@@ -142,7 +142,7 @@ export function Simulator() {
             Cada Display vendido = <span className="text-lime-glow">R$47</span> de lucro bruto.
           </p>
           <p className="mt-2 text-sm text-muted-foreground tabular-nums">
-            Venda: R$67 — Custo: R$20 = <span className="font-semibold text-primary">R$47</span>
+            Venda: R$67 Custo: R$20 = <span className="font-semibold text-primary">R$47</span>
           </p>
         </div>
 

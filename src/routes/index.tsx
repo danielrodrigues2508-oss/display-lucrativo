@@ -16,13 +16,13 @@ import { VideoFan } from "@/components/landing/VideoFan";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Comunidade Display Lucrativo — R$1.000 em 7 dias" },
+      { title: "Comunidade Display Lucrativo R$1.000 em 7 dias" },
       {
         name: "description",
         content:
           "Lucre R$1.000 em 7 dias vendendo Display Interativo trabalhando 1 hora por dia. Método, fornecimento exclusivo e mentorias por R$37/mês.",
       },
-      { property: "og:title", content: "Comunidade Display Lucrativo — R$1.000 em 7 dias" },
+      { property: "og:title", content: "Comunidade Display Lucrativo R$1.000 em 7 dias" },
       {
         property: "og:description",
         content:
@@ -94,7 +94,7 @@ function Index() {
         />
         <div className="relative mx-auto max-w-5xl text-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-[color-mix(in_oklab,var(--lime)_8%,transparent)] px-4 py-2 text-[10px] font-semibold tracking-[0.16em] text-primary uppercase sm:text-[11px]">
-            🚨 Condição especial — Aluno Fundador
+            🚨 Condição especial Aluno Fundador
           </span>
 
           <div className="relative mt-5 -mb-6 sm:mt-8 sm:mb-0">
@@ -153,7 +153,7 @@ function Index() {
         <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <Reveal>
             <h2 className="font-display font-extrabold tracking-tight">
-              <span className="text-lime-glow block mb-2 text-3xl sm:text-5xl">Faça sua própria conta — use o simulador abaixo</span>
+              <span className="text-lime-glow block mb-2 text-3xl sm:text-5xl">Faça sua própria conta use o simulador abaixo</span>
               <span className="text-foreground/60 text-lg font-bold block sm:text-xl">Quanto você quer ganhar vendendo Display Interativo?</span>
             </h2>
           </Reveal>
@@ -188,7 +188,7 @@ function Index() {
                 <p>
                   Você recebe um Display de{" "}
                   <span className="font-semibold text-primary">R$67</span> como bônus para
-                  começar — paga apenas o frete.
+                  começar paga apenas o frete.
                 </p>
               </div>
             </div>
@@ -558,7 +558,7 @@ function Index() {
             individuais.
           </p>
           <p className="mt-4 text-xs text-muted-foreground/70">
-            Todos os direitos reservados — Daniel Rodrigues.
+            Todos os direitos reservados Daniel Rodrigues.
           </p>
         </div>
       </footer>
