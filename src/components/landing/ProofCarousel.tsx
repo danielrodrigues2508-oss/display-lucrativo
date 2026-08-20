@@ -13,7 +13,7 @@ const PHOTOS = [
  * Loop infinito duplicando a lista.
  */
 export function ProofCarousel() {
-  const loop = [...PHOTOS, ...PHOTOS];
+  const loop = [...PHOTOS, ...PHOTOS, ...PHOTOS]; // Triple for smoother loop at high speeds
 
   return (
     <div className="proof-carousel relative -mx-4 overflow-hidden sm:-mx-6">
@@ -33,12 +33,13 @@ export function ProofCarousel() {
           scrollbar-width: none;
           -ms-overflow-style: none;
           scroll-snap-type: x mandatory;
-          animation: proof-marquee 20s linear infinite;
+          animation: proof-marquee 12s linear infinite;
         }
         .proof-track::-webkit-scrollbar { display: none; }
+        /* Removed hover pause to ensure continuous autoplay */
         @keyframes proof-marquee {
           from { transform: translateX(0); }
-          to { transform: translateX(-50%); }
+          to { transform: translateX(-33.33%); }
         }
         @media (prefers-reduced-motion: reduce) {
           .proof-track { animation: none; }
