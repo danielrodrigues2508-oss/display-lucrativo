@@ -156,16 +156,6 @@ function Index() {
               <span className="text-lime-glow">Faça sua própria conta</span>{" "}
               <span className="text-foreground/80">— use o simulador abaixo</span>
             </p>
-            <h2 className="mt-5 font-display text-3xl leading-[1.08] font-extrabold text-balance sm:text-5xl">
-              Quanto você quer ganhar vendendo{" "}
-              <span className="text-primary">Display Interativo?</span>
-            </h2>
-
-            <p className="mt-6 max-w-lg leading-relaxed text-muted-foreground">
-              Você não precisa vender 10 ou 20 Displays por dia para começar. Vendendo apenas 5
-              Displays por dia durante 5 dias, você já chega a{" "}
-              <span className="font-semibold text-foreground">R$1.175</span> de lucro no seu bolso.
-            </p>
           </Reveal>
           <Reveal delay={100}>
             <Simulator />
