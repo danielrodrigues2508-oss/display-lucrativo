@@ -33,10 +33,9 @@ export function ProofCarousel() {
           scrollbar-width: none;
           -ms-overflow-style: none;
           scroll-snap-type: x mandatory;
-          animation: proof-marquee 28s linear infinite;
+          animation: proof-marquee 20s linear infinite;
         }
         .proof-track::-webkit-scrollbar { display: none; }
-        .proof-carousel:hover .proof-track { animation-play-state: paused; }
         @keyframes proof-marquee {
           from { transform: translateX(0); }
           to { transform: translateX(-50%); }
