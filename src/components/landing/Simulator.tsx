@@ -77,17 +77,16 @@ function Stepper({
 }
 
 const PRESETS = [
-  { d: 1, days: 7 },
-  { d: 3, days: 7 },
-  { d: 5, days: 5 },
-  { d: 5, days: 7 },
-  { d: 10, days: 7 },
-  { d: 13, days: 7 },
+  { d: 1, days: 22 },
+  { d: 2, days: 22 },
+  { d: 3, days: 22 },
+  { d: 5, days: 22 },
+  { d: 10, days: 22 },
 ];
 
 export function Simulator() {
-  const [perDay, setPerDay] = useState(5);
-  const [days, setDays] = useState(5);
+  const [perDay, setPerDay] = useState(3);
+  const [days, setDays] = useState(22);
 
   const total = perDay * days;
   const profit = total * LUCRO_POR_DISPLAY;
