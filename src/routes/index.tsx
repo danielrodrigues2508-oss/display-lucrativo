@@ -10,6 +10,7 @@ import { CtaButton } from "@/components/landing/Cta";
 import { Reveal } from "@/components/landing/Reveal";
 import { Simulator } from "@/components/landing/Simulator";
 import { VideoFan } from "@/components/landing/VideoFan";
+import { SafeImage } from "@/components/landing/SafeImage";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -83,21 +84,25 @@ const RECEBE = [
     n: "01",
     t: "Acesso Direto ao Fornecedor Exclusivo",
     d: "Preço de fábrica direto da fonte (R$23 a unidade), produção sob demanda sem necessidade de estoque e frete grátis a partir de 20 peças.",
+    image: "/imagens/entregavel-fabrica.jpg",
   },
   {
     n: "02",
     t: "Método Display Lucrativo",
     d: "O passo a passo completo de quem vende na rua: abordagens práticas que funcionam no comércio local, técnicas de fechamento e o processo rápido para configurar o display no celular.",
+    image: "/imagens/entregavel-metodo.jpg",
   },
   {
     n: "03",
     t: "Mentoria ao Vivo Todo Mês",
     d: "Um encontro mensal ao vivo direto comigo para tirar dúvidas reais de campo, analisar abordagens e destravar suas vendas.",
+    image: "/imagens/entregavel-mentoria.jpg",
   },
   {
     n: "04",
     t: "Comunidade Display Lucrativo",
     d: "Grupo exclusivo com quem está na mesma jornada para trocar experiências, novas estratégias de abordagem e parcerias no dia a dia.",
+    image: "/imagens/entregavel-comunidade.jpg",
   },
 ];
 
@@ -177,9 +182,9 @@ function Index() {
         </div>
       </section>
 
-      {/* ============ 03 — O QUE ACONTECE NA PRÁTICA ============ */}
+      {/* ============ 03 — O QUE ACONTECE NA PRÁTICA (2 COLUNAS COM IMAGEM) ============ */}
       <section className="relative px-4 py-16 sm:px-6 lg:py-28">
-        <div className="mx-auto max-w-4xl">
+        <div className="mx-auto max-w-6xl">
           <Reveal>
             <SectionLabel>📍 O que acontece na prática</SectionLabel>
             <h2 className="mt-4 font-display text-3xl leading-[1.08] font-extrabold text-balance sm:text-5xl">
@@ -190,25 +195,45 @@ function Index() {
             </h2>
           </Reveal>
 
-          <Reveal delay={80} className="mt-8">
-            <ul className="space-y-4">
-              {PRATICA.map((item) => (
-                <li
-                  key={item}
-                  className="flex items-start gap-3 rounded-2xl border border-border bg-[color-mix(in_oklab,var(--surface)_70%,transparent)] px-5 py-4"
-                >
-                  <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
-                  <span className="leading-relaxed text-zinc-200">{item}</span>
-                </li>
-              ))}
-            </ul>
+          <div className="mt-12 grid gap-10 lg:grid-cols-12 lg:items-center">
+            {/* Coluna 1: Textos e Bullets */}
+            <Reveal delay={80} className="lg:col-span-7">
+              <ul className="space-y-4">
+                {PRATICA.map((item) => (
+                  <li
+                    key={item}
+                    className="flex items-start gap-3 rounded-2xl border border-border bg-[color-mix(in_oklab,var(--surface)_70%,transparent)] px-5 py-4"
+                  >
+                    <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                    <span className="leading-relaxed text-zinc-200">{item}</span>
+                  </li>
+                ))}
+              </ul>
 
-            <p className="mt-8 font-display text-lg font-extrabold text-balance italic sm:text-2xl">
-              Você não vende acrílico. Você entrega o jeito mais rápido pro lojista{" "}
-              <span className="text-lime-glow">dominar as buscas da região</span> sem
-              precisar implorar nada pra ninguém.
-            </p>
-          </Reveal>
+              <p className="mt-8 font-display text-lg font-extrabold text-balance italic sm:text-2xl">
+                Você não vende acrílico. Você entrega o jeito mais rápido pro lojista{" "}
+                <span className="text-lime-glow">dominar as buscas da região</span> sem
+                precisar implorar nada pra ninguém.
+              </p>
+            </Reveal>
+
+            {/* Coluna 2: Card Fotográfico com o Display no Balcão */}
+            <Reveal delay={120} className="lg:col-span-5">
+              <div className="relative mx-auto max-w-md overflow-hidden rounded-3xl border border-primary/30 bg-zinc-900/90 p-3 shadow-[var(--shadow-deep)] lg:max-w-none">
+                <SafeImage
+                  src="/imagens/display-balcao.jpg"
+                  alt="Display Interativo posicionado estrategicamente no balcão ao lado da maquininha"
+                  fallbackLabel="Display Interativo em uso real no balcão"
+                  className="aspect-[4/3] sm:aspect-[5/4] w-full rounded-2xl object-cover"
+                />
+                <div className="p-3 text-center sm:p-4">
+                  <p className="text-xs font-semibold text-zinc-300">
+                    📸 Display Interativo no balcão: o cliente encosta o celular e avalia em 5 segundos.
+                  </p>
+                </div>
+              </div>
+            </Reveal>
+          </div>
         </div>
       </section>
 
@@ -245,26 +270,33 @@ function Index() {
               </div>
             </div>
 
-            <div className="surface-panel relative rounded-[1.75rem] border border-primary/40 p-6 shadow-[var(--shadow-deep)] sm:p-8">
-              <span className="mb-5 inline-flex rounded-full border border-primary/35 bg-[color-mix(in_oklab,var(--lime)_10%,transparent)] px-3.5 py-1.5 text-xs font-bold tracking-[0.14em] text-primary uppercase sm:absolute sm:top-6 sm:right-6 sm:mb-0">
-                Recomendado / maior lucro
-              </span>
-              <p className="font-display text-xl font-extrabold sm:text-2xl">
-                🚚 Lote 20 Displays{" "}
-                <span className="text-primary">(frete grátis)</span>
-              </p>
-              <dl className="mt-6 space-y-3 text-sm sm:text-base">
-                <div className="flex items-center justify-between gap-4">
-                  <dt className="text-muted-foreground">Custo fornecedor</dt>
-                  <dd className="font-display font-bold tabular-nums">R$460,00</dd>
+            {/* Card Lote 20 com cabeçalho flexível sem sobreposição */}
+            <div className="surface-panel flex flex-col justify-between rounded-[1.75rem] border border-primary/40 p-6 shadow-[var(--shadow-deep)] sm:p-8">
+              <div>
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
+                  <p className="font-display text-xl font-extrabold sm:text-2xl">
+                    🚚 Lote 20 Displays{" "}
+                    <span className="text-primary">(frete grátis)</span>
+                  </p>
+                  <span className="self-start sm:self-auto inline-flex rounded-full border border-primary/35 bg-[color-mix(in_oklab,var(--lime)_10%,transparent)] px-3.5 py-1.5 text-xs font-bold tracking-[0.14em] text-primary uppercase shrink-0">
+                    Recomendado / maior lucro
+                  </span>
                 </div>
-                <div className="flex items-center justify-between gap-4">
-                  <dt className="text-muted-foreground">Preço médio de venda</dt>
-                  <dd className="font-display font-bold tabular-nums">
-                    R$1.400,00 a R$1.600,00
-                  </dd>
-                </div>
-              </dl>
+
+                <dl className="mt-6 space-y-3 text-sm sm:text-base">
+                  <div className="flex items-center justify-between gap-4">
+                    <dt className="text-muted-foreground">Custo fornecedor</dt>
+                    <dd className="font-display font-bold tabular-nums">R$460,00</dd>
+                  </div>
+                  <div className="flex items-center justify-between gap-4">
+                    <dt className="text-muted-foreground">Preço médio de venda</dt>
+                    <dd className="font-display font-bold tabular-nums">
+                      R$1.400,00 a R$1.600,00
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+
               <div className="mt-6 rounded-2xl border border-primary/30 bg-[color-mix(in_oklab,var(--lime)_10%,var(--ink))] px-5 py-4">
                 <p className="text-xs sm:text-sm font-bold tracking-[0.18em] text-primary uppercase">
                   Lucro no bolso
@@ -298,7 +330,7 @@ function Index() {
         </div>
       </section>
 
-      {/* ============ 05 — O QUE VOCÊ RECEBE ============ */}
+      {/* ============ 05 — O QUE VOCÊ RECEBE (4 ENTREGÁVEIS COM BANNERS/MOCKUPS) ============ */}
       <section className="relative px-4 py-16 sm:px-6 lg:py-28">
         <div className="mx-auto max-w-6xl">
           <Reveal className="max-w-3xl">
@@ -308,11 +340,21 @@ function Index() {
             </h2>
           </Reveal>
 
-          <div className="mt-12 grid gap-5 sm:grid-cols-2">
+          <div className="mt-12 grid gap-6 sm:grid-cols-2">
             {RECEBE.map((card, i) => (
               <Reveal key={card.n} delay={i * 70}>
-                <div className="surface-panel flex h-full flex-col rounded-[1.75rem] border border-border p-6 sm:p-7">
-                  <div>
+                <div className="surface-panel flex h-full flex-col overflow-hidden rounded-[1.75rem] border border-border p-0 transition-all duration-300 hover:border-primary/50">
+                  {/* Container visual do mockup/banner no topo do card */}
+                  <div className="relative aspect-[16/9] w-full overflow-hidden border-b border-border/70 bg-zinc-950/80">
+                    <SafeImage
+                      src={card.image}
+                      alt={card.t}
+                      fallbackLabel={`Mockup: ${card.t}`}
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
+
+                  <div className="p-6 sm:p-7">
                     <span className="font-display text-sm font-bold text-primary">
                       {card.n}
                     </span>
@@ -328,7 +370,7 @@ function Index() {
         </div>
       </section>
 
-      {/* ============ 06 — COMO TUDO COMEÇOU ============ */}
+      {/* ============ 06 — COMO TUDO COMEÇOU (COM GALERIA ANTES E DEPOIS) ============ */}
       <section className="relative px-4 py-16 sm:px-6 lg:py-28">
         <div className="mx-auto max-w-4xl">
           <Reveal>
@@ -359,6 +401,35 @@ function Index() {
                 <strong className="text-lime-glow">R$ 3.000 limpos no bolso todo mês</strong>{" "}
                 com o Display Interativo.
               </p>
+            </div>
+          </Reveal>
+
+          {/* Grade de Fotos Antes e Depois / Bastidores */}
+          <Reveal delay={100} className="mt-12">
+            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+              <div className="overflow-hidden rounded-2xl border border-white/10 bg-zinc-900/80 p-3 shadow-lg">
+                <SafeImage
+                  src="/imagens/historia-mesa-2021.jpg"
+                  alt="2021: O início cortando papel na tesoura com a mesa cheia de pedidos"
+                  fallbackLabel="2021: O início cortando papel na tesoura"
+                  className="aspect-[4/3] w-full rounded-xl object-cover"
+                />
+                <p className="mt-3 text-center text-xs font-semibold text-zinc-300">
+                  ✂️ 2021: O início com tesoura, papel e mais de 30 peças na primeira semana.
+                </p>
+              </div>
+
+              <div className="overflow-hidden rounded-2xl border border-primary/30 bg-zinc-900/80 p-3 shadow-lg">
+                <SafeImage
+                  src="/imagens/historia-display-atual.jpg"
+                  alt="Hoje: Display Interativo profissional com chip NFC e QR Code direto da fábrica"
+                  fallbackLabel="Hoje: Display Interativo com tecnologia e escala"
+                  className="aspect-[4/3] w-full rounded-xl object-cover"
+                />
+                <p className="mt-3 text-center text-xs font-semibold text-primary">
+                  🚀 Hoje: Display Interativo profissional direto da fábrica com alta escala.
+                </p>
+              </div>
             </div>
           </Reveal>
         </div>
@@ -438,16 +509,18 @@ function Index() {
             </Reveal>
           </div>
 
-          {/* Ponte explicativa para a oferta */}
-          <Reveal delay={120} className="mt-8 text-center">
-            <p className="mx-auto max-w-2xl text-sm font-medium text-zinc-300 sm:text-base">
-              💡 <span className="text-primary font-semibold">Importante:</span> Ao entrar hoje no treinamento por R$ 97, você decide lá dentro qual dos dois caminhos quer seguir.
-            </p>
+          {/* Destaque do Aviso de Ponto de Partida Estilizado */}
+          <Reveal delay={120} className="mt-10">
+            <div className="mx-auto max-w-2xl rounded-2xl border border-primary/35 bg-zinc-900/90 p-5 text-center shadow-[0_0_35px_-12px_var(--lime)] backdrop-blur-sm">
+              <p className="text-sm font-semibold text-zinc-100 sm:text-base leading-relaxed">
+                💡 <span className="text-primary font-bold">Importante:</span> Ao entrar hoje no treinamento por R$ 97, você decide lá dentro qual dos dois caminhos quer seguir.
+              </p>
+            </div>
           </Reveal>
         </div>
       </section>
 
-      {/* ============ 08 — OFERTA ============ */}
+      {/* ============ 08 — OFERTA COM MOCKUP 3D ============ */}
       <section id="checkout" className="relative px-4 py-16 sm:px-6 lg:py-28">
         <div
           aria-hidden
@@ -466,6 +539,16 @@ function Index() {
               <h2 className="mx-auto mt-6 max-w-2xl font-display text-2xl leading-[1.1] font-extrabold text-balance sm:text-4xl">
                 Tudo pronto para você começar a faturar no comércio da sua região.
               </h2>
+
+              {/* Mockup 3D Oficial da Oferta */}
+              <div className="mx-auto mt-8 max-w-md overflow-hidden rounded-2xl border border-white/10 bg-zinc-950/60 p-2 shadow-xl">
+                <SafeImage
+                  src="/imagens/mockup-combo-97.png"
+                  alt="Mockup 3D Oficial do Combo Membro Fundador Display Lucrativo"
+                  fallbackLabel="Mockup Oficial Combo Membro Fundador"
+                  className="aspect-[16/9] sm:aspect-[2/1] w-full object-contain"
+                />
+              </div>
 
               <ul className="mx-auto mt-8 grid max-w-xl gap-4 text-left">
                 {CHECKLIST.map((item) => (
@@ -551,7 +634,7 @@ function Index() {
         </div>
       </section>
 
-      {/* ============ 11 — CTA FINAL ============ */}
+      {/* ============ 11 — CTA FINAL COM EQUILÍBRIO TIPOGRÁFICO ============ */}
       <section className="relative px-4 py-20 sm:px-6 lg:py-32">
         <div
           aria-hidden
@@ -562,9 +645,9 @@ function Index() {
         />
         <div className="relative mx-auto max-w-4xl text-center">
           <Reveal>
-            <h2 className="font-display text-3xl leading-[1.06] font-extrabold text-balance sm:text-6xl">
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-center leading-tight text-balance">
               Você pode continuar esperando o próximo salário pingar.
-              <br />
+              <br className="hidden sm:block" />{" "}
               <span className="text-lime-glow">
                 Ou pode começar hoje a construir um negócio muito lucrativo em sua região.
               </span>

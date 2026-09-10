@@ -77,16 +77,16 @@ function Stepper({
 }
 
 const PRESETS = [
-  { d: 1, days: 22 },
-  { d: 2, days: 22 },
-  { d: 3, days: 22 },
-  { d: 5, days: 22 },
-  { d: 10, days: 22 },
+  { d: 1, days: 26 },
+  { d: 2, days: 26 },
+  { d: 3, days: 26 },
+  { d: 5, days: 26 },
+  { d: 10, days: 26 },
 ];
 
 export function Simulator() {
   const [perDay, setPerDay] = useState(3);
-  const [days, setDays] = useState(22);
+  const [days, setDays] = useState(26);
 
   const total = perDay * days;
   const profit = total * LUCRO_POR_DISPLAY;
@@ -116,7 +116,7 @@ export function Simulator() {
             min={1}
             max={30}
           />
-          <Stepper label="Dias" value={days} onChange={setDays} min={1} max={30} />
+          <Stepper label="Dias no mês" value={days} onChange={setDays} min={1} max={30} />
         </div>
 
         <div className="mt-6 grid grid-cols-2 gap-2 sm:gap-3">
@@ -144,19 +144,19 @@ export function Simulator() {
 
         <div className="mt-3 rounded-2xl border border-border bg-[color-mix(in_oklab,var(--surface-2)_80%,transparent)] p-4">
           <p className="text-xs sm:text-sm font-bold tracking-[0.18em] text-muted-foreground uppercase">
-            Exemplo
+            Meta Recomendada
           </p>
           <p className="mt-1 font-display text-lg font-extrabold tabular-nums sm:text-xl">
-            22 Displays → <span className="text-lime-glow">R$1.034</span>
+            78 Displays (3/dia em 26 dias) → <span className="text-lime-glow">R$ 3.666</span>
           </p>
           <p className="mt-1 text-sm text-zinc-300">
-            É isso que está por trás da promessa de R$1.000 em 7 dias.
+            Mais de R$ 3.600 limpos no seu bolso dedicando 1 a 2 horas no fim do dia.
           </p>
         </div>
 
         <div className="mt-6">
           <p className="text-xs sm:text-sm font-bold tracking-[0.18em] text-muted-foreground uppercase">
-            Simulação rápida
+            Simulação rápida (26 dias úteis)
           </p>
           <div className="mt-3 flex flex-wrap gap-2">
             {PRESETS.map((p) => {
@@ -176,7 +176,7 @@ export function Simulator() {
                       : "border-border bg-[var(--surface-2)] text-muted-foreground hover:border-primary/50 hover:text-foreground",
                   )}
                 >
-                  {p.d} × {p.days} ={" "}
+                  {p.d} × {p.days}d ={" "}
                   <span className={active ? "" : "text-foreground"}>
                     {brl(p.d * p.days * LUCRO_POR_DISPLAY)}
                   </span>
