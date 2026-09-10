@@ -264,7 +264,9 @@ function Index() {
                     <dd className="font-display font-bold tabular-nums">R$460,00</dd>
                   </div>
                   <div className="flex items-center justify-between gap-4">
-                    <dt className="text-muted-foreground">Preço médio de venda</dt>
+                    <dt className="text-muted-foreground">
+                      Venda das 20 peças (a R$ 70 - R$ 80 cada)
+                    </dt>
                     <dd className="font-display font-bold tabular-nums">
                       R$1.400,00 a R$1.600,00
                     </dd>
@@ -574,8 +576,8 @@ function Index() {
               </div>
 
               <div className="mt-10 flex flex-col items-center">
-                <CtaButton className="max-w-lg">
-                  QUERO GARANTIR MINHA VAGA COM BÔNUS DE FUNDADOR
+                <CtaButton className="max-w-md">
+                  GARANTIR MINHA VAGA AGORA
                 </CtaButton>
                 <p className="mt-4 text-sm text-zinc-400">
                   🔒 Pagamento 100% Seguro • Acesso Imediato • 7 Dias de Garantia
@@ -680,8 +682,8 @@ function Index() {
               Apenas <span className="text-lime-glow">R$ 97 à vista</span> no Pix ou Cartão
             </p>
             <div className="mt-7 w-full max-w-md">
-              <CtaButton className="py-6 text-base shadow-[0_0_90px_-8px_var(--lime)] sm:text-xl">
-                QUERO COMEÇAR A VENDER HOJE MESMO
+              <CtaButton className="w-full max-w-md shadow-[0_0_70px_-10px_var(--lime)]">
+                COMEÇAR A VENDER HOJE
               </CtaButton>
             </div>
             <p className="mt-4 text-sm text-zinc-400">

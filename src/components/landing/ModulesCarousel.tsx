@@ -13,21 +13,21 @@ export const MODULES: ModuleItem[] = [
     id: "mod-01",
     num: "Módulo 01",
     title: "Preparando a Operação",
-    desc: "Mentalidade, precificação e montagem do material de campo.",
+    desc: "Mentalidade, precificação certa e montagem do material de campo.",
     image: "/modulos/modulo-01-preparando-operacao.jpg",
   },
   {
     id: "mod-02",
     num: "Módulo 02",
     title: "O Display Interativo",
-    desc: "Como gravar o chip NFC e link do Google em 10 segundos no celular.",
+    desc: "Gravação do chip NFC e link do Google em 10 segundos no celular.",
     image: "/modulos/modulo-02-o-display-perfeito.jpg",
   },
   {
     id: "mod-03",
     num: "Módulo 03",
     title: "A Rota das Primeiras Vendas",
-    desc: "Script validado de balcão e abordagem direta com o comerciante.",
+    desc: "Script prático de balcão e abordagem direta com o lojista.",
     image: "/modulos/modulo-03-rota-primeira-venda.jpg",
   },
   {
@@ -41,21 +41,35 @@ export const MODULES: ModuleItem[] = [
     id: "mod-05",
     num: "Módulo 05",
     title: "Acesso Direto à Fábrica",
-    desc: "Fornecedor exclusivo a preço de custo (R$ 23) sob demanda.",
+    desc: "Contato validado para comprar com custo reduzido e frete grátis.",
     image: "/modulos/modulo-05-fornecedor-fabrica.jpg",
   },
   {
     id: "mod-06",
     num: "Módulo 06",
+    title: "Blindagem de Objeções",
+    desc: "Respostas práticas para 'vou pensar' e 'já tenho QR Code'.",
+    image: "/modulos/modulo-06-quebra-de-objecoes.jpg",
+  },
+  {
+    id: "mod-07",
+    num: "Módulo 07",
+    title: "Google Perfil das Empresas",
+    desc: "Como demonstrar o impacto das avaliações no topo da busca.",
+    image: "/modulos/modulo-07-google-meu-negocio.jpg",
+  },
+  {
+    id: "mod-08",
+    num: "Módulo 08",
     title: "Comunidade & Networking",
-    desc: "Troca de estratégias diárias com operadores e mentorias mensais.",
-    image: "/modulos/modulo-06-comunidade.jpg",
+    desc: "Troca diária de estratégias com quem já está vendendo em campo.",
+    image: "/modulos/modulo-08-comunidade-networking.jpg",
   },
 ];
 
 export function ModulesCarousel() {
-  // Duplicar a lista 4x para loop contínuo perfeitamente suave sem cortes visuais
-  const loopItems = [...MODULES, ...MODULES, ...MODULES, ...MODULES];
+  // Duplicar a lista para loop infinito contínuo e suave sem cortes ou saltos
+  const loopItems = [...MODULES, ...MODULES, ...MODULES];
 
   return (
     <div className="relative w-full overflow-hidden py-4 no-scrollbar">
@@ -63,11 +77,11 @@ export function ModulesCarousel() {
       <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-12 bg-gradient-to-r from-[var(--background)] to-transparent sm:w-28" />
       <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-12 bg-gradient-to-l from-[var(--background)] to-transparent sm:w-28" />
 
-      <div className="modules-track-animated flex gap-5 py-4 no-scrollbar">
+      <div className="modules-track-animated flex gap-6 py-4 no-scrollbar hover:[animation-play-state:paused]">
         {loopItems.map((mod, idx) => (
           <div
             key={`${mod.id}-${idx}`}
-            className="group relative flex w-[230px] shrink-0 flex-col overflow-hidden rounded-2xl border border-white/10 bg-zinc-900/90 shadow-xl transition-all duration-300 hover:-translate-y-1.5 hover:border-primary/60 hover:shadow-[0_15px_40px_-10px_rgba(0,0,0,0.8),0_0_25px_-5px_var(--lime)] sm:w-[270px]"
+            className="group relative flex w-[280px] shrink-0 flex-col overflow-hidden rounded-2xl border border-white/10 bg-zinc-900/90 shadow-xl transition-all duration-300 hover:-translate-y-1.5 hover:border-primary/60 hover:shadow-[0_15px_40px_-10px_rgba(0,0,0,0.8),0_0_25px_-5px_var(--lime)]"
           >
             {/* Imagem / Poster do Módulo */}
             <div className="relative aspect-[3/4] w-full overflow-hidden bg-zinc-950">
@@ -86,7 +100,7 @@ export function ModulesCarousel() {
               </div>
 
               {/* Gradiente escuro na base do poster para contraste com os textos */}
-              <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/40 to-transparent opacity-90" />
+              <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/50 to-transparent opacity-90" />
 
               {/* Informações sobrepostas na parte inferior do poster */}
               <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5">
