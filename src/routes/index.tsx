@@ -296,7 +296,7 @@ function Index() {
                 </span>
               </h2>
               <p className="mt-4 text-sm leading-relaxed text-zinc-300 sm:text-base">
-                Arraste os controles para simular seus dias e peças.
+                Simule suas vendas diárias e veja o lucro limpo no bolso:
               </p>
             </Reveal>
             <Reveal delay={100} className="mx-auto max-w-xl">

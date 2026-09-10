@@ -54,16 +54,16 @@ export const MODULES: ModuleItem[] = [
 ];
 
 export function ModulesCarousel() {
-  // Duplicar a lista 3x para loop contínuo infinito perfeito sem saltos
-  const loopItems = [...MODULES, ...MODULES, ...MODULES];
+  // Duplicar a lista 4x para loop contínuo perfeitamente suave sem cortes visuais
+  const loopItems = [...MODULES, ...MODULES, ...MODULES, ...MODULES];
 
   return (
-    <div className="relative w-full overflow-hidden py-4">
+    <div className="relative w-full overflow-hidden py-4 no-scrollbar">
       {/* Sombras suaves nas bordas laterais para fade out elegante */}
-      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-12 bg-gradient-to-r from-[var(--background)] to-transparent sm:w-24" />
-      <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-12 bg-gradient-to-l from-[var(--background)] to-transparent sm:w-24" />
+      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-12 bg-gradient-to-r from-[var(--background)] to-transparent sm:w-28" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-12 bg-gradient-to-l from-[var(--background)] to-transparent sm:w-28" />
 
-      <div className="modules-track flex gap-5 py-4">
+      <div className="modules-track-animated flex gap-5 py-4 no-scrollbar">
         {loopItems.map((mod, idx) => (
           <div
             key={`${mod.id}-${idx}`}
@@ -101,31 +101,6 @@ export function ModulesCarousel() {
           </div>
         ))}
       </div>
-
-      <style>{`
-        .modules-track {
-          display: flex;
-          width: max-content;
-          animation: modules-scroll 32s linear infinite;
-        }
-        .modules-track:hover {
-          animation-play-state: paused;
-        }
-        @keyframes modules-scroll {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(calc(-100% / 3));
-          }
-        }
-        @media (prefers-reduced-motion: reduce) {
-          .modules-track {
-            animation: none;
-            overflow-x: auto;
-          }
-        }
-      `}</style>
     </div>
   );
 }
