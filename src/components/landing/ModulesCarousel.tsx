@@ -1,119 +1,164 @@
-import { SafeImage } from "./SafeImage";
-
-export interface ModuleItem {
-  id: string;
-  num: string;
-  title: string;
-  desc: string;
-  image: string;
-}
-
-export const MODULES: ModuleItem[] = [
-  {
-    id: "mod-01",
-    num: "Módulo 01",
-    title: "Preparando a Operação",
-    desc: "Mentalidade, precificação certa e montagem do material de campo.",
-    image: "/modulos/modulo-01-preparando-operacao.jpg",
-  },
-  {
-    id: "mod-02",
-    num: "Módulo 02",
-    title: "O Display Interativo",
-    desc: "Gravação do chip NFC e link do Google em 10 segundos no celular.",
-    image: "/modulos/modulo-02-o-display-perfeito.jpg",
-  },
-  {
-    id: "mod-03",
-    num: "Módulo 03",
-    title: "A Rota das Primeiras Vendas",
-    desc: "Script prático de balcão e abordagem direta com o lojista.",
-    image: "/modulos/modulo-03-rota-primeira-venda.jpg",
-  },
-  {
-    id: "mod-04",
-    num: "Módulo 04",
-    title: "Do Bairro à Escala",
-    desc: "Como fechar pacotes de múltiplos displays e gerar indicações.",
-    image: "/modulos/modulo-04-escala-balcao.jpg",
-  },
-  {
-    id: "mod-05",
-    num: "Módulo 05",
-    title: "Acesso Direto à Fábrica",
-    desc: "Contato validado para comprar com custo reduzido e frete grátis.",
-    image: "/modulos/modulo-05-fornecedor-fabrica.jpg",
-  },
-  {
-    id: "mod-06",
-    num: "Módulo 06",
-    title: "Blindagem de Objeções",
-    desc: "Respostas práticas para 'vou pensar' e 'já tenho QR Code'.",
-    image: "/modulos/modulo-06-quebra-de-objecoes.jpg",
-  },
-  {
-    id: "mod-07",
-    num: "Módulo 07",
-    title: "Google Perfil das Empresas",
-    desc: "Como demonstrar o impacto das avaliações no topo da busca.",
-    image: "/modulos/modulo-07-google-meu-negocio.jpg",
-  },
-  {
-    id: "mod-08",
-    num: "Módulo 08",
-    title: "Comunidade & Networking",
-    desc: "Troca diária de estratégias com quem já está vendendo em campo.",
-    image: "/modulos/modulo-08-comunidade-networking.jpg",
-  },
-];
-
 export function ModulesCarousel() {
-  // Duplicar a lista para loop infinito contínuo e suave sem cortes ou saltos
-  const loopItems = [...MODULES, ...MODULES, ...MODULES];
-
   return (
-    <div className="relative w-full overflow-hidden py-4 no-scrollbar">
-      {/* Sombras suaves nas bordas laterais para fade out elegante */}
-      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-12 bg-gradient-to-r from-[var(--background)] to-transparent sm:w-28" />
-      <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-12 bg-gradient-to-l from-[var(--background)] to-transparent sm:w-28" />
-
-      <div className="modules-track-animated flex gap-6 py-4 no-scrollbar hover:[animation-play-state:paused]">
-        {loopItems.map((mod, idx) => (
-          <div
-            key={`${mod.id}-${idx}`}
-            className="group relative flex w-[280px] shrink-0 flex-col overflow-hidden rounded-2xl border border-white/10 bg-zinc-900/90 shadow-xl transition-all duration-300 hover:-translate-y-1.5 hover:border-primary/60 hover:shadow-[0_15px_40px_-10px_rgba(0,0,0,0.8),0_0_25px_-5px_var(--lime)]"
-          >
-            {/* Imagem / Poster do Módulo */}
-            <div className="relative aspect-[3/4] w-full overflow-hidden bg-zinc-950">
-              <SafeImage
-                src={mod.image}
-                alt={mod.title}
-                fallbackLabel={mod.title}
-                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-
-              {/* Tag com o número do módulo no topo */}
-              <div className="absolute top-3 left-3 z-10">
-                <span className="inline-flex rounded-full border border-primary/40 bg-zinc-950/85 px-3 py-1 text-[11px] font-bold tracking-wider text-primary uppercase shadow-md backdrop-blur-md">
-                  {mod.num}
-                </span>
-              </div>
-
-              {/* Gradiente escuro na base do poster para contraste com os textos */}
-              <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/50 to-transparent opacity-90" />
-
-              {/* Informações sobrepostas na parte inferior do poster */}
-              <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5">
-                <h4 className="font-display text-base font-extrabold text-white group-hover:text-primary transition-colors sm:text-lg">
-                  {mod.title}
-                </h4>
-                <p className="mt-1.5 text-xs text-zinc-300 line-clamp-2 leading-relaxed">
-                  {mod.desc}
-                </p>
-              </div>
-            </div>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 mt-10 max-w-6xl mx-auto px-4">
+      {/* Card 1 | MÓDULO 00 */}
+      <div className="bg-zinc-900/60 border border-zinc-800/80 hover:border-emerald-500/40 transition-colors p-5 rounded-2xl flex flex-col justify-between">
+        <div>
+          <div className="flex items-center justify-between mb-3">
+            <span className="text-xs font-semibold uppercase tracking-wider text-zinc-400">
+              Módulo 00
+            </span>
+            <span className="px-2 py-0.5 text-xs font-semibold text-emerald-400 bg-emerald-950/60 rounded border border-emerald-500/30">
+              Display Grátis
+            </span>
           </div>
-        ))}
+          <h3 className="text-lg font-bold text-white mb-2 leading-snug">
+            SEU DISPLAY DEMONSTRAÇÃO
+          </h3>
+          <p className="text-sm text-zinc-400 leading-relaxed">
+            Explicando como funciona para receber seu display de demonstração.
+          </p>
+        </div>
+      </div>
+
+      {/* Card 2 | MÓDULO 01 */}
+      <div className="bg-zinc-900/60 border border-zinc-800/80 hover:border-emerald-500/40 transition-colors p-5 rounded-2xl flex flex-col justify-between">
+        <div>
+          <div className="flex items-center justify-between mb-3">
+            <span className="text-xs font-semibold uppercase tracking-wider text-zinc-400">
+              Módulo 01
+            </span>
+            <span className="px-2 py-0.5 text-xs font-medium text-zinc-300 bg-zinc-800 rounded border border-zinc-700">
+              Mentalidade
+            </span>
+          </div>
+          <h3 className="text-lg font-bold text-white mb-2 leading-snug">
+            SEM ISSO ESQUECE
+          </h3>
+          <p className="text-sm text-zinc-400 leading-relaxed">
+            Nosso Manifesto de ouro para focar apenas no que gera riqueza e cortar distrações.
+          </p>
+        </div>
+      </div>
+
+      {/* Card 3 | MÓDULO 02 */}
+      <div className="bg-zinc-900/60 border border-zinc-800/80 hover:border-emerald-500/40 transition-colors p-5 rounded-2xl flex flex-col justify-between">
+        <div>
+          <div className="flex items-center justify-between mb-3">
+            <span className="text-xs font-semibold uppercase tracking-wider text-zinc-400">
+              Módulo 02
+            </span>
+            <span className="px-2 py-0.5 text-xs font-semibold text-emerald-400 bg-emerald-950/60 rounded border border-emerald-500/30">
+              O Coração do Método
+            </span>
+          </div>
+          <h3 className="text-lg font-bold text-white mb-2 leading-snug">
+            SEUS 3MIL ESTÁ AQUI
+          </h3>
+          <p className="text-sm text-zinc-400 leading-relaxed">
+            Você não vende "plaquinha".
+          </p>
+        </div>
+      </div>
+
+      {/* Card 4 | MÓDULO 03 */}
+      <div className="bg-zinc-900/60 border border-zinc-800/80 hover:border-emerald-500/40 transition-colors p-5 rounded-2xl flex flex-col justify-between">
+        <div>
+          <div className="flex items-center justify-between mb-3">
+            <span className="text-xs font-semibold uppercase tracking-wider text-zinc-400">
+              Módulo 03
+            </span>
+            <span className="px-2 py-0.5 text-xs font-medium text-zinc-300 bg-zinc-800 rounded border border-zinc-700">
+              Operação Prática
+            </span>
+          </div>
+          <h3 className="text-lg font-bold text-white mb-2 leading-snug">
+            DISPLAY LUCRATIVO
+          </h3>
+          <p className="text-sm text-zinc-400 leading-relaxed">
+            Configurar o display no celular em 60 segundos e entregar com postura profissional.
+          </p>
+        </div>
+      </div>
+
+      {/* Card 5 | MÓDULO 04 */}
+      <div className="bg-zinc-900/60 border border-zinc-800/80 hover:border-emerald-500/40 transition-colors p-5 rounded-2xl flex flex-col justify-between">
+        <div>
+          <div className="flex items-center justify-between mb-3">
+            <span className="text-xs font-semibold uppercase tracking-wider text-zinc-400">
+              Módulo 04
+            </span>
+            <span className="px-2 py-0.5 text-xs font-semibold text-emerald-400 bg-emerald-950/60 rounded border border-emerald-500/30">
+              Tração Rápida
+            </span>
+          </div>
+          <h3 className="text-lg font-bold text-white mb-2 leading-snug">
+            SUAS 10 PRIMEIRAS VENDAS (F.A.C.I.L)
+          </h3>
+          <p className="text-sm text-zinc-400 leading-relaxed">
+            O método prático F.A.C.I.L e o raio-X dos comércios mais fáceis de fechar.
+          </p>
+        </div>
+      </div>
+
+      {/* Card 6 | MÓDULO 05 */}
+      <div className="bg-zinc-900/60 border border-zinc-800/80 hover:border-emerald-500/40 transition-colors p-5 rounded-2xl flex flex-col justify-between">
+        <div>
+          <div className="flex items-center justify-between mb-3">
+            <span className="text-xs font-semibold uppercase tracking-wider text-zinc-400">
+              Módulo 05
+            </span>
+            <span className="px-2 py-0.5 text-xs font-medium text-zinc-300 bg-zinc-800 rounded border border-zinc-700">
+              Blindagem de Mercado
+            </span>
+          </div>
+          <h3 className="text-lg font-bold text-white mb-2 leading-snug">
+            DISPLAY INTERATIVO NUNCA VAI SATURAR
+          </h3>
+          <p className="text-sm text-zinc-400 leading-relaxed">
+            Os 7 motivos reais para você ficar em paz.
+          </p>
+        </div>
+      </div>
+
+      {/* Card 7 | MÓDULO 06 */}
+      <div className="bg-zinc-900/60 border border-zinc-800/80 hover:border-emerald-500/40 transition-colors p-5 rounded-2xl flex flex-col justify-between">
+        <div>
+          <div className="flex items-center justify-between mb-3">
+            <span className="text-xs font-semibold uppercase tracking-wider text-zinc-400">
+              Módulo 06
+            </span>
+            <span className="px-2 py-0.5 text-xs font-medium text-zinc-300 bg-zinc-800 rounded border border-zinc-700">
+              Acompanhamento
+            </span>
+          </div>
+          <h3 className="text-lg font-bold text-white mb-2 leading-snug">
+            COMUNIDADE | DISPLAY LUCRATIVO
+          </h3>
+          <p className="text-sm text-zinc-400 leading-relaxed">
+            Acesso ao grupo oficial de networking + Mentoria ao vivo mensal direto comigo para destravar gargalos.
+          </p>
+        </div>
+      </div>
+
+      {/* Card 8 | PRÓXIMO NÍVEL 08 */}
+      <div className="bg-gradient-to-b from-zinc-900/90 to-emerald-950/30 border border-emerald-500/40 hover:border-emerald-400/80 transition-colors p-5 rounded-2xl flex flex-col justify-between shadow-lg shadow-emerald-950/20">
+        <div>
+          <div className="flex items-center justify-between mb-3">
+            <span className="text-xs font-bold uppercase tracking-wider text-emerald-400">
+              Próximo Nível 08
+            </span>
+            <span className="px-2 py-0.5 text-xs font-bold text-black bg-emerald-400 rounded">
+              Ativação & Escala
+            </span>
+          </div>
+          <h3 className="text-lg font-bold text-white mb-2 leading-snug">
+            DESAFIO 1K EM 7 DIAS & DESAFIOS PAGOS
+          </h3>
+          <p className="text-sm text-zinc-300 leading-relaxed">
+            O plano de ativação gratuito para colocar R$ 1.000 limpos no bolso logo na primeira semana, e acesso aos desafios avançados de escala.
+          </p>
+        </div>
       </div>
     </div>
   );
