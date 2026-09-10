@@ -1,4 +1,6 @@
-const modules = [
+import { motion } from 'framer-motion';
+
+const modulesList = [
   {
     tag: 'MÓDULO 00',
     badge: 'Display Grátis',
@@ -50,32 +52,40 @@ const modules = [
   }
 ];
 
-export function ModulesMarquee() {
-  // Duplicamos a lista para criar o loop perfeito sem falhas visuais
-  const displayList = [...modules, ...modules];
+export function ModulesCarousel() {
+  // Duplica os 8 itens para loop contínuo infinito
+  const fullCards = [...modulesList, ...modulesList];
 
   return (
-    <div className="w-full overflow-hidden py-8 relative">
-      {/* Sombras de fade suave nas bordas laterais */}
-      <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-28 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none" />
-      <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-28 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none" />
+    <div className="w-full overflow-hidden py-6 relative">
+      {/* Efeito de fade nas bordas */}
+      <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-r from-black via-black/80 to-transparent z-20 pointer-events-none" />
+      <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-l from-black via-black/80 to-transparent z-20 pointer-events-none" />
 
-      <div className="flex gap-4 sm:gap-6 w-max animate-modules-scroll hover:[animation-play-state:paused]">
-        {displayList.map((item, idx) => (
+      <motion.div
+        className="flex gap-4 sm:gap-6 w-max"
+        animate={{ x: ['0%', '-50%'] }}
+        transition={{
+          ease: 'linear',
+          duration: 32,
+          repeat: Infinity,
+        }}
+      >
+        {fullCards.map((item, index) => (
           <div
-            key={idx}
-            className={`w-[220px] sm:w-[260px] h-[380px] sm:h-[440px] rounded-2xl p-5 flex flex-col justify-between flex-shrink-0 transition-transform hover:scale-[1.02] ${
+            key={index}
+            className={`w-[220px] sm:w-[250px] h-[390px] sm:h-[420px] rounded-2xl p-5 flex flex-col justify-between flex-shrink-0 bg-zinc-900/90 border transition-colors ${
               item.highlight
-                ? 'bg-gradient-to-b from-zinc-900 to-emerald-950/40 border-2 border-emerald-400/80 shadow-lg shadow-emerald-500/10'
-                : 'bg-zinc-900/90 border border-zinc-800/80 hover:border-emerald-500/40'
+                ? 'border-emerald-400/80 bg-gradient-to-b from-zinc-900 to-emerald-950/30'
+                : 'border-zinc-800/80 hover:border-zinc-700'
             }`}
           >
             <div>
               <div className="flex items-center justify-between mb-4">
-                <span className={`text-xs font-bold uppercase tracking-wider ${item.highlight ? 'text-emerald-400' : 'text-zinc-400'}`}>
+                <span className={`text-[11px] font-bold uppercase tracking-wider ${item.highlight ? 'text-emerald-400' : 'text-zinc-400'}`}>
                   {item.tag}
                 </span>
-                <span className={`px-2.5 py-1 text-[11px] font-bold rounded-full border ${
+                <span className={`px-2.5 py-1 text-[10px] font-bold rounded-full border ${
                   item.highlight
                     ? 'bg-emerald-400 text-black border-emerald-400'
                     : 'bg-emerald-950/70 text-emerald-300 border-emerald-500/30'
@@ -84,22 +94,22 @@ export function ModulesMarquee() {
                 </span>
               </div>
 
-              <h3 className="text-lg sm:text-xl font-extrabold text-white leading-snug tracking-tight">
+              <h3 className="text-base sm:text-lg font-bold text-white leading-snug tracking-tight">
                 {item.title}
               </h3>
             </div>
 
             <div className="pt-4 border-t border-zinc-800/60">
-              <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed">
+              <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed">
                 {item.desc}
               </p>
             </div>
           </div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 }
 
-export const ModulesCarousel = ModulesMarquee;
-export default ModulesMarquee;
+export const ModulesMarquee = ModulesCarousel;
+export default ModulesCarousel;
