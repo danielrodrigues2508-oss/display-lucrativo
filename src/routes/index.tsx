@@ -342,13 +342,13 @@ function Index() {
               <Reveal key={card.n} delay={i * 70}>
                 <div className="surface-panel flex h-full flex-col overflow-hidden rounded-[1.75rem] border border-border p-5 sm:p-7 transition-all duration-300 hover:border-primary/50">
                   {/* Container visual do mockup/banner no topo do card */}
-                  <div className="relative w-full h-48 overflow-hidden rounded-xl border border-zinc-800 bg-zinc-950/80 mb-4">
+                  <div className="relative w-full h-52 overflow-hidden rounded-xl border border-zinc-800 bg-zinc-950 mb-4">
                     {card.image ? (
                       <img
                         src={card.image}
-                        alt={card.t}
+                        alt={card.t === "Acesso Direto ao Fornecedor Exclusivo" ? "Lote de displays de acrílico com NFC direto da fábrica" : card.t}
                         loading="lazy"
-                        className="h-full w-full object-cover object-bottom"
+                        className="w-full h-full object-cover object-center"
                       />
                     ) : (
                       <div className="flex h-full w-full flex-col items-center justify-center p-4 text-center">
@@ -414,29 +414,29 @@ function Index() {
           <Reveal delay={100} className="mt-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
               {/* Coluna 1 (Antes - 2021) */}
-              <div className="overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900/80 p-3 shadow-xl">
-                <img
-                  src="/images/historia-antes-depois.jpg"
-                  alt="2021: O início com tesoura, papel e mais de 30 peças na primeira semana"
-                  loading="lazy"
-                  className="aspect-[4/3] w-full rounded-xl object-cover"
+              <div className="flex flex-col gap-2">
+                <img 
+                  src="/images/historia-antes-depois.jpg" 
+                  alt="Primeiras placas de 2021 cortadas na tesoura" 
+                  className="w-full h-80 sm:h-96 object-cover rounded-xl border border-zinc-800" 
+                  loading="lazy" 
                 />
-                <p className="mt-3 text-center text-xs font-semibold text-zinc-300">
-                  ✂️ 2021: O início com tesoura, papel e mais de 30 peças na primeira semana.
-                </p>
+                <span className="text-xs sm:text-sm text-zinc-400 text-center">
+                  2021: O início com tesoura, papel e mais de 30 peças na primeira semana.
+                </span>
               </div>
 
-              {/* Coluna 2 (Hoje - O Método Validado) */}
-              <div className="overflow-hidden rounded-2xl border border-emerald-500/30 bg-zinc-900/80 p-3 shadow-xl">
-                <img
-                  src="/images/pratica-balcao-nfc.jpg"
-                  alt="Hoje: Display Interativo profissional com chip NFC direto da fábrica"
-                  loading="lazy"
-                  className="aspect-[4/3] w-full rounded-xl object-cover"
+              {/* Coluna 2 (Hoje - Método Validado) */}
+              <div className="flex flex-col gap-2">
+                <img 
+                  src="/images/historia-depois.jpg" 
+                  alt="Displays profissionais com tecnologia NFC na mão" 
+                  className="w-full h-80 sm:h-96 object-cover object-center rounded-xl border border-emerald-500/30 shadow-lg" 
+                  loading="lazy" 
                 />
-                <p className="mt-3 text-center text-xs font-semibold text-primary">
+                <span className="text-xs sm:text-sm text-emerald-400 font-medium text-center">
                   🚀 Hoje: Display Interativo profissional com tecnologia NFC direto da fábrica.
-                </p>
+                </span>
               </div>
             </div>
           </Reveal>
