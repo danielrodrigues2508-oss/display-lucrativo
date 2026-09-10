@@ -8,7 +8,6 @@ import {
 } from "@/components/ui/accordion";
 import { CtaButton } from "@/components/landing/Cta";
 import { PhotoSlot } from "@/components/landing/Media";
-import { ProofCarousel } from "@/components/landing/ProofCarousel";
 import { Reveal } from "@/components/landing/Reveal";
 import { Simulator } from "@/components/landing/Simulator";
 import { VideoFan } from "@/components/landing/VideoFan";
@@ -53,27 +52,28 @@ const FAQ = [
   },
   {
     q: "Trabalho o dia inteiro (CLT). Consigo fazer?",
-    a: "Com certeza. Você só precisa de 1 a 2 horas livres no final do dia ou no sábado. Comércios locais (padarias, hamburguerias, barbearias, oficinas) continuam abertos no fim da tarde e à noite, que é exatamente o melhor horário para falar com o dono.",
+    a: "Com certeza. Você só precisa de 1 a 2 horas livres no final do dia ou no sábado. Comércios locais continuam abertos no fim da tarde e à noite, que é o melhor horário para falar com o dono.",
   },
   {
     q: "Como recebo meu Display de Demonstração?",
-    a: "Assim que entrar na área de membros, você tem o botão para solicitar sua peça. Nós bancamos a produção física direto com o fornecedor parceiro e você cobre apenas a etiqueta de envio para o seu endereço. Se optar pelo pedido de 20 ou mais unidades, seu frete é 100% grátis.",
+    a: "Assim que entrar na área de membros, você solicita sua peça. Nós bancamos a produção física direto com o fornecedor e você cobre apenas o frete. A partir de 20 unidades, o frete é 100% grátis.",
   },
   {
     q: "Preciso comprar estoque para começar?",
-    a: "Não. Você só precisa do seu display de demonstração na mão para ir a campo. Você apresenta, vende para o comércio, recebe o dinheiro do cliente e só depois faz o pedido com o fornecedor. Zero risco de dinheiro parado.",
+    a: "Não. Com o display de demonstração na mão você apresenta, recebe o dinheiro do cliente e só depois faz o pedido com a fábrica. Zero risco de estoque parado.",
   },
   {
     q: "Tem mensalidade ou fidelidade?",
-    a: "Nenhuma. O pagamento é único (R$97 à vista). Você paga uma única vez e tem acesso completo ao método, fornecedor exclusivo e suporte.",
+    a: "Nenhuma. O pagamento é único (R$ 97 à vista).",
   },
   {
     q: "E se eu entrar e não conseguir vender nada?",
-    a: "Você está protegido pela Garantia Incondicional de 7 dias. Se assistir às aulas, testar a abordagem e achar que não é para você, basta mandar uma mensagem no suporte dentro do prazo e devolvemos 100% do seu dinheiro.",
+    a: "Garantia Incondicional de 7 dias. Devolvemos 100% do seu valor se pedir o cancelamento no prazo.",
   },
 ];
 
 const PRATICA = [
+  "O comerciante sabe que quanto mais avaliações no Google, mais o negócio dele fica na frente dos concorrentes da região. O problema é a correria do caixa e não saber como pedir isso pro cliente. Aqui entra nossa solução:",
   "O Display é bonito, profissional e chama atenção no balcão.",
   "O cliente só encosta o celular ou aponta a câmera.",
   "Em menos de 5 segundos a avaliação é feita e o Google passa a recomendar mais aquela loja.",
@@ -84,35 +84,31 @@ const RECEBE = [
     n: "01",
     t: "Acesso Direto ao Fornecedor Exclusivo",
     d: "Preço de fábrica direto da fonte (R$23 a unidade), produção sob demanda sem necessidade de estoque e frete grátis a partir de 20 peças.",
-    photo: "FOTO_PEDIDOS_PRODUCAO",
   },
   {
     n: "02",
     t: "Método Display Lucrativo",
     d: "O passo a passo completo de quem vende na rua: abordagens práticas que funcionam no comércio local, técnicas de fechamento e o processo rápido para configurar o display no celular.",
-    photo: "FOTO_ABORDAGEM",
   },
   {
     n: "03",
     t: "Mentoria ao Vivo Todo Mês",
     d: "Um encontro mensal ao vivo direto comigo para tirar dúvidas reais de campo, analisar abordagens e destravar suas vendas.",
-    photo: null,
   },
   {
     n: "04",
     t: "Comunidade Display Lucrativo",
     d: "Grupo exclusivo com quem está na mesma jornada para trocar experiências, novas estratégias de abordagem e parcerias no dia a dia.",
-    photo: null,
   },
 ];
 
 const CHECKLIST = [
-  "Método Display Lucrativo Completo (da abordagem ao fechamento em balcão)",
-  "Acesso Direto ao Fornecedor Exclusivo (preço de fábrica a R$23 a unidade)",
-  "Mentorias ao Vivo Mensais (tira-dúvidas de campo direto comigo)",
-  "Comunidade Display Lucrativo (networking com outros operadores)",
-  "Bônus Fundador: 1 Display de Demonstração bancado por nós",
-  "Condição Especial: opção de escala com frete grátis e call exclusiva",
+  "Método Display Lucrativo Completo (Da abordagem ao fechamento em balcão)",
+  "Acesso Direto ao Fornecedor Exclusivo (Preço de fábrica a R$ 23 a unidade)",
+  "Mentorias ao Vivo Mensais (Tira-dúvidas de campo direto comigo)",
+  "Comunidade Display Lucrativo (Networking com outros operadores)",
+  "Bônus Fundador: 1 Display de Demonstração Bancado por Nós",
+  "Condição Especial: Opção de Escala com Frete Grátis e Call Exclusiva",
 ];
 
 function Index() {
@@ -138,9 +134,10 @@ function Index() {
           </div>
 
           <h1 className="mx-auto mt-0 max-w-4xl font-display text-[2.1rem] leading-[1.03] font-extrabold text-balance sm:mt-4 sm:text-6xl lg:text-7xl">
-            3 displays por dia.{" "}
+            3 displays por dia.
+            <br />
             <span className="text-lime-glow">
-              Mais de R$3.000 limpos no seu bolso todo mês.
+              Mais de R$ 3.000 limpos no seu bolso todo mês.
             </span>
           </h1>
 
@@ -166,7 +163,7 @@ function Index() {
             {[
               { n: "4 ANOS", t: "Vendendo Display Interativo" },
               { n: "5+", t: "Nunca voltei para casa sem vender menos que isso" },
-              { n: "10–13", t: "Displays vendidos por dia, em média" },
+              { n: "10-13", t: "Displays vendidos por dia, em média" },
             ].map((item, i) => (
               <Reveal key={item.n} delay={i * 90}>
                 <p className="text-lime-glow font-display text-5xl font-extrabold sm:text-6xl">
@@ -195,13 +192,7 @@ function Index() {
           </Reveal>
 
           <Reveal delay={80} className="mt-8">
-            <p className="leading-relaxed text-muted-foreground sm:text-lg">
-              O comerciante sabe que quanto mais avaliações no Google, mais o negócio dele
-              fica na frente dos concorrentes da região. O problema é a correria do caixa e
-              não saber como pedir isso pro cliente. Aqui entra nossa solução:
-            </p>
-
-            <ul className="mt-8 space-y-4">
+            <ul className="space-y-4">
               {PRATICA.map((item) => (
                 <li
                   key={item}
@@ -249,13 +240,16 @@ function Index() {
                   Lucro no bolso
                 </p>
                 <p className="text-lime-glow mt-1 font-display text-2xl font-extrabold tabular-nums sm:text-3xl">
-                  + R$47,00 a R$57,00
+                   + R$ 47,00 a R$ 57,00
                 </p>
                 <p className="mt-1 text-sm text-muted-foreground">Até 71% de margem</p>
               </div>
             </div>
 
-            <div className="surface-panel rounded-[1.75rem] border border-primary/40 p-6 shadow-[var(--shadow-deep)] sm:p-8">
+            <div className="surface-panel relative rounded-[1.75rem] border border-primary/40 p-6 shadow-[var(--shadow-deep)] sm:p-8">
+              <span className="mb-5 inline-flex rounded-full border border-primary/35 bg-[color-mix(in_oklab,var(--lime)_10%,transparent)] px-3 py-1.5 text-[9px] font-bold tracking-[0.14em] text-primary uppercase sm:absolute sm:top-6 sm:right-6 sm:mb-0">
+                Recomendado / maior lucro
+              </span>
               <p className="font-display text-xl font-extrabold sm:text-2xl">
                 🚚 Lote 20 Displays{" "}
                 <span className="text-primary">(frete grátis)</span>
@@ -277,7 +271,7 @@ function Index() {
                   Lucro no bolso
                 </p>
                 <p className="text-lime-glow mt-1 font-display text-2xl font-extrabold tabular-nums sm:text-3xl">
-                  + R$940,00 a R$1.140,00
+                   + R$ 940,00 a R$ 1.140,00
                 </p>
                 <p className="mt-1 text-sm text-muted-foreground">Lucro 100% limpo</p>
               </div>
@@ -294,6 +288,9 @@ function Index() {
                   Veja o lucro limpo no seu bolso por mês:
                 </span>
               </h2>
+              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                Arraste os controles para simular seus dias e peças.
+              </p>
             </Reveal>
             <Reveal delay={100}>
               <Simulator />
@@ -315,14 +312,7 @@ function Index() {
           <div className="mt-12 grid gap-5 sm:grid-cols-2">
             {RECEBE.map((card, i) => (
               <Reveal key={card.n} delay={i * 70}>
-                <div className="surface-panel flex h-full flex-col gap-4 rounded-[1.75rem] border border-border p-6 sm:p-7">
-                  {card.photo && (
-                    <PhotoSlot
-                      id={card.photo}
-                      className="aspect-[16/10] w-full"
-                      alt={card.t}
-                    />
-                  )}
+                <div className="surface-panel flex h-full flex-col rounded-[1.75rem] border border-border p-6 sm:p-7">
                   <div>
                     <span className="font-display text-sm font-bold text-primary">
                       {card.n}
@@ -337,19 +327,55 @@ function Index() {
             ))}
           </div>
 
-          {/* ==== 06 — GALERIA VISUAL DE PROVA ==== */}
-          <div className="mt-24">
-            <Reveal className="max-w-3xl">
-              <h2 className="font-display text-3xl leading-[1.08] font-extrabold text-balance sm:text-5xl">
-                Eu não quero que você acredite em mim.{" "}
-                <span className="text-primary">Quero que você veja.</span>
-              </h2>
-            </Reveal>
+        </div>
+      </section>
 
-            <Reveal delay={80} className="mt-12">
-              <ProofCarousel />
-            </Reveal>
-          </div>
+      {/* ============ 06 — COMO TUDO COMEÇOU ============ */}
+      <section className="relative px-4 py-16 sm:px-6 lg:py-28">
+        <div className="mx-auto max-w-6xl">
+          <Reveal className="max-w-4xl">
+            <SectionLabel>📍 Como tudo começou</SectionLabel>
+            <h2 className="mt-4 font-display text-3xl leading-[1.08] font-extrabold text-balance sm:text-5xl">
+              Eu comecei exatamente onde você está hoje: procurando uma renda extra.
+            </h2>
+            <div className="mt-8 space-y-5 text-base leading-relaxed text-muted-foreground sm:text-lg">
+              <p>
+                Em 2021, eu estava quebrado e sem saber o que fazer. Buscando no YouTube uma
+                forma de renda extra, encontrei um vídeo sobre plaquinhas de Pix e decidi
+                testar: comprei os acrílicos, fiz a arte no Canva e recortava papel na tesoura.
+              </p>
+              <p className="font-semibold text-foreground">
+                Essa foto com a mesa cheia foi a minha primeira semana de vendas: mais de 30
+                peças entregues no comércio local.
+              </p>
+              <p>
+                De lá para cá o jogo mudou. Hoje não corto mais papel: uso o{" "}
+                <strong className="text-foreground">Display Interativo com aproximação</strong>,
+                direto da fábrica. Depois de anos batendo de porta em porta, validei um método
+                tão simples e direto que consigo ensinar qualquer pessoa a vender displays e
+                colocar dinheiro limpo no bolso, mesmo que você nunca tenha vendido nada na vida.
+              </p>
+              <p>
+                Minha história e a minha realidade financeira mudaram. Agora chegou a sua vez
+                de ver que é totalmente possível colocar mais de{" "}
+                <strong className="text-lime-glow">R$ 3.000 limpos no bolso todo mês</strong>{" "}
+                com o Display Interativo.
+              </p>
+            </div>
+          </Reveal>
+
+          <Reveal delay={80} className="mt-12 grid grid-cols-2 gap-3 sm:gap-5">
+            {["FOTO_PROVA_01", "FOTO_PROVA_02", "FOTO_PROVA_03", "FOTO_PROVA_04"].map(
+              (id, index) => (
+                <PhotoSlot
+                  key={id}
+                  id={id}
+                  className={index === 0 ? "aspect-[4/5] sm:row-span-2" : "aspect-[4/5] sm:aspect-[16/10]"}
+                  alt="Registros reais da jornada com Display Interativo"
+                />
+              ),
+            )}
+          </Reveal>
         </div>
       </section>
 
@@ -375,10 +401,10 @@ function Index() {
                 <div className="hairline my-6" />
                 <p className="leading-relaxed text-muted-foreground">
                   Nós bancamos a produção do seu primeiro{" "}
-                  <span className="font-semibold text-foreground">
-                    Display de Demonstração
-                  </span>
-                  . Enquanto a peça viaja até a sua casa, você já vai afiando o machado
+                   <span className="font-semibold text-foreground">
+                     Display de Demonstração.
+                   </span>{" "}
+                   Enquanto a peça viaja até a sua casa, você já vai afiando o machado
                   assistindo às aulas do método. Você só paga a etiqueta de frete para o seu
                   endereço. Chegou, configurou, vendeu no primeiro comércio da sua rua,
                   colocou o lucro no bolso e já tem caixa para o próximo passo.
@@ -387,12 +413,15 @@ function Index() {
             </Reveal>
 
             <Reveal delay={90}>
-              <div className="surface-panel flex h-full flex-col rounded-[1.75rem] border border-primary/50 p-6 shadow-[var(--shadow-deep)] sm:p-8">
+              <div className="surface-panel relative flex h-full flex-col rounded-[1.75rem] border border-primary/50 p-6 shadow-[var(--shadow-deep)] sm:p-8">
+                <span className="mb-5 inline-flex self-start rounded-full border border-primary/35 bg-[color-mix(in_oklab,var(--lime)_10%,transparent)] px-3 py-1.5 text-[9px] font-bold tracking-[0.14em] text-primary uppercase sm:absolute sm:top-6 sm:right-6 sm:mb-0">
+                  🔥 Para escalar rápido
+                </span>
                 <h3 className="font-display text-2xl font-extrabold text-lime-glow sm:text-3xl">
                   Opção 2: O Plano Escala 7 Dias
                 </h3>
                 <p className="mt-2 text-sm text-muted-foreground">
-                  Para quem já tem o recurso e quer começar em escala.
+                  Para quem quer acelerar os resultados desde o início.
                 </p>
                 <div className="hairline my-6" />
                 <p className="leading-relaxed text-muted-foreground">
@@ -446,12 +475,9 @@ function Index() {
                 Tudo pronto para você começar a faturar no comércio da sua região.
               </h2>
 
-              <ul className="mx-auto mt-8 grid max-w-xl gap-3 text-left">
+              <ul className="mx-auto mt-8 grid max-w-xl gap-4 text-left">
                 {CHECKLIST.map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-start gap-3 rounded-2xl border border-border bg-[color-mix(in_oklab,var(--surface-2)_75%,transparent)] px-5 py-4"
-                  >
+                  <li key={item} className="flex items-start gap-3">
                     <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
                     <span className="text-sm leading-relaxed sm:text-base">{item}</span>
                   </li>
@@ -465,10 +491,10 @@ function Index() {
                 </p>
                 <p className="text-lime-glow mt-2 font-display text-5xl leading-none font-extrabold sm:text-6xl">
                   R$97,00
-                  <span className="font-display text-xl font-bold sm:text-2xl"> à vista</span>
+                   <span className="font-display text-xl font-bold sm:text-2xl"> à vista</span>
                 </p>
                 <p className="mt-3 text-sm text-muted-foreground">
-                  (no Pix ou Cartão pagamento único)
+                  (no Pix ou Cartão - Pagamento Único)
                 </p>
               </div>
 
@@ -477,7 +503,7 @@ function Index() {
                   QUERO GARANTIR MINHA VAGA COM BÔNUS DE FUNDADOR
                 </CtaButton>
                 <p className="mt-4 text-sm text-muted-foreground">
-                  🔒 Pagamento 100% seguro • Acesso imediato • 7 dias de garantia
+                   🔒 Pagamento 100% Seguro • Acesso Imediato • 7 Dias de Garantia
                 </p>
               </div>
             </div>
@@ -547,17 +573,18 @@ function Index() {
           <Reveal>
             <h2 className="font-display text-3xl leading-[1.06] font-extrabold text-balance sm:text-6xl">
               Você pode continuar esperando o próximo salário pingar.
+              <br />
+              <span className="text-lime-glow">
+                Ou pode começar hoje a construir um negócio muito lucrativo em sua região.
+              </span>
             </h2>
-            <p className="mx-auto mt-6 max-w-2xl text-muted-foreground sm:text-lg">
-              Ou pode começar hoje a construir um negócio muito lucrativo em sua região.
-            </p>
           </Reveal>
 
           <Reveal delay={90} className="mt-14 grid gap-8 sm:grid-cols-2">
             {[
               { n: "1 a 2 horas", t: "livres no seu dia" },
               {
-                n: "+ R$3.000",
+                 n: "+ R$ 3.000",
                 t: "limpos no mês vendendo apenas 3 displays por dia",
               },
             ].map((item) => (
@@ -575,7 +602,7 @@ function Index() {
               🔥 Condição membro fundador (pagamento único)
             </span>
             <p className="mt-5 font-display text-2xl font-extrabold sm:text-3xl">
-              Apenas <span className="text-lime-glow">R$97 à vista</span> no Pix ou Cartão
+               Apenas <span className="text-lime-glow">R$ 97 à vista</span> no Pix ou Cartão
             </p>
             <div className="mt-7 w-full max-w-md">
               <CtaButton className="py-6 text-base shadow-[0_0_90px_-8px_var(--lime)] sm:text-xl">
@@ -583,7 +610,7 @@ function Index() {
               </CtaButton>
             </div>
             <p className="mt-4 text-sm text-muted-foreground">
-              🔒 Acesso imediato • Sem mensalidade • 7 dias de garantia incondicional
+               🔒 Acesso Imediato • Sem Mensalidade • 7 Dias de Garantia Incondicional
             </p>
           </Reveal>
         </div>
