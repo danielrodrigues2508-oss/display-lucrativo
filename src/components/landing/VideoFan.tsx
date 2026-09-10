@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
 
 const heroCards = [
-  { id: 1, src: "/images/hero-1.jpg", rotate: -18, y: 35, x: 25 },
-  { id: 2, src: "/images/hero-2.jpg", rotate: -10, y: 12, x: 10 },
-  { id: 3, src: "/images/hero-3.jpg", rotate: -3, y: 0, x: 0 },
-  { id: 4, src: "/images/hero-4.jpg", rotate: 4, y: 0, x: 0 },
-  { id: 5, src: "/images/hero-5.jpg", rotate: 11, y: 12, x: -10 },
-  { id: 6, src: "/images/hero-6.jpg", rotate: 19, y: 35, x: -25 },
+  { id: 1, videoSrc: "/videos/card1.mp4", rotate: -18, y: 35, x: 25 },
+  { id: 2, videoSrc: "/videos/card2.mp4", rotate: -10, y: 12, x: 10 },
+  { id: 3, videoSrc: "/videos/card3.mp4", rotate: -3, y: 0, x: 0 },
+  { id: 4, videoSrc: "/videos/card4.mp4", rotate: 4, y: 0, x: 0 },
+  { id: 5, videoSrc: "/videos/card5.mp4", rotate: 11, y: 12, x: -10 },
+  { id: 6, videoSrc: "/videos/card6.mp4", rotate: 19, y: 35, x: -25 },
 ];
 
 export function HeroFan() {
@@ -38,11 +38,13 @@ export function HeroFan() {
             style={{ zIndex: i + 1 }}
             className="w-28 sm:w-36 md:w-44 aspect-[9/16] rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-zinc-900 flex-shrink-0 cursor-pointer origin-bottom"
           >
-            <img
-              src={card.src}
-              alt="Display interativo em operação"
-              className="w-full h-full object-cover select-none pointer-events-none"
-              loading="eager"
+            <video
+              src={card.videoSrc}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover pointer-events-none select-none"
             />
           </motion.div>
         ))}
