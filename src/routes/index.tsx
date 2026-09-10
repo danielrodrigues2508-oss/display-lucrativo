@@ -85,25 +85,25 @@ const RECEBE = [
     n: "01",
     t: "Acesso Direto ao Fornecedor Exclusivo",
     d: "Preço de fábrica direto da fonte (R$23 a unidade), produção sob demanda sem necessidade de estoque e frete grátis a partir de 20 peças.",
-    image: "/imagens/entregavel-fabrica.jpg",
+    image: "/images/entregavel-caixa-fabrica.jpg",
   },
   {
     n: "02",
     t: "Método Display Lucrativo",
     d: "O passo a passo completo de quem vende na rua: abordagens práticas que funcionam no comércio local, técnicas de fechamento e o processo rápido para configurar o display no celular.",
-    image: "/imagens/entregavel-metodo.jpg",
+    image: "",
   },
   {
     n: "03",
     t: "Mentoria ao Vivo Todo Mês",
     d: "Um encontro mensal ao vivo direto comigo para tirar dúvidas reais de campo, analisar abordagens e destravar suas vendas.",
-    image: "/imagens/entregavel-mentoria.jpg",
+    image: "",
   },
   {
     n: "04",
     t: "Comunidade Display Lucrativo",
     d: "Grupo exclusivo com quem está na mesma jornada para trocar experiências, novas estratégias de abordagem e parcerias no dia a dia.",
-    image: "/imagens/entregavel-comunidade.jpg",
+    image: "",
   },
 ];
 
@@ -194,14 +194,14 @@ function Index() {
 
             {/* Coluna 2: Card Fotográfico com o Display no Balcão */}
             <Reveal delay={120} className="lg:col-span-5">
-              <div className="relative mx-auto max-w-md overflow-hidden rounded-3xl border border-primary/30 bg-zinc-900/90 p-3 shadow-[var(--shadow-deep)] lg:max-w-none">
+              <div className="relative mx-auto max-w-md overflow-hidden rounded-2xl border border-emerald-500/20 bg-zinc-900/90 p-2 sm:p-3 shadow-xl lg:max-w-none">
                 <SafeImage
-                  src="/imagens/display-balcao.jpg"
+                  src="/images/pratica-balcao-nfc.jpg"
                   alt="Display Interativo posicionado estrategicamente no balcão ao lado da maquininha"
                   fallbackLabel="Display Interativo em uso real no balcão"
-                  className="aspect-[4/3] sm:aspect-[5/4] w-full rounded-2xl object-cover"
+                  className="w-full h-auto max-h-[460px] rounded-xl object-cover"
                 />
-                <div className="p-3 text-center sm:p-4">
+                <div className="p-3 text-center">
                   <p className="text-xs font-semibold text-zinc-300">
                     📸 Display Interativo no balcão: o cliente encosta o celular e avalia em 5 segundos.
                   </p>
@@ -327,7 +327,7 @@ function Index() {
         </div>
       </section>
 
-      {/* ============ 05 — O QUE VOCÊ RECEBE (4 ENTREGÁVEIS COM BANNERS/MOCKUPS) ============ */}
+      {/* ============ 05 — O QUE VOCÊ RECEBE (4 ENTREGÁVEIS) ============ */}
       <section className="relative px-4 py-16 sm:px-6 lg:py-28">
         <div className="mx-auto max-w-6xl">
           <Reveal className="max-w-3xl">
@@ -340,9 +340,9 @@ function Index() {
           <div className="mt-12 grid gap-6 sm:grid-cols-2">
             {RECEBE.map((card, i) => (
               <Reveal key={card.n} delay={i * 70}>
-                <div className="surface-panel flex h-full flex-col overflow-hidden rounded-[1.75rem] border border-border p-0 transition-all duration-300 hover:border-primary/50">
+                <div className="surface-panel flex h-full flex-col overflow-hidden rounded-[1.75rem] border border-border p-5 sm:p-7 transition-all duration-300 hover:border-primary/50">
                   {/* Container visual do mockup/banner no topo do card */}
-                  <div className="relative aspect-[16/9] w-full overflow-hidden border-b border-border/70 bg-zinc-950/80">
+                  <div className="relative w-full h-48 overflow-hidden rounded-xl border border-zinc-800 bg-zinc-950/80 mb-4">
                     <SafeImage
                       src={card.image}
                       alt={card.t}
@@ -351,7 +351,7 @@ function Index() {
                     />
                   </div>
 
-                  <div className="p-6 sm:p-7">
+                  <div>
                     <span className="font-display text-sm font-bold text-primary">
                       {card.n}
                     </span>
@@ -367,7 +367,7 @@ function Index() {
         </div>
       </section>
 
-      {/* ============ 06 — COMO TUDO COMEÇOU (COM GALERIA ANTES E DEPOIS) ============ */}
+      {/* ============ 06 — COMO TUDO COMEÇOU (FOTO BANCADA DE PRODUÇÃO) ============ */}
       <section className="relative px-4 py-16 sm:px-6 lg:py-28">
         <div className="mx-auto max-w-4xl">
           <Reveal>
@@ -401,32 +401,18 @@ function Index() {
             </div>
           </Reveal>
 
-          {/* Grade de Fotos Antes e Depois / Bastidores */}
+          {/* Foto real da bancada de produção e testes */}
           <Reveal delay={100} className="mt-12">
-            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-              <div className="overflow-hidden rounded-2xl border border-white/10 bg-zinc-900/80 p-3 shadow-lg">
-                <SafeImage
-                  src="/imagens/historia-mesa-2021.jpg"
-                  alt="2021: O início cortando papel na tesoura com a mesa cheia de pedidos"
-                  fallbackLabel="2021: O início cortando papel na tesoura"
-                  className="aspect-[4/3] w-full rounded-xl object-cover"
-                />
-                <p className="mt-3 text-center text-xs font-semibold text-zinc-300">
-                  ✂️ 2021: O início com tesoura, papel e mais de 30 peças na primeira semana.
-                </p>
-              </div>
-
-              <div className="overflow-hidden rounded-2xl border border-primary/30 bg-zinc-900/80 p-3 shadow-lg">
-                <SafeImage
-                  src="/imagens/historia-display-atual.jpg"
-                  alt="Hoje: Display Interativo profissional com chip NFC e QR Code direto da fábrica"
-                  fallbackLabel="Hoje: Display Interativo com tecnologia e escala"
-                  className="aspect-[4/3] w-full rounded-xl object-cover"
-                />
-                <p className="mt-3 text-center text-xs font-semibold text-primary">
-                  🚀 Hoje: Display Interativo profissional direto da fábrica com alta escala.
-                </p>
-              </div>
+            <div className="mx-auto max-w-2xl overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900/80 p-2 sm:p-3 shadow-2xl">
+              <SafeImage
+                src="/images/historia-antes-depois.jpg"
+                alt="A bancada de testes e os primeiros lotes validados na prática"
+                fallbackLabel="Bancada de testes e primeiros lotes de produção"
+                className="w-full h-auto rounded-xl object-cover"
+              />
+              <p className="mt-3 text-center text-xs font-semibold text-zinc-300 pb-1">
+                📸 A bancada de testes e os primeiros lotes validados na prática.
+              </p>
             </div>
           </Reveal>
         </div>

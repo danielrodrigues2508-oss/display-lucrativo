@@ -3,7 +3,7 @@ import { Image as ImageIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface SafeImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
-  src: string;
+  src?: string;
   alt: string;
   className?: string;
   containerClassName?: string;
@@ -18,14 +18,14 @@ export function SafeImage({
   fallbackLabel,
   ...props
 }: SafeImageProps) {
-  const [failed, setFailed] = useState(false);
+  const [failed, setFailed] = useState(!src);
   const [loaded, setLoaded] = useState(false);
 
-  if (failed) {
+  if (!src || failed) {
     return (
       <div
         className={cn(
-          "relative flex h-full w-full min-h-[140px] flex-col items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-zinc-900/60 p-4 text-center",
+          "relative flex h-full w-full min-h-[140px] flex-col items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-zinc-900/80 p-4 text-center backdrop-blur-xs",
           containerClassName
         )}
       >
@@ -34,9 +34,6 @@ export function SafeImage({
         </div>
         <span className="text-xs font-semibold text-zinc-300 line-clamp-1">
           {fallbackLabel || alt}
-        </span>
-        <span className="text-[10px] text-zinc-300 font-mono mt-1 opacity-75">
-          {src}
         </span>
       </div>
     );
