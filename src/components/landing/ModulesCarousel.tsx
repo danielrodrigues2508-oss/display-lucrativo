@@ -1,167 +1,105 @@
-export function ModulesCarousel() {
+const modules = [
+  {
+    tag: 'MÓDULO 00',
+    badge: 'Display Grátis',
+    title: 'SEU DISPLAY DEMONSTRAÇÃO',
+    desc: 'Explicando como funciona para receber seu display de demonstração.'
+  },
+  {
+    tag: 'MÓDULO 01',
+    badge: 'Mentalidade',
+    title: 'SEM ISSO ESQUECE',
+    desc: 'Nosso Manifesto de ouro para focar apenas no que gera riqueza e cortar distrações.'
+  },
+  {
+    tag: 'MÓDULO 02',
+    badge: 'O Coração do Método',
+    title: 'SEUS 3MIL ESTÁ AQUI',
+    desc: 'Você não vende "plaquinha". Domine a abordagem que fecha no balcão.'
+  },
+  {
+    tag: 'MÓDULO 03',
+    badge: 'Operação Prática',
+    title: 'DISPLAY LUCRATIVO',
+    desc: 'Configurar o display no celular em 60 segundos e entregar com postura profissional.'
+  },
+  {
+    tag: 'MÓDULO 04',
+    badge: 'Tração Rápida',
+    title: 'SUAS 10 PRIMEIRAS VENDAS (F.A.C.I.L)',
+    desc: 'O método prático F.A.C.I.L e o raio-X dos comércios mais fáceis de fechar.'
+  },
+  {
+    tag: 'MÓDULO 05',
+    badge: 'Blindagem de Mercado',
+    title: 'DISPLAY INTERATIVO NUNCA VAI SATURAR',
+    desc: 'Os 7 motivos reais para você ficar em paz com o mercado local.'
+  },
+  {
+    tag: 'MÓDULO 06',
+    badge: 'Acompanhamento',
+    title: 'COMUNIDADE | DISPLAY LUCRATIVO',
+    desc: 'Acesso ao grupo oficial de networking + Mentoria ao vivo mensal direto comigo.'
+  },
+  {
+    tag: 'PRÓXIMO NÍVEL 08',
+    badge: 'Ativação & Escala',
+    title: 'DESAFIO 1K EM 7 DIAS & DESAFIOS PAGOS',
+    desc: 'Plano de ativação para colocar R$ 1.000 limpos no bolso logo na primeira semana.',
+    highlight: true
+  }
+];
+
+export function ModulesMarquee() {
+  // Duplicamos a lista para criar o loop perfeito sem falhas visuais
+  const displayList = [...modules, ...modules];
+
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 mt-10 max-w-6xl mx-auto px-4">
-      {/* Card 1 | MÓDULO 00 */}
-      <div className="bg-zinc-900/60 border border-zinc-800/80 hover:border-emerald-500/40 transition-colors p-5 rounded-2xl flex flex-col justify-between">
-        <div>
-          <div className="flex items-center justify-between mb-3">
-            <span className="text-xs font-semibold uppercase tracking-wider text-zinc-400">
-              Módulo 00
-            </span>
-            <span className="px-2 py-0.5 text-xs font-semibold text-emerald-400 bg-emerald-950/60 rounded border border-emerald-500/30">
-              Display Grátis
-            </span>
-          </div>
-          <h3 className="text-lg font-bold text-white mb-2 leading-snug">
-            SEU DISPLAY DEMONSTRAÇÃO
-          </h3>
-          <p className="text-sm text-zinc-400 leading-relaxed">
-            Explicando como funciona para receber seu display de demonstração.
-          </p>
-        </div>
-      </div>
+    <div className="w-full overflow-hidden py-8 relative">
+      {/* Sombras de fade suave nas bordas laterais */}
+      <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-28 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none" />
+      <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-28 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none" />
 
-      {/* Card 2 | MÓDULO 01 */}
-      <div className="bg-zinc-900/60 border border-zinc-800/80 hover:border-emerald-500/40 transition-colors p-5 rounded-2xl flex flex-col justify-between">
-        <div>
-          <div className="flex items-center justify-between mb-3">
-            <span className="text-xs font-semibold uppercase tracking-wider text-zinc-400">
-              Módulo 01
-            </span>
-            <span className="px-2 py-0.5 text-xs font-medium text-zinc-300 bg-zinc-800 rounded border border-zinc-700">
-              Mentalidade
-            </span>
-          </div>
-          <h3 className="text-lg font-bold text-white mb-2 leading-snug">
-            SEM ISSO ESQUECE
-          </h3>
-          <p className="text-sm text-zinc-400 leading-relaxed">
-            Nosso Manifesto de ouro para focar apenas no que gera riqueza e cortar distrações.
-          </p>
-        </div>
-      </div>
+      <div className="flex gap-4 sm:gap-6 w-max animate-modules-scroll hover:[animation-play-state:paused]">
+        {displayList.map((item, idx) => (
+          <div
+            key={idx}
+            className={`w-[220px] sm:w-[260px] h-[380px] sm:h-[440px] rounded-2xl p-5 flex flex-col justify-between flex-shrink-0 transition-transform hover:scale-[1.02] ${
+              item.highlight
+                ? 'bg-gradient-to-b from-zinc-900 to-emerald-950/40 border-2 border-emerald-400/80 shadow-lg shadow-emerald-500/10'
+                : 'bg-zinc-900/90 border border-zinc-800/80 hover:border-emerald-500/40'
+            }`}
+          >
+            <div>
+              <div className="flex items-center justify-between mb-4">
+                <span className={`text-xs font-bold uppercase tracking-wider ${item.highlight ? 'text-emerald-400' : 'text-zinc-400'}`}>
+                  {item.tag}
+                </span>
+                <span className={`px-2.5 py-1 text-[11px] font-bold rounded-full border ${
+                  item.highlight
+                    ? 'bg-emerald-400 text-black border-emerald-400'
+                    : 'bg-emerald-950/70 text-emerald-300 border-emerald-500/30'
+                }`}>
+                  {item.badge}
+                </span>
+              </div>
 
-      {/* Card 3 | MÓDULO 02 */}
-      <div className="bg-zinc-900/60 border border-zinc-800/80 hover:border-emerald-500/40 transition-colors p-5 rounded-2xl flex flex-col justify-between">
-        <div>
-          <div className="flex items-center justify-between mb-3">
-            <span className="text-xs font-semibold uppercase tracking-wider text-zinc-400">
-              Módulo 02
-            </span>
-            <span className="px-2 py-0.5 text-xs font-semibold text-emerald-400 bg-emerald-950/60 rounded border border-emerald-500/30">
-              O Coração do Método
-            </span>
-          </div>
-          <h3 className="text-lg font-bold text-white mb-2 leading-snug">
-            SEUS 3MIL ESTÁ AQUI
-          </h3>
-          <p className="text-sm text-zinc-400 leading-relaxed">
-            Você não vende "plaquinha".
-          </p>
-        </div>
-      </div>
+              <h3 className="text-lg sm:text-xl font-extrabold text-white leading-snug tracking-tight">
+                {item.title}
+              </h3>
+            </div>
 
-      {/* Card 4 | MÓDULO 03 */}
-      <div className="bg-zinc-900/60 border border-zinc-800/80 hover:border-emerald-500/40 transition-colors p-5 rounded-2xl flex flex-col justify-between">
-        <div>
-          <div className="flex items-center justify-between mb-3">
-            <span className="text-xs font-semibold uppercase tracking-wider text-zinc-400">
-              Módulo 03
-            </span>
-            <span className="px-2 py-0.5 text-xs font-medium text-zinc-300 bg-zinc-800 rounded border border-zinc-700">
-              Operação Prática
-            </span>
+            <div className="pt-4 border-t border-zinc-800/60">
+              <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed">
+                {item.desc}
+              </p>
+            </div>
           </div>
-          <h3 className="text-lg font-bold text-white mb-2 leading-snug">
-            DISPLAY LUCRATIVO
-          </h3>
-          <p className="text-sm text-zinc-400 leading-relaxed">
-            Configurar o display no celular em 60 segundos e entregar com postura profissional.
-          </p>
-        </div>
-      </div>
-
-      {/* Card 5 | MÓDULO 04 */}
-      <div className="bg-zinc-900/60 border border-zinc-800/80 hover:border-emerald-500/40 transition-colors p-5 rounded-2xl flex flex-col justify-between">
-        <div>
-          <div className="flex items-center justify-between mb-3">
-            <span className="text-xs font-semibold uppercase tracking-wider text-zinc-400">
-              Módulo 04
-            </span>
-            <span className="px-2 py-0.5 text-xs font-semibold text-emerald-400 bg-emerald-950/60 rounded border border-emerald-500/30">
-              Tração Rápida
-            </span>
-          </div>
-          <h3 className="text-lg font-bold text-white mb-2 leading-snug">
-            SUAS 10 PRIMEIRAS VENDAS (F.A.C.I.L)
-          </h3>
-          <p className="text-sm text-zinc-400 leading-relaxed">
-            O método prático F.A.C.I.L e o raio-X dos comércios mais fáceis de fechar.
-          </p>
-        </div>
-      </div>
-
-      {/* Card 6 | MÓDULO 05 */}
-      <div className="bg-zinc-900/60 border border-zinc-800/80 hover:border-emerald-500/40 transition-colors p-5 rounded-2xl flex flex-col justify-between">
-        <div>
-          <div className="flex items-center justify-between mb-3">
-            <span className="text-xs font-semibold uppercase tracking-wider text-zinc-400">
-              Módulo 05
-            </span>
-            <span className="px-2 py-0.5 text-xs font-medium text-zinc-300 bg-zinc-800 rounded border border-zinc-700">
-              Blindagem de Mercado
-            </span>
-          </div>
-          <h3 className="text-lg font-bold text-white mb-2 leading-snug">
-            DISPLAY INTERATIVO NUNCA VAI SATURAR
-          </h3>
-          <p className="text-sm text-zinc-400 leading-relaxed">
-            Os 7 motivos reais para você ficar em paz.
-          </p>
-        </div>
-      </div>
-
-      {/* Card 7 | MÓDULO 06 */}
-      <div className="bg-zinc-900/60 border border-zinc-800/80 hover:border-emerald-500/40 transition-colors p-5 rounded-2xl flex flex-col justify-between">
-        <div>
-          <div className="flex items-center justify-between mb-3">
-            <span className="text-xs font-semibold uppercase tracking-wider text-zinc-400">
-              Módulo 06
-            </span>
-            <span className="px-2 py-0.5 text-xs font-medium text-zinc-300 bg-zinc-800 rounded border border-zinc-700">
-              Acompanhamento
-            </span>
-          </div>
-          <h3 className="text-lg font-bold text-white mb-2 leading-snug">
-            COMUNIDADE | DISPLAY LUCRATIVO
-          </h3>
-          <p className="text-sm text-zinc-400 leading-relaxed">
-            Acesso ao grupo oficial de networking + Mentoria ao vivo mensal direto comigo para destravar gargalos.
-          </p>
-        </div>
-      </div>
-
-      {/* Card 8 | PRÓXIMO NÍVEL 08 */}
-      <div className="bg-gradient-to-b from-zinc-900/90 to-emerald-950/30 border border-emerald-500/40 hover:border-emerald-400/80 transition-colors p-5 rounded-2xl flex flex-col justify-between shadow-lg shadow-emerald-950/20">
-        <div>
-          <div className="flex items-center justify-between mb-3">
-            <span className="text-xs font-bold uppercase tracking-wider text-emerald-400">
-              Próximo Nível 08
-            </span>
-            <span className="px-2 py-0.5 text-xs font-bold text-black bg-emerald-400 rounded">
-              Ativação & Escala
-            </span>
-          </div>
-          <h3 className="text-lg font-bold text-white mb-2 leading-snug">
-            DESAFIO 1K EM 7 DIAS & DESAFIOS PAGOS
-          </h3>
-          <p className="text-sm text-zinc-300 leading-relaxed">
-            O plano de ativação gratuito para colocar R$ 1.000 limpos no bolso logo na primeira semana, e acesso aos desafios avançados de escala.
-          </p>
-        </div>
+        ))}
       </div>
     </div>
   );
 }
 
-export default ModulesCarousel;
+export const ModulesCarousel = ModulesMarquee;
+export default ModulesMarquee;

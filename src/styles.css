@@ -199,6 +199,24 @@
   transform: none;
 }
 
+@keyframes modulesScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-modules-scroll {
+  animation: modulesScroll 35s linear infinite;
+  will-change: transform;
+}
+
+.animate-modules-scroll:hover {
+  animation-play-state: paused;
+}
+
 @keyframes modules-scroll {
   0% {
     transform: translateX(0);
@@ -231,6 +249,7 @@
   .animate-fan-in {
     animation-duration: 0.01ms;
   }
+  .animate-modules-scroll,
   .modules-track-animated {
     animation: none;
     overflow-x: auto;
