@@ -103,12 +103,12 @@ const RECEBE = [
 ];
 
 const CHECKLIST = [
-  "Método Display Lucrativo Completo (da abordagem ao fechamento em balcão)",
-  "Acesso Direto ao Fornecedor Exclusivo (preço de fábrica a R$23 a unidade)",
-  "Mentorias ao Vivo Mensais (tira-dúvidas de campo direto comigo)",
-  "Comunidade Display Lucrativo (networking com outros operadores)",
-  "Bônus Fundador: 1 Display de Demonstração bancado por nós",
-  "Condição Especial: opção de escala com frete grátis e call exclusiva",
+  "Método Display Lucrativo Completo (Da abordagem ao fechamento em balcão)",
+  "Acesso Direto ao Fornecedor Exclusivo (Preço de fábrica a R$ 23 a unidade)",
+  "Mentorias ao Vivo Mensais (Tira-dúvidas de campo direto comigo)",
+  "Comunidade Display Lucrativo (Networking com outros operadores)",
+  "Bônus Fundador: 1 Display de Demonstração Bancado por Nós",
+  "Condição Especial: Opção de Escala com Frete Grátis e Call Exclusiva",
 ];
 
 function Index() {
@@ -163,7 +163,7 @@ function Index() {
             {[
               { n: "4 ANOS", t: "Vendendo Display Interativo" },
               { n: "5+", t: "Nunca voltei para casa sem vender menos que isso" },
-              { n: "10–13", t: "Displays vendidos por dia, em média" },
+              { n: "10-13", t: "Displays vendidos por dia, em média" },
             ].map((item, i) => (
               <Reveal key={item.n} delay={i * 90}>
                 <p className="text-lime-glow font-display text-5xl font-extrabold sm:text-6xl">
@@ -240,7 +240,7 @@ function Index() {
                   Lucro no bolso
                 </p>
                 <p className="text-lime-glow mt-1 font-display text-2xl font-extrabold tabular-nums sm:text-3xl">
-                  + R$47,00 a R$57,00
+                   + R$ 47,00 a R$ 57,00
                 </p>
                 <p className="mt-1 text-sm text-muted-foreground">Até 71% de margem</p>
               </div>
@@ -271,7 +271,7 @@ function Index() {
                   Lucro no bolso
                 </p>
                 <p className="text-lime-glow mt-1 font-display text-2xl font-extrabold tabular-nums sm:text-3xl">
-                  + R$940,00 a R$1.140,00
+                   + R$ 940,00 a R$ 1.140,00
                 </p>
                 <p className="mt-1 text-sm text-muted-foreground">Lucro 100% limpo</p>
               </div>
@@ -401,10 +401,10 @@ function Index() {
                 <div className="hairline my-6" />
                 <p className="leading-relaxed text-muted-foreground">
                   Nós bancamos a produção do seu primeiro{" "}
-                  <span className="font-semibold text-foreground">
-                    Display de Demonstração
-                  </span>
-                  . Enquanto a peça viaja até a sua casa, você já vai afiando o machado
+                   <span className="font-semibold text-foreground">
+                     Display de Demonstração.
+                   </span>{" "}
+                   Enquanto a peça viaja até a sua casa, você já vai afiando o machado
                   assistindo às aulas do método. Você só paga a etiqueta de frete para o seu
                   endereço. Chegou, configurou, vendeu no primeiro comércio da sua rua,
                   colocou o lucro no bolso e já tem caixa para o próximo passo.
@@ -491,7 +491,7 @@ function Index() {
                 </p>
                 <p className="text-lime-glow mt-2 font-display text-5xl leading-none font-extrabold sm:text-6xl">
                   R$97,00
-                  <span className="font-display text-xl font-bold sm:text-2xl"> à vista</span>
+                   <span className="font-display text-xl font-bold sm:text-2xl"> à vista</span>
                 </p>
                 <p className="mt-3 text-sm text-muted-foreground">
                   (no Pix ou Cartão - Pagamento Único)
@@ -503,7 +503,7 @@ function Index() {
                   QUERO GARANTIR MINHA VAGA COM BÔNUS DE FUNDADOR
                 </CtaButton>
                 <p className="mt-4 text-sm text-muted-foreground">
-                  🔒 Pagamento 100% seguro • Acesso imediato • 7 dias de garantia
+                   🔒 Pagamento 100% Seguro • Acesso Imediato • 7 Dias de Garantia
                 </p>
               </div>
             </div>
@@ -584,7 +584,7 @@ function Index() {
             {[
               { n: "1 a 2 horas", t: "livres no seu dia" },
               {
-                n: "+ R$3.000",
+                 n: "+ R$ 3.000",
                 t: "limpos no mês vendendo apenas 3 displays por dia",
               },
             ].map((item) => (
@@ -602,7 +602,7 @@ function Index() {
               🔥 Condição membro fundador (pagamento único)
             </span>
             <p className="mt-5 font-display text-2xl font-extrabold sm:text-3xl">
-              Apenas <span className="text-lime-glow">R$97 à vista</span> no Pix ou Cartão
+               Apenas <span className="text-lime-glow">R$ 97 à vista</span> no Pix ou Cartão
             </p>
             <div className="mt-7 w-full max-w-md">
               <CtaButton className="py-6 text-base shadow-[0_0_90px_-8px_var(--lime)] sm:text-xl">
@@ -610,7 +610,7 @@ function Index() {
               </CtaButton>
             </div>
             <p className="mt-4 text-sm text-muted-foreground">
-              🔒 Acesso imediato • Sem mensalidade • 7 dias de garantia incondicional
+               🔒 Acesso Imediato • Sem Mensalidade • 7 Dias de Garantia Incondicional
             </p>
           </Reveal>
         </div>
