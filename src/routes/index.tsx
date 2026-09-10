@@ -195,10 +195,10 @@ function Index() {
             {/* Coluna 2: Card Fotográfico com o Display no Balcão */}
             <Reveal delay={120} className="lg:col-span-5">
               <div className="relative mx-auto max-w-md overflow-hidden rounded-2xl border border-emerald-500/20 bg-zinc-900/90 p-2 sm:p-3 shadow-xl lg:max-w-none">
-                <SafeImage
+                <img
                   src="/images/pratica-balcao-nfc.jpg"
                   alt="Display Interativo posicionado estrategicamente no balcão ao lado da maquininha"
-                  fallbackLabel="Display Interativo em uso real no balcão"
+                  loading="lazy"
                   className="w-full h-auto max-h-[460px] rounded-xl object-cover"
                 />
                 <div className="p-3 text-center">
@@ -343,12 +343,21 @@ function Index() {
                 <div className="surface-panel flex h-full flex-col overflow-hidden rounded-[1.75rem] border border-border p-5 sm:p-7 transition-all duration-300 hover:border-primary/50">
                   {/* Container visual do mockup/banner no topo do card */}
                   <div className="relative w-full h-48 overflow-hidden rounded-xl border border-zinc-800 bg-zinc-950/80 mb-4">
-                    <SafeImage
-                      src={card.image}
-                      alt={card.t}
-                      fallbackLabel={`Mockup: ${card.t}`}
-                      className="h-full w-full object-cover"
-                    />
+                    {card.image ? (
+                      <img
+                        src={card.image}
+                        alt={card.t}
+                        loading="lazy"
+                        className="h-full w-full object-cover object-bottom"
+                      />
+                    ) : (
+                      <div className="flex h-full w-full flex-col items-center justify-center p-4 text-center">
+                        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary mb-2 shadow-[0_0_20px_-5px_var(--lime)]">
+                          <span className="font-display font-bold text-sm text-primary">{card.n}</span>
+                        </div>
+                        <span className="text-xs font-semibold text-zinc-400">{card.t}</span>
+                      </div>
+                    )}
                   </div>
 
                   <div>
@@ -367,7 +376,7 @@ function Index() {
         </div>
       </section>
 
-      {/* ============ 06 — COMO TUDO COMEÇOU (FOTO BANCADA DE PRODUÇÃO) ============ */}
+      {/* ============ 06 — COMO TUDO COMEÇOU (GRID COMPARATIVO ANTES VS HOJE) ============ */}
       <section className="relative px-4 py-16 sm:px-6 lg:py-28">
         <div className="mx-auto max-w-4xl">
           <Reveal>
@@ -401,18 +410,34 @@ function Index() {
             </div>
           </Reveal>
 
-          {/* Foto real da bancada de produção e testes */}
-          <Reveal delay={100} className="mt-12">
-            <div className="mx-auto max-w-2xl overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900/80 p-2 sm:p-3 shadow-2xl">
-              <SafeImage
-                src="/images/historia-antes-depois.jpg"
-                alt="A bancada de testes e os primeiros lotes validados na prática"
-                fallbackLabel="Bancada de testes e primeiros lotes de produção"
-                className="w-full h-auto rounded-xl object-cover"
-              />
-              <p className="mt-3 text-center text-xs font-semibold text-zinc-300 pb-1">
-                📸 A bancada de testes e os primeiros lotes validados na prática.
-              </p>
+          {/* Grid comparativo de duas colunas: Antes vs Hoje */}
+          <Reveal delay={100} className="mt-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+              {/* Coluna 1 (Antes - 2021) */}
+              <div className="overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900/80 p-3 shadow-xl">
+                <img
+                  src="/images/historia-antes-depois.jpg"
+                  alt="2021: O início com tesoura, papel e mais de 30 peças na primeira semana"
+                  loading="lazy"
+                  className="aspect-[4/3] w-full rounded-xl object-cover"
+                />
+                <p className="mt-3 text-center text-xs font-semibold text-zinc-300">
+                  ✂️ 2021: O início com tesoura, papel e mais de 30 peças na primeira semana.
+                </p>
+              </div>
+
+              {/* Coluna 2 (Hoje - O Método Validado) */}
+              <div className="overflow-hidden rounded-2xl border border-emerald-500/30 bg-zinc-900/80 p-3 shadow-xl">
+                <img
+                  src="/images/pratica-balcao-nfc.jpg"
+                  alt="Hoje: Display Interativo profissional com chip NFC direto da fábrica"
+                  loading="lazy"
+                  className="aspect-[4/3] w-full rounded-xl object-cover"
+                />
+                <p className="mt-3 text-center text-xs font-semibold text-primary">
+                  🚀 Hoje: Display Interativo profissional com tecnologia NFC direto da fábrica.
+                </p>
+              </div>
             </div>
           </Reveal>
         </div>
