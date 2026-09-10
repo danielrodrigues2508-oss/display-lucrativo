@@ -342,13 +342,13 @@ function Index() {
               <Reveal key={card.n} delay={i * 70}>
                 <div className="surface-panel flex h-full flex-col overflow-hidden rounded-[1.75rem] border border-border p-5 sm:p-7 transition-all duration-300 hover:border-primary/50">
                   {/* Container visual do mockup/banner no topo do card */}
-                  <div className="relative w-full h-52 overflow-hidden rounded-xl border border-zinc-800 bg-zinc-950 mb-4">
+                  <div className="relative w-full h-56 overflow-hidden rounded-xl border border-zinc-800 bg-zinc-950/80 mb-4 flex items-center justify-center p-2">
                     {card.image ? (
                       <img
                         src={card.image}
                         alt={card.t === "Acesso Direto ao Fornecedor Exclusivo" ? "Lote de displays de acrílico com NFC direto da fábrica" : card.t}
                         loading="lazy"
-                        className="w-full h-full object-cover object-center"
+                        className="w-full h-full object-contain rounded-lg"
                       />
                     ) : (
                       <div className="flex h-full w-full flex-col items-center justify-center p-4 text-center">
