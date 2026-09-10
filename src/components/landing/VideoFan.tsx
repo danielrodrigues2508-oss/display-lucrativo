@@ -1,21 +1,21 @@
-import { cn } from "@/lib/utils";
+import React, { useRef, useEffect } from "react";
 
-type FanCard = {
+interface FanCard {
   id: string;
   src: string;
   title: string;
-  x: number; // px offset final (desktop)
+  x: number;
   y: number;
   rot: number;
   scale: number;
   z: number;
-  mobile?: { x: number; y: number; rot: number; scale: number } | null;
-};
+  mobile?: { x: number; y: number; rot: number; scale: number };
+}
 
 const CARDS: FanCard[] = [
   {
     id: "card-1",
-    src: "/videos/card1.mp4",
+    src: "/video/VIDEO_PROVA_01.mp4",
     title: "Display Lucrativo 1",
     x: -390,
     y: 44,
@@ -26,7 +26,7 @@ const CARDS: FanCard[] = [
   },
   {
     id: "card-2",
-    src: "/videos/card2.mp4",
+    src: "/video/VIDEO_PROVA_02.mp4",
     title: "Display Lucrativo 2",
     x: -235,
     y: 12,
@@ -37,29 +37,29 @@ const CARDS: FanCard[] = [
   },
   {
     id: "card-3",
-    src: "/videos/card3.mp4",
+    src: "/video/VIDEO_PROVA_03.mp4",
     title: "Display Lucrativo 3",
     x: -78,
     y: -8,
     rot: -3,
-    scale: 1,
-    z: 4,
-    mobile: null,
+    scale: 0.98,
+    z: 3,
+    mobile: { x: -18, y: -2, rot: -2, scale: 0.94 },
   },
   {
     id: "card-4",
-    src: "/videos/card4.mp4",
+    src: "/video/VIDEO_PROVA_04.mp4",
     title: "Display Lucrativo 4",
     x: 78,
     y: -8,
     rot: 3,
-    scale: 1,
-    z: 4,
-    mobile: { x: 0, y: -6, rot: 0, scale: 1 },
+    scale: 0.98,
+    z: 3,
+    mobile: { x: 18, y: -2, rot: 2, scale: 0.94 },
   },
   {
     id: "card-5",
-    src: "/videos/card5.mp4",
+    src: "/video/VIDEO_PROVA_05.mp4",
     title: "Display Lucrativo 5",
     x: 235,
     y: 12,
@@ -70,7 +70,7 @@ const CARDS: FanCard[] = [
   },
   {
     id: "card-6",
-    src: "/videos/card6.mp4",
+    src: "/video/VIDEO_PROVA_06.mp4",
     title: "Display Lucrativo 6",
     x: 390,
     y: 44,
@@ -81,89 +81,33 @@ const CARDS: FanCard[] = [
   },
 ];
 
-export function VideoFan() {
+export const VideoFan: React.FC = () => {
   return (
-    <div className="relative mx-auto h-[300px] w-full max-w-[1100px] select-none sm:h-[360px] lg:h-[440px]">
-      {/* Halo verde sutil no fundo */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute top-1/2 left-1/2 h-[300px] w-[min(760px,90vw)] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-40 blur-[90px]"
-        style={{
-          background: "radial-gradient(closest-side, var(--lime), transparent 70%)",
-        }}
-      />
-
-      {CARDS.map((card, i) => {
-        const hiddenOnMobile = card.mobile === null;
-        const m = card.mobile ?? {
-          x: card.x,
-          y: card.y,
-          rot: card.rot,
-          scale: card.scale,
-        };
-
-        return (
-          <div
-            key={card.id}
-            className={cn(
-              "group animate-fan-in absolute top-1/2 left-1/2 cursor-pointer transition-[z-index] duration-200 hover:z-50",
-              hiddenOnMobile ? "hidden lg:block" : ""
-            )}
-            style={
-              {
-                zIndex: card.z,
-                animationDelay: `${80 + Math.abs(i - 2.5) * 70}ms`,
-                "--fan-x": `${m.x}px`,
-                "--fan-y": `${m.y}px`,
-                "--fan-rot": `${m.rot}deg`,
-                "--fan-scale": `${m.scale}`,
-                "--fan-x-lg": `${card.x}px`,
-                "--fan-y-lg": `${card.y}px`,
-                "--fan-rot-lg": `${card.rot}deg`,
-                "--fan-scale-lg": `${card.scale}`,
-                "--fan-transform":
-                  "translate(-50%, -50%) translate(var(--fx), var(--fy)) rotate(var(--fr)) scale(var(--fs))",
-              } as React.CSSProperties
-            }
-          >
-            {/* Card com elevação, escala suave e iluminação ao passar o mouse */}
-            <div className="aspect-[9/16] w-[130px] rounded-2xl border border-border/80 bg-surface/90 shadow-[var(--shadow-deep)] backdrop-blur-xs transition-all duration-300 ease-out group-hover:-translate-y-5 group-hover:scale-110 group-hover:border-primary/70 group-hover:shadow-[0_25px_60px_-15px_rgba(0,0,0,0.9),0_0_35px_rgba(163,230,53,0.35)] sm:w-[150px] lg:w-[190px]">
-              <div className="relative h-full w-full overflow-hidden rounded-2xl bg-black">
-                <video
-                  src={card.src}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  controls={false}
-                  disablePictureInPicture
-                  preload="auto"
-                  aria-label={card.title}
-                  className="h-full w-full rounded-2xl object-cover"
-                />
-                <div className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-white/10 ring-inset group-hover:ring-primary/40" />
-              </div>
-            </div>
+    <div className="relative w-full max-w-5xl mx-auto h-[380px] sm:h-[460px] flex items-center justify-center overflow-visible select-none my-6">
+      {CARDS.map((card) => (
+        <div
+          key={card.id}
+          className="absolute transition-transform duration-500 ease-out hover:scale-105 hover:z-30 cursor-pointer"
+          style={{
+            zIndex: card.z,
+            transform: `translate(${card.x}px, ${card.y}px) rotate(${card.rot}deg) scale(${card.scale})`,
+          }}
+        >
+          <div className="w-[170px] sm:w-[210px] aspect-[9/16] rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-zinc-900/80 backdrop-blur-sm relative">
+            <video
+              src={card.src}
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="auto"
+              className="w-full h-full object-cover"
+            />
           </div>
-        );
-      })}
-
-      <style>{`
-        .animate-fan-in {
-          --fx: var(--fan-x);
-          --fy: var(--fan-y);
-          --fr: var(--fan-rot);
-          --fs: var(--fan-scale);
-        }
-        @media (min-width: 1024px) {
-          .animate-fan-in {
-            --fx: var(--fan-x-lg);
-            --fy: var(--fan-y-lg);
-            --fr: var(--fan-rot-lg);
-            --fs: var(--fan-scale-lg);
-          }
-        }
-      `}</style>
+        </div>
+      ))}
     </div>
   );
-}
+};
+
+export default VideoFan;
