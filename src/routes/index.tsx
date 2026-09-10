@@ -11,6 +11,7 @@ import { Reveal } from "@/components/landing/Reveal";
 import { Simulator } from "@/components/landing/Simulator";
 import { VideoFan } from "@/components/landing/VideoFan";
 import { SafeImage } from "@/components/landing/SafeImage";
+import { ModulesCarousel } from "@/components/landing/ModulesCarousel";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -156,33 +157,7 @@ function Index() {
         </div>
       </section>
 
-      {/* ============ 02 — PROVA REAL ============ */}
-      <section className="relative px-4 py-16 sm:px-6 lg:py-28">
-        <div className="mx-auto max-w-6xl">
-          <Reveal className="max-w-3xl">
-            <SectionLabel>Prova real</SectionLabel>
-          </Reveal>
-
-          <div className="mt-10 grid gap-10 sm:grid-cols-3 sm:gap-6">
-            {[
-              { n: "4 ANOS", t: "Vendendo Display Interativo" },
-              { n: "5+", t: "Nunca voltei para casa sem vender menos que isso" },
-              { n: "10-13", t: "Displays vendidos por dia, em média" },
-            ].map((item, i) => (
-              <Reveal key={item.n} delay={i * 90}>
-                <p className="text-lime-glow font-display text-5xl font-extrabold sm:text-6xl">
-                  {item.n}
-                </p>
-                <p className="mt-3 max-w-xs text-[0.9375rem] leading-relaxed text-zinc-200 sm:text-base">
-                  {item.t}
-                </p>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ============ 03 — O QUE ACONTECE NA PRÁTICA (2 COLUNAS COM IMAGEM) ============ */}
+      {/* ============ 02 — O QUE ACONTECE NA PRÁTICA (DIRETO APÓS A HERO) ============ */}
       <section className="relative px-4 py-16 sm:px-6 lg:py-28">
         <div className="mx-auto max-w-6xl">
           <Reveal>
@@ -237,7 +212,7 @@ function Index() {
         </div>
       </section>
 
-      {/* ============ 04 — CUSTO VS LUCRO + SIMULADOR ============ */}
+      {/* ============ 03 — CUSTO VS LUCRO + SIMULADOR CENTRALIZADO ============ */}
       <section className="relative px-4 py-16 sm:px-6 lg:py-28">
         <div className="mx-auto max-w-6xl">
           <Reveal className="max-w-3xl">
@@ -309,8 +284,9 @@ function Index() {
             </div>
           </Reveal>
 
-          <div className="mt-16 grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-            <Reveal>
+          {/* Bloco do Simulador 100% Centralizado Verticalmente */}
+          <div className="mt-16 sm:mt-24">
+            <Reveal className="mx-auto max-w-2xl text-center mb-8 sm:mb-10">
               <h2 className="font-display font-extrabold tracking-tight">
                 <span className="text-lime-glow block mb-2 text-3xl sm:text-5xl">
                   Simulador de Lucro Real
@@ -323,10 +299,29 @@ function Index() {
                 Arraste os controles para simular seus dias e peças.
               </p>
             </Reveal>
-            <Reveal delay={100}>
+            <Reveal delay={100} className="mx-auto max-w-xl">
               <Simulator />
             </Reveal>
           </div>
+        </div>
+      </section>
+
+      {/* ============ 04 — CARROSSEL AUTOMÁTICO DE MÓDULOS (TREINAMENTO) ============ */}
+      <section className="relative px-4 py-16 sm:px-6 lg:py-24 overflow-hidden border-t border-b border-border/50 bg-[color-mix(in_oklab,var(--ink)_60%,transparent)]">
+        <div className="mx-auto max-w-6xl">
+          <Reveal className="mx-auto max-w-3xl text-center mb-10 sm:mb-14">
+            <SectionLabel>📚 Conteúdo do Método</SectionLabel>
+            <h2 className="mt-4 font-display text-3xl leading-[1.08] font-extrabold text-balance sm:text-5xl">
+              Tudo o que você precisa para sair do zero e fechar sua primeira venda.
+            </h2>
+            <p className="mt-4 text-base text-zinc-300 sm:text-lg">
+              Acesso passo a passo desde a configuração no celular até os scripts de balcão e escala.
+            </p>
+          </Reveal>
+
+          <Reveal delay={80}>
+            <ModulesCarousel />
+          </Reveal>
         </div>
       </section>
 
@@ -470,16 +465,22 @@ function Index() {
 
             <Reveal delay={90}>
               <div className="surface-panel relative flex h-full flex-col rounded-[1.75rem] border border-primary/50 p-6 shadow-[var(--shadow-deep)] sm:p-8">
-                <span className="mb-5 inline-flex self-start rounded-full border border-primary/35 bg-[color-mix(in_oklab,var(--lime)_10%,transparent)] px-3.5 py-1.5 text-xs font-bold tracking-[0.14em] text-primary uppercase sm:absolute sm:top-6 sm:right-6 sm:mb-0">
-                  🔥 Para escalar rápido
-                </span>
-                <h3 className="font-display text-2xl font-extrabold text-lime-glow sm:text-3xl">
-                  Opção 2: O Plano Escala 7 Dias
-                </h3>
-                <p className="mt-2 text-sm text-zinc-300">
-                  Para quem quer acelerar os resultados desde o início.
-                </p>
-                <div className="hairline my-6" />
+                {/* Cabeçalho flexível sem sobreposição */}
+                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-4">
+                  <div>
+                    <h3 className="font-display text-2xl font-extrabold text-lime-glow sm:text-3xl">
+                      Opção 2: O Plano Escala 7 Dias
+                    </h3>
+                    <p className="mt-2 text-sm text-zinc-300">
+                      Para quem quer acelerar os resultados desde o início.
+                    </p>
+                  </div>
+                  <span className="self-start sm:self-auto inline-flex rounded-full border border-primary/35 bg-[color-mix(in_oklab,var(--lime)_10%,transparent)] px-3.5 py-1.5 text-xs font-bold tracking-[0.14em] text-primary uppercase shrink-0">
+                    🔥 Para escalar rápido
+                  </span>
+                </div>
+
+                <div className="hairline my-4" />
                 <p className="leading-relaxed text-zinc-200">
                   Se você já quer entrar no jogo grande e fazer seu primeiro pedido a partir
                   de 20 unidades direto com a fábrica:
