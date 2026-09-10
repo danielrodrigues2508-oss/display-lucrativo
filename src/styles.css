@@ -200,16 +200,16 @@
 }
 
 @keyframes modulesScroll {
-  from {
+  0% {
     transform: translateX(0);
   }
-  to {
+  100% {
     transform: translateX(-50%);
   }
 }
 
 .animate-modules-scroll {
-  animation: modulesScroll 35s linear infinite;
+  animation: modulesScroll 30s linear infinite;
   will-change: transform;
 }
 

@@ -39,13 +39,13 @@ const modules = [
     tag: 'MÓDULO 06',
     badge: 'Acompanhamento',
     title: 'COMUNIDADE | DISPLAY LUCRATIVO',
-    desc: 'Acesso ao grupo oficial de networking + Mentoria ao vivo mensal direto comigo.'
+    desc: 'Acesso ao grupo oficial de networking + Mentoria ao vivo mensal direto comigo para destravar gargalos.'
   },
   {
     tag: 'PRÓXIMO NÍVEL 08',
     badge: 'Ativação & Escala',
     title: 'DESAFIO 1K EM 7 DIAS & DESAFIOS PAGOS',
-    desc: 'Plano de ativação para colocar R$ 1.000 limpos no bolso logo na primeira semana.',
+    desc: 'O plano de ativação gratuito para colocar R$ 1.000 limpos no bolso logo na primeira semana, e acesso aos desafios avançados de escala.',
     highlight: true
   }
 ];
