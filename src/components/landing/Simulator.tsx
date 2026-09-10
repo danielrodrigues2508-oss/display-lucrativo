@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Minus, Plus } from "lucide-react";
+import { ArrowDown, Minus, Plus } from "lucide-react";
 import { LUCRO_POR_DISPLAY, brl } from "@/lib/landing";
 import { cn } from "@/lib/utils";
 
@@ -48,7 +48,7 @@ function Stepper({
     "flex h-12 w-12 items-center justify-center rounded-full border border-border bg-[var(--surface-2)] text-foreground transition-colors hover:border-primary/60 hover:text-primary disabled:opacity-30 disabled:hover:border-border disabled:hover:text-foreground";
   return (
     <div className="flex flex-col gap-3">
-      <span className="text-[11px] font-semibold tracking-[0.18em] text-muted-foreground uppercase">
+      <span className="text-xs sm:text-sm font-bold tracking-[0.18em] text-muted-foreground uppercase">
         {label}
       </span>
       <div className="flex items-center justify-between gap-3 rounded-2xl border border-border bg-[color-mix(in_oklab,var(--ink)_70%,transparent)] p-2">
@@ -102,7 +102,7 @@ export function Simulator() {
       />
       <div className="surface-panel relative overflow-hidden rounded-[2rem] p-4 shadow-[var(--shadow-deep)] sm:p-8">
         <div className="flex items-center justify-between">
-          <span className="text-[11px] font-semibold tracking-[0.2em] text-primary uppercase">
+          <span className="text-xs sm:text-sm font-bold tracking-[0.2em] text-primary uppercase">
             Simulador de lucro
           </span>
           <span className="h-2 w-2 rounded-full bg-primary shadow-[0_0_14px_var(--lime)]" />
@@ -121,13 +121,13 @@ export function Simulator() {
 
         <div className="mt-6 grid grid-cols-2 gap-2 sm:gap-3">
           <div className="rounded-2xl border border-border bg-[color-mix(in_oklab,var(--ink)_70%,transparent)] p-3 sm:p-5">
-            <p className="text-[9px] font-semibold tracking-[0.18em] text-muted-foreground uppercase sm:text-[11px]">
+            <p className="text-[10px] sm:text-xs font-bold tracking-[0.18em] text-muted-foreground uppercase">
               Displays vendidos
             </p>
             <p className="mt-1 font-display text-2xl font-extrabold tabular-nums sm:mt-2 sm:text-4xl">{animTotal}</p>
           </div>
           <div className="relative overflow-hidden rounded-2xl border border-primary/35 bg-[color-mix(in_oklab,var(--lime)_8%,var(--ink))] p-3 sm:p-5">
-            <p className="text-[9px] font-semibold tracking-[0.18em] text-primary/80 uppercase sm:text-[11px]">
+            <p className="text-[10px] sm:text-xs font-bold tracking-[0.18em] text-primary/90 uppercase">
               Lucro bruto
             </p>
             <p className="text-lime-glow mt-1 font-display text-2xl font-extrabold tabular-nums sm:mt-2 sm:text-4xl lg:text-5xl">
@@ -143,19 +143,19 @@ export function Simulator() {
         </div>
 
         <div className="mt-3 rounded-2xl border border-border bg-[color-mix(in_oklab,var(--surface-2)_80%,transparent)] p-4">
-          <p className="text-[11px] font-semibold tracking-[0.18em] text-muted-foreground uppercase">
+          <p className="text-xs sm:text-sm font-bold tracking-[0.18em] text-muted-foreground uppercase">
             Exemplo
           </p>
           <p className="mt-1 font-display text-lg font-extrabold tabular-nums sm:text-xl">
             22 Displays → <span className="text-lime-glow">R$1.034</span>
           </p>
-          <p className="mt-1 text-sm text-muted-foreground">
+          <p className="mt-1 text-sm text-zinc-300">
             É isso que está por trás da promessa de R$1.000 em 7 dias.
           </p>
         </div>
 
         <div className="mt-6">
-          <p className="text-[11px] font-semibold tracking-[0.18em] text-muted-foreground uppercase">
+          <p className="text-xs sm:text-sm font-bold tracking-[0.18em] text-muted-foreground uppercase">
             Simulação rápida
           </p>
           <div className="mt-3 flex flex-wrap gap-2">
@@ -170,7 +170,7 @@ export function Simulator() {
                     setDays(p.days);
                   }}
                   className={cn(
-                    "rounded-full border px-4 py-2 text-sm font-medium tabular-nums transition-all duration-300",
+                    "rounded-full border px-4 py-2 text-sm font-semibold tabular-nums transition-all duration-300 cursor-pointer",
                     active
                       ? "border-primary bg-primary text-primary-foreground"
                       : "border-border bg-[var(--surface-2)] text-muted-foreground hover:border-primary/50 hover:text-foreground",
@@ -186,7 +186,25 @@ export function Simulator() {
           </div>
         </div>
 
-        <p className="mt-6 text-xs text-muted-foreground/80">
+        {/* Micro-CTA de Conversão Secundário */}
+        <div className="mt-6 pt-2">
+          <a
+            href="#checkout"
+            onClick={(e) => {
+              e.preventDefault();
+              const el = document.getElementById("checkout");
+              if (el) {
+                el.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+            className="group flex w-full items-center justify-center gap-2 rounded-2xl border border-primary/50 bg-primary/10 px-6 py-4 font-display text-sm font-extrabold text-primary shadow-[0_0_30px_-10px_var(--lime)] transition-all duration-300 hover:border-primary hover:bg-primary hover:text-primary-foreground hover:shadow-[0_0_50px_-8px_var(--lime)] hover:scale-[1.02] sm:text-base cursor-pointer"
+          >
+            <span>Quero lucrar meus primeiros R$ 1.000</span>
+            <ArrowDown className="h-4 w-4 transition-transform group-hover:translate-y-0.5" />
+          </a>
+        </div>
+
+        <p className="mt-4 text-xs text-muted-foreground/80 text-center">
           Simulação baseada na quantidade de vendas realizadas. Os resultados reais podem variar.
         </p>
       </div>
