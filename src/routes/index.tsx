@@ -80,30 +80,38 @@ const PRATICA = [
   "Em menos de 5 segundos a avaliação é feita e o Google passa a recomendar mais aquela loja.",
 ];
 
-const RECEBE = [
+const DELIVERABLES = [
   {
-    n: "01",
-    t: "Acesso Direto ao Fornecedor Exclusivo",
-    d: "Preço de fábrica direto da fonte (R$23 a unidade), produção sob demanda sem necessidade de estoque e frete grátis a partir de 20 peças.",
-    image: "/images/entregavel-caixa-fabrica.jpg",
+    id: "01",
+    tag: "01",
+    title: "Acesso Direto ao Fornecedor Exclusivo",
+    desc: "Preço de fábrica direto da fonte (R$23 a unidade), produção sob demanda sem necessidade de estoque e frete grátis a partir de 20 peças.",
+    image: "/images/hero-3.jpg?v=1",
+    alt: "Displays acrílicos de fábrica",
   },
   {
-    n: "02",
-    t: "Método Display Lucrativo",
-    d: "O passo a passo completo de quem vende na rua: abordagens práticas que funcionam no comércio local, técnicas de fechamento e o processo rápido para configurar o display no celular.",
-    image: "",
+    id: "02",
+    tag: "02",
+    title: "Método Display Lucrativo",
+    desc: "O passo a passo completo de quem vende na rua: abordagens práticas que funcionam no comércio local, técnicas de fechamento e o processo rápido para configurar o display no celular.",
+    image: "/images/entrega-metodo.jpg?v=1",
+    alt: "Área de membros e método prático",
   },
   {
-    n: "03",
-    t: "Mentoria ao Vivo Todo Mês",
-    d: "Um encontro mensal ao vivo direto comigo para tirar dúvidas reais de campo, analisar abordagens e destravar suas vendas.",
-    image: "",
+    id: "03",
+    tag: "03",
+    title: "Mentoria ao Vivo Todo Mês",
+    desc: "Um encontro mensal ao vivo direto comigo para tirar dúvidas reais de campo, analisar abordagens e destravar suas vendas.",
+    image: "/images/entrega-mentoria.jpg?v=1",
+    alt: "Encontro de mentoria ao vivo",
   },
   {
-    n: "04",
-    t: "Comunidade Display Lucrativo",
-    d: "Grupo exclusivo com quem está na mesma jornada para trocar experiências, novas estratégias de abordagem e parcerias no dia a dia.",
-    image: "",
+    id: "04",
+    tag: "04",
+    title: "Comunidade Display Lucrativo",
+    desc: "Grupo exclusivo com quem está na mesma jornada para trocar experiências, novas estratégias de abordagem e parcerias no dia a dia.",
+    image: "/images/entrega-comunidade.jpg?v=1",
+    alt: "Comunidade e networking ativo",
   },
 ];
 
@@ -338,36 +346,27 @@ function Index() {
           </Reveal>
 
           <div className="mt-12 grid gap-6 sm:grid-cols-2">
-            {RECEBE.map((card, i) => (
-              <Reveal key={card.n} delay={i * 70}>
-                <div className="surface-panel flex h-full flex-col overflow-hidden rounded-[1.75rem] border border-border p-5 sm:p-7 transition-all duration-300 hover:border-primary/50">
-                  {/* Container visual do mockup/banner no topo do card */}
-                  <div className="relative w-full h-56 overflow-hidden rounded-xl border border-zinc-800 bg-zinc-950/80 mb-4">
-                    {card.image ? (
-                      <img
-                        src={card.image}
-                        alt={card.t === "Acesso Direto ao Fornecedor Exclusivo" ? "Lote de displays de acrílico com NFC direto da fábrica" : card.t}
-                        loading="lazy"
-                        className="w-full h-full object-cover object-center"
-                      />
-                    ) : (
-                      <div className="flex h-full w-full flex-col items-center justify-center p-4 text-center">
-                        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary mb-2 shadow-[0_0_20px_-5px_var(--lime)]">
-                          <span className="font-display font-bold text-sm text-primary">{card.n}</span>
-                        </div>
-                        <span className="text-xs font-semibold text-zinc-400">{card.t}</span>
-                      </div>
-                    )}
+            {DELIVERABLES.map((item, i) => (
+              <Reveal key={item.id} delay={i * 70}>
+                <div className="group surface-panel flex h-full flex-col overflow-hidden rounded-[1.75rem] border border-border p-5 sm:p-7 transition-all duration-300 hover:border-primary/50">
+                  {/* Container visual horizontal 16:9 */}
+                  <div className="relative w-full aspect-video sm:h-52 overflow-hidden rounded-xl border border-zinc-800/80 bg-zinc-950 mb-5">
+                    <img
+                      src={item.image}
+                      alt={item.alt}
+                      className="w-full h-full object-cover select-none pointer-events-none transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy"
+                    />
                   </div>
 
-                  <div>
+                  <div className="flex flex-col flex-1">
                     <span className="font-display text-sm font-bold text-primary">
-                      {card.n}
+                      {item.tag}
                     </span>
-                    <h3 className="mt-1 font-display text-xl font-extrabold sm:text-2xl">
-                      {card.t}
+                    <h3 className="mt-1 font-display text-xl font-extrabold sm:text-2xl text-white">
+                      {item.title}
                     </h3>
-                    <p className="mt-3 leading-relaxed text-zinc-300">{card.d}</p>
+                    <p className="mt-3 leading-relaxed text-zinc-300">{item.desc}</p>
                   </div>
                 </div>
               </Reveal>
