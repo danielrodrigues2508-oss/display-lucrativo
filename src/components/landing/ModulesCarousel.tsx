@@ -84,44 +84,43 @@ export function ModulesCarousel() {
             key={index}
             className={`group relative w-[230px] sm:w-[260px] aspect-[9/16] rounded-2xl overflow-hidden flex-shrink-0 border transition-all duration-300 shadow-xl hover:scale-[1.02] ${
               item.highlight
-                ? 'border-emerald-400/90 shadow-emerald-500/20'
-                : 'border-zinc-800/80 hover:border-emerald-500/50'
+                ? 'border-2 border-emerald-400 shadow-2xl shadow-emerald-500/30'
+                : 'border border-zinc-800/80 hover:border-emerald-400/80 shadow-lg'
             }`}
           >
-            {/* Imagem de Fundo Oficial */}
+            {/* Imagem de fundo preenchendo o card */}
             <img
               src={item.image}
               alt={item.title}
-              className="absolute inset-0 w-full h-full object-cover select-none pointer-events-none transition-transform duration-500 group-hover:scale-105"
+              className="absolute inset-0 w-full h-full object-cover rounded-2xl select-none pointer-events-none transition-transform duration-500 group-hover:scale-105"
               loading="lazy"
             />
 
-            {/* Camada de Gradiente Escuro para Garantir Contraste Perfeito do Texto */}
-            <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/60 to-zinc-950/30" />
-
-            {/* Conteúdo com Badges, Título e Descrição */}
-            <div className="relative z-10 h-full p-5 flex flex-col justify-between">
-              <div>
-                <div className="flex items-center justify-between gap-2 mb-3">
+            {/* Container dos textos sobrepostos com gradientes no topo e na base */}
+            <div className="relative z-10 h-full flex flex-col justify-between">
+              {/* Gradiente de fundo preto transparente no topo */}
+              <div className="bg-gradient-to-b from-black/90 via-black/70 to-transparent p-4 rounded-t-2xl">
+                <div className="flex items-center justify-between gap-2 mb-2.5">
                   <span className={`text-[11px] font-bold uppercase tracking-wider ${item.highlight ? 'text-emerald-400' : 'text-zinc-300'}`}>
                     Módulo {item.id}
                   </span>
                   <span className={`px-2.5 py-1 text-[10px] font-bold rounded-full border backdrop-blur-md ${
                     item.highlight
-                      ? 'bg-emerald-400 text-black border-emerald-400'
+                      ? 'bg-emerald-400 text-black border-emerald-400 font-extrabold'
                       : 'bg-zinc-950/80 text-emerald-300 border-emerald-500/40'
                   }`}>
                     {item.tag}
                   </span>
                 </div>
 
-                <h3 className="text-base sm:text-lg font-bold text-white leading-snug tracking-tight drop-shadow-md">
+                <h3 className="text-base sm:text-lg font-extrabold text-white leading-snug tracking-tight drop-shadow-md">
                   {item.title}
                 </h3>
               </div>
 
-              <div className="pt-3 border-t border-white/10">
-                <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed drop-shadow-sm">
+              {/* Gradiente de fundo preto transparente na base para contraste da descrição */}
+              <div className="bg-gradient-to-t from-black/95 via-black/80 to-transparent p-4 rounded-b-2xl pt-8">
+                <p className="text-xs sm:text-sm text-zinc-200 leading-relaxed drop-shadow-sm font-medium">
                   {item.desc}
                 </p>
               </div>
