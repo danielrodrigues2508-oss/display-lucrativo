@@ -86,8 +86,8 @@ const DELIVERABLES = [
     tag: "01",
     title: "Acesso Direto ao Fornecedor Exclusivo",
     desc: "Preço de fábrica direto da fonte (R$23 a unidade), produção sob demanda sem necessidade de estoque e frete grátis a partir de 20 peças.",
-    image: "/images/hero-3.jpg?v=1",
-    alt: "Displays acrílicos de fábrica",
+    image: "/images/entrega-fornecedor.jpg?v=1",
+    alt: "Estoque direto da fábrica e displays acrílicos",
   },
   {
     id: "02",
