@@ -10,7 +10,6 @@ import { CtaButton } from "@/components/landing/Cta";
 import { Reveal } from "@/components/landing/Reveal";
 import { Simulator } from "@/components/landing/Simulator";
 import { VideoFan } from "@/components/landing/VideoFan";
-import { SafeImage } from "@/components/landing/SafeImage";
 import { ModulesCarousel } from "@/components/landing/ModulesCarousel";
 
 export const Route = createFileRoute("/")({
@@ -554,12 +553,12 @@ function Index() {
               </h2>
 
               {/* Mockup 3D Oficial da Oferta */}
-              <div className="mx-auto mt-8 max-w-md overflow-hidden rounded-2xl border border-white/10 bg-zinc-950/60 p-2 shadow-xl">
-                <SafeImage
-                  src="/imagens/mockup-combo-97.png"
-                  alt="Mockup 3D Oficial do Combo Membro Fundador Display Lucrativo"
-                  fallbackLabel="Mockup Oficial Combo Membro Fundador"
-                  className="aspect-[16/9] sm:aspect-[2/1] w-full object-contain"
+              <div className="w-full max-w-4xl mx-auto mt-8 rounded-2xl overflow-hidden border border-zinc-800/80 shadow-[0_0_30px_rgba(34,197,94,0.15)] bg-zinc-950">
+                <img
+                  src="/images/mockup-combo-fundador.jpg?v=1"
+                  alt="Combo Oficial Display Lucrativo"
+                  className="w-full h-auto object-cover select-none pointer-events-none"
+                  loading="lazy"
                 />
               </div>
 
