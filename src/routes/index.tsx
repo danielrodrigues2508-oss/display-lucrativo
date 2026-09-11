@@ -553,16 +553,16 @@ function Index() {
               </h2>
 
               {/* Mockup 3D Oficial da Oferta */}
-              <div className="w-full max-w-4xl mx-auto mt-8 rounded-2xl overflow-hidden border border-zinc-800/80 shadow-[0_0_30px_rgba(34,197,94,0.15)] bg-zinc-950">
+              <div className="w-full max-w-lg mx-auto mt-6 mb-6 rounded-xl overflow-hidden border border-zinc-800/80 shadow-[0_0_25px_rgba(34,197,94,0.12)] bg-zinc-950">
                 <img
                   src="/images/mockup-combo-fundador.jpg?v=1"
                   alt="Combo Oficial Display Lucrativo"
-                  className="w-full h-auto object-cover select-none pointer-events-none"
+                  className="w-full h-auto max-h-[220px] sm:max-h-[250px] object-cover select-none pointer-events-none"
                   loading="lazy"
                 />
               </div>
 
-              <ul className="mx-auto mt-8 grid max-w-xl gap-4 text-left">
+              <ul className="mx-auto mt-6 grid max-w-xl gap-3 sm:gap-4 text-left">
                 {CHECKLIST.map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
