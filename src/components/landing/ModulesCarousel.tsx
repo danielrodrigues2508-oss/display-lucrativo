@@ -7,7 +7,7 @@ const modulesData = [
     badge: 'Display Grátis',
     title: 'SEU DISPLAY DEMONSTRAÇÃO',
     desc: 'Explicando como funciona para receber seu display de demonstração.',
-    image: '/images/modulos/modulo-00.jpg',
+    image: '/images/modulos/modulo-00.jpg?v=clean',
   },
   {
     id: '01',
@@ -15,7 +15,7 @@ const modulesData = [
     badge: 'Mentalidade',
     title: 'SEM ISSO ESQUECE',
     desc: 'Nosso Manifesto de ouro para focar apenas no que gera riqueza e cortar distrações.',
-    image: '/images/modulos/modulo-01.jpg',
+    image: '/images/modulos/modulo-01.jpg?v=clean',
   },
   {
     id: '02',
@@ -23,7 +23,7 @@ const modulesData = [
     badge: 'O Coração do Método',
     title: 'SEUS 3MIL ESTÁ AQUI',
     desc: 'Você não vende "plaquinha". Domine a abordagem que fecha no balcão e saiba quanto cobrar.',
-    image: '/images/modulos/modulo-02.jpg',
+    image: '/images/modulos/modulo-02.jpg?v=clean',
   },
   {
     id: '03',
@@ -31,7 +31,7 @@ const modulesData = [
     badge: 'Operação Prática',
     title: 'DISPLAY LUCRATIVO',
     desc: 'Configurar o display no celular em 60 segundos e entregar com postura profissional.',
-    image: '/images/modulos/modulo-03.jpg',
+    image: '/images/modulos/modulo-03.jpg?v=clean',
   },
   {
     id: '04',
@@ -39,7 +39,7 @@ const modulesData = [
     badge: 'Tração Rápida',
     title: 'SUAS 10 PRIMEIRAS VENDAS',
     desc: 'O método prático F.A.C.I.L e o raio-X dos comércios mais fáceis de fechar.',
-    image: '/images/modulos/modulo-04.jpg',
+    image: '/images/modulos/modulo-04.jpg?v=clean',
   },
   {
     id: '05',
@@ -47,7 +47,7 @@ const modulesData = [
     badge: 'Blindagem de Mercado',
     title: 'DISPLAY NUNCA VAI SATURAR',
     desc: 'Os motivos reais para você entender a demanda infinita do comércio local.',
-    image: '/images/modulos/modulo-05.jpg',
+    image: '/images/modulos/modulo-05.jpg?v=clean',
   },
   {
     id: '06',
@@ -55,7 +55,7 @@ const modulesData = [
     badge: 'Acompanhamento',
     title: 'COMUNIDADE | NETWORKING',
     desc: 'Grupo oficial de membros + Mentoria ao vivo mensal para acelerar seus resultados.',
-    image: '/images/modulos/modulo-06.jpg',
+    image: '/images/modulos/modulo-06.jpg?v=clean',
   },
   {
     id: '08',
@@ -63,7 +63,7 @@ const modulesData = [
     badge: 'Ativação & Escala',
     title: 'DESAFIO 1K EM 7 DIAS',
     desc: 'O plano prático para colocar os primeiros R$ 1.000 limpos no bolso na primeira semana.',
-    image: '/images/modulos/modulo-08.jpg',
+    image: '/images/modulos/modulo-08.jpg?v=clean',
     highlight: true,
   },
 ];
