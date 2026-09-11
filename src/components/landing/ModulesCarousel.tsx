@@ -21,7 +21,7 @@ const modulesData = [
     id: '02',
     tag: 'MÓDULO 02',
     badge: 'O Coração do Método',
-    title: 'SEUS 3MIL ESTÁ AQUI',
+    title: 'SEUS 3 MIL ESTÁ AQUI',
     desc: 'Você não vende "plaquinha". Domine a abordagem que fecha no balcão e saiba quanto cobrar.',
     image: '/images/modulos/modulo-02.jpg?v=clean',
   },
@@ -104,9 +104,9 @@ export function ModulesCarousel() {
               loading="lazy"
             />
 
-            {/* Efeito de legibilidade (degradês sutis escuros no topo e rodapé) */}
-            <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black/90 via-black/60 to-transparent z-10 pointer-events-none" />
-            <div className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-black/95 via-black/75 to-transparent z-10 pointer-events-none" />
+            {/* Efeito de legibilidade (degradês escuros no topo e rodapé) */}
+            <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black/95 via-black/80 to-transparent z-10 pointer-events-none" />
+            <div className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-black/95 via-black/85 to-transparent z-10 pointer-events-none" />
 
             {/* Conteúdo em camadas */}
             <div className="relative z-20 flex flex-col justify-between h-full p-4 sm:p-5">
@@ -125,14 +125,14 @@ export function ModulesCarousel() {
                   </span>
                 </div>
 
-                <h3 className="text-base sm:text-lg font-extrabold text-white leading-snug tracking-tight drop-shadow-md">
+                <h3 className="text-lg sm:text-xl font-extrabold uppercase tracking-tight text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] leading-snug">
                   {item.title}
                 </h3>
               </div>
 
               {/* Rodapé: descrição curta */}
               <div>
-                <p className="text-xs sm:text-sm text-zinc-200 leading-relaxed drop-shadow-sm font-medium">
+                <p className="text-xs sm:text-sm text-zinc-200 leading-snug drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)] font-medium">
                   {item.desc}
                 </p>
               </div>
