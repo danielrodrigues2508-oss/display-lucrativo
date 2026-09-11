@@ -100,7 +100,7 @@ export function Simulator() {
         className="pointer-events-none absolute -inset-6 rounded-[2.5rem] opacity-25 blur-3xl"
         style={{ background: "radial-gradient(closest-side, var(--lime), transparent 70%)" }}
       />
-      <div className="surface-panel relative overflow-hidden rounded-[2rem] p-4 shadow-[var(--shadow-deep)] sm:p-8">
+      <div className="surface-panel relative overflow-hidden rounded-[2rem] p-4 sm:p-6 md:p-8 shadow-[var(--shadow-deep)]">
         <div className="flex items-center justify-between">
           <span className="text-xs sm:text-sm font-bold tracking-[0.2em] text-primary uppercase">
             Simulador de lucro

@@ -141,7 +141,7 @@ function Index() {
             🔥 Condição especial Aluno Fundador
           </span>
 
-          <div className="relative mt-4 -mb-3 sm:mt-6 sm:mb-0">
+          <div className="relative mt-4 -mb-3 sm:mt-6 sm:mb-0 max-h-[200px] sm:max-h-[320px] md:max-h-none overflow-hidden sm:overflow-visible">
             <VideoFan />
           </div>
 
@@ -153,15 +153,15 @@ function Index() {
             </span>
           </h1>
 
-          <p className="mx-auto mt-5 max-w-2xl sm:max-w-3xl text-[1.0625rem] leading-relaxed text-zinc-200 sm:mt-6 sm:text-lg text-balance">
+          <p className="mx-auto mt-5 max-w-xl text-sm sm:text-base leading-snug sm:leading-relaxed text-zinc-200 sm:mt-6 text-balance">
             No seu tempo livre e sem largar o emprego. O método de quem vende display há 4
             anos: aprenda a vender, configurar e tenha acesso ao meu fornecedor&nbsp;exclusivo.
           </p>
 
           <div className="mt-9 flex flex-col items-center">
             <CtaButton className="max-w-md">QUERO COMEÇAR AGORA</CtaButton>
-            <p className="text-xs text-zinc-400 mt-3 flex items-center justify-center gap-1.5 font-medium select-none">
-              <span>🔒</span> Pagamento único de R$ 97 • Acesso Imediato • 7 Dias de Garantia
+            <p className="text-[11px] sm:text-xs text-zinc-400 mt-2.5 flex flex-wrap items-center justify-center gap-1 font-medium select-none text-center">
+              <span>🔒</span> <span className="whitespace-nowrap">Pagamento único de R$ 97</span> • <span className="whitespace-nowrap">Acesso Imediato</span> • <span className="whitespace-nowrap">7 Dias de Garantia</span>
             </p>
           </div>
         </div>
@@ -195,7 +195,7 @@ function Index() {
                 ))}
               </ul>
 
-              <p className="mt-8 font-display text-lg font-extrabold text-balance italic sm:text-2xl">
+              <p className="mt-8 mb-6 md:mb-0 font-display text-lg font-extrabold text-balance italic sm:text-2xl">
                 Você não vende acrílico. Você entrega o jeito mais rápido pro lojista{" "}
                 <span className="text-lime-glow">dominar as buscas da região</span> sem
                 precisar implorar nada pra ninguém.
@@ -211,8 +211,8 @@ function Index() {
                   loading="lazy"
                   className="w-full h-auto max-h-[460px] rounded-xl object-cover"
                 />
-                <div className="p-3 text-center">
-                  <p className="text-xs font-semibold text-zinc-300">
+                <div className="p-3 text-center md:text-left">
+                  <p className="text-xs text-zinc-400 mt-3 block text-center md:text-left">
                     📸 Display Interativo no balcão: o cliente encosta o celular e avalia em 5 segundos.
                   </p>
                 </div>
@@ -273,11 +273,11 @@ function Index() {
                     <dt className="text-muted-foreground">Custo fornecedor</dt>
                     <dd className="font-display font-bold tabular-nums">R$460,00</dd>
                   </div>
-                  <div className="flex items-center justify-between gap-4">
+                  <div className="flex items-center justify-between gap-2 text-sm sm:text-base">
                     <dt className="text-muted-foreground">
                       Venda das 20 peças (a R$ 70 - R$ 80 cada)
                     </dt>
-                    <dd className="font-display font-bold tabular-nums">
+                    <dd className="font-display font-bold tabular-nums shrink-0">
                       R$1.400,00 a R$1.600,00
                     </dd>
                   </div>
@@ -333,6 +333,9 @@ function Index() {
 
           <Reveal delay={80}>
             <ModulesCarousel />
+            <p className="text-[11px] text-zinc-400 text-center mt-2 flex items-center justify-center gap-1 md:hidden select-none">
+              <span>👈</span> Deslize para ver todos os módulos <span>👉</span>
+            </p>
           </Reveal>
         </div>
       </section>
@@ -456,70 +459,88 @@ function Index() {
 
           <div className="mt-12 grid gap-5 lg:grid-cols-2">
             <Reveal>
-              <div className="surface-panel flex h-full flex-col rounded-[1.75rem] border border-border p-6 sm:p-8">
-                <h3 className="font-display text-2xl font-extrabold sm:text-3xl">
-                  Opção 1: O Teste Seguro
-                </h3>
-                <p className="mt-2 text-sm text-zinc-300">
-                  Para quem quer levantar caixa rápido com pouco dinheiro.
-                </p>
-                <div className="hairline my-6" />
-                <p className="leading-relaxed text-zinc-200">
-                  Nós bancamos a produção do seu primeiro{" "}
-                  <span className="font-semibold text-foreground">
-                    Display de Demonstração.
-                  </span>{" "}
-                  Enquanto a peça viaja até a sua casa, você já vai afiando o machado
-                  assistindo às aulas do método. Você só paga a etiqueta de frete para o seu
-                  endereço. Chegou, configurou, vendeu no primeiro comércio da sua rua,
-                  colocou o lucro no bolso e já tem caixa para o próximo passo.
-                </p>
+              <div className="surface-panel flex h-full flex-col justify-between rounded-[1.75rem] border border-border p-6 sm:p-8">
+                <div>
+                  <h3 className="font-display text-2xl font-extrabold sm:text-3xl">
+                    Opção 1: O Teste Seguro
+                  </h3>
+                  <p className="mt-2 text-sm text-zinc-300">
+                    Para quem quer levantar caixa rápido com pouco dinheiro.
+                  </p>
+                  <div className="hairline my-6" />
+                  <p className="leading-relaxed text-zinc-200">
+                    Nós bancamos a produção do seu primeiro{" "}
+                    <span className="font-semibold text-foreground">
+                      Display de Demonstração.
+                    </span>{" "}
+                    Enquanto a peça viaja até a sua casa, você já vai afiando o machado
+                    assistindo às aulas do método. Você só paga a etiqueta de frete para o seu
+                    endereço. Chegou, configurou, vendeu no primeiro comércio da sua rua,
+                    colocou o lucro no bolso e já tem caixa para o próximo passo.
+                  </p>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => document.getElementById('oferta')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="w-full mt-6 py-2.5 px-4 rounded-lg bg-zinc-900 border border-zinc-700 hover:border-green-500/50 text-xs font-semibold text-zinc-200 transition-colors cursor-pointer"
+                >
+                  Selecionar este caminho →
+                </button>
               </div>
             </Reveal>
 
             <Reveal delay={90}>
-              <div className="surface-panel relative flex h-full flex-col rounded-[1.75rem] border border-primary/50 p-6 shadow-[var(--shadow-deep)] sm:p-8">
-                {/* Cabeçalho flexível sem sobreposição */}
-                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-4">
-                  <div>
-                    <h3 className="font-display text-2xl font-extrabold text-lime-glow sm:text-3xl">
-                      Opção 2: O Plano Escala 7 Dias
-                    </h3>
-                    <p className="mt-2 text-sm text-zinc-300">
-                      Para quem quer acelerar os resultados desde o início.
-                    </p>
+              <div className="surface-panel relative flex h-full flex-col justify-between rounded-[1.75rem] border border-primary/50 p-6 shadow-[var(--shadow-deep)] sm:p-8">
+                <div>
+                  {/* Cabeçalho flexível sem sobreposição */}
+                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-4">
+                    <div>
+                      <h3 className="font-display text-2xl font-extrabold text-lime-glow sm:text-3xl">
+                        Opção 2: O Plano Escala 7 Dias
+                      </h3>
+                      <p className="mt-2 text-sm text-zinc-300">
+                        Para quem quer acelerar os resultados desde o início.
+                      </p>
+                    </div>
+                    <span className="self-start sm:self-auto inline-flex rounded-full border border-primary/35 bg-[color-mix(in_oklab,var(--lime)_10%,transparent)] px-3.5 py-1.5 text-xs font-bold tracking-[0.14em] text-primary uppercase shrink-0">
+                      🔥 Para escalar rápido
+                    </span>
                   </div>
-                  <span className="self-start sm:self-auto inline-flex rounded-full border border-primary/35 bg-[color-mix(in_oklab,var(--lime)_10%,transparent)] px-3.5 py-1.5 text-xs font-bold tracking-[0.14em] text-primary uppercase shrink-0">
-                    🔥 Para escalar rápido
-                  </span>
-                </div>
 
-                <div className="hairline my-4" />
-                <p className="leading-relaxed text-zinc-200">
-                  Se você já quer entrar no jogo grande e fazer seu primeiro pedido a partir
-                  de 20 unidades direto com a fábrica:
-                </p>
-                <ul className="mt-5 space-y-3">
-                  <li className="flex items-start gap-3">
-                    <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
-                    <span className="leading-relaxed text-zinc-200">
-                      <span className="font-semibold text-foreground">
-                        Frete 100% grátis
-                      </span>{" "}
-                      da fábrica até a sua porta.
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
-                    <span className="leading-relaxed text-zinc-200">
-                      <span className="font-semibold text-foreground">
-                        Call exclusiva de alinhamento comigo:
-                      </span>{" "}
-                      um encontro ao vivo em grupo fechado no Zoom, para desenharmos "o plano
-                      escala" para zerar suas 20 peças ou mais em até 7 dias.
-                    </span>
-                  </li>
-                </ul>
+                  <div className="hairline my-4" />
+                  <p className="leading-relaxed text-zinc-200">
+                    Se você já quer entrar no jogo grande e fazer seu primeiro pedido a partir
+                    de 20 unidades direto com a fábrica:
+                  </p>
+                  <ul className="mt-5 space-y-3">
+                    <li className="flex items-start gap-3">
+                      <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                      <span className="leading-relaxed text-zinc-200">
+                        <span className="font-semibold text-foreground">
+                          Frete 100% grátis
+                        </span>{" "}
+                        da fábrica até a sua porta.
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                      <span className="leading-relaxed text-zinc-200">
+                        <span className="font-semibold text-foreground">
+                          Call exclusiva de alinhamento comigo:
+                        </span>{" "}
+                        um encontro ao vivo em grupo fechado no Zoom, para desenharmos "o plano
+                        escala" para zerar suas 20 peças ou mais em até 7 dias.
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => document.getElementById('oferta')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="w-full mt-6 py-2.5 px-4 rounded-lg bg-zinc-900 border border-zinc-700 hover:border-green-500/50 text-xs font-semibold text-zinc-200 transition-colors cursor-pointer"
+                >
+                  Selecionar este caminho →
+                </button>
               </div>
             </Reveal>
           </div>
@@ -565,7 +586,7 @@ function Index() {
                 />
               </div>
 
-              <ul className="mx-auto mt-6 grid max-w-xl gap-3 sm:gap-4 text-left">
+              <ul className="mx-auto mt-6 grid max-w-xl gap-2 sm:gap-3 text-left">
                 {CHECKLIST.map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
@@ -591,8 +612,8 @@ function Index() {
                 <CtaButton className="max-w-md">
                   GARANTIR MINHA VAGA AGORA
                 </CtaButton>
-                <p className="mt-4 text-sm text-zinc-400">
-                  🔒 Pagamento 100% Seguro • Acesso Imediato • 7 Dias de Garantia
+                <p className="text-[11px] sm:text-xs text-zinc-400 mt-2.5 flex flex-wrap items-center justify-center gap-1 font-medium select-none text-center">
+                  <span>🔒</span> <span className="whitespace-nowrap">Pagamento 100% Seguro</span> • <span className="whitespace-nowrap">Acesso Imediato</span> • <span className="whitespace-nowrap">7 Dias de Garantia</span>
                 </p>
               </div>
             </div>
@@ -635,7 +656,7 @@ function Index() {
           <Reveal delay={80} className="mt-10">
             <Accordion type="single" collapsible className="w-full">
               {FAQ.map((item, i) => (
-                <AccordionItem key={item.q} value={`item-${i}`} className="border-border">
+                <AccordionItem key={item.q} value={`item-${i}`} className="border-zinc-800/80">
                   <AccordionTrigger className="py-5 text-left font-display text-base font-bold hover:no-underline sm:text-lg">
                     {item.q}
                   </AccordionTrigger>
@@ -698,8 +719,8 @@ function Index() {
                 COMEÇAR A VENDER HOJE
               </CtaButton>
             </div>
-            <p className="text-xs text-zinc-400 mt-3 flex items-center justify-center gap-1.5 font-medium select-none">
-              <span>🔒</span> Pagamento único de R$ 97 • Acesso Imediato • 7 Dias de Garantia
+            <p className="text-[11px] sm:text-xs text-zinc-400 mt-2.5 flex flex-wrap items-center justify-center gap-1 font-medium select-none text-center">
+              <span>🔒</span> <span className="whitespace-nowrap">Pagamento único de R$ 97</span> • <span className="whitespace-nowrap">Acesso Imediato</span> • <span className="whitespace-nowrap">7 Dias de Garantia</span>
             </p>
           </Reveal>
         </div>
