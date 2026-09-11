@@ -59,7 +59,7 @@ const modulesData = [
   },
   {
     id: '08',
-    tag: 'PRÓXIMO NÍVEL 08',
+    tag: 'PRÓXIMO NÍVEL',
     badge: 'Ativação & Escala',
     title: 'DESAFIO 1K EM 7 DIAS',
     desc: 'O plano prático para colocar os primeiros R$ 1.000 limpos no bolso na primeira semana.',
@@ -113,10 +113,10 @@ export function ModulesCarousel() {
               {/* Topo: tag, badge e título */}
               <div>
                 <div className="flex items-center justify-between gap-2 mb-3">
-                  <span className={`text-[11px] font-bold uppercase tracking-wider ${item.highlight ? 'text-emerald-400' : 'text-zinc-300'}`}>
+                  <span className={`text-[11px] font-bold uppercase tracking-wider whitespace-nowrap shrink-0 ${item.highlight ? 'text-emerald-400' : 'text-zinc-300'}`}>
                     {item.tag}
                   </span>
-                  <span className={`px-2.5 py-1 text-[10px] font-bold rounded-full border backdrop-blur-md ${
+                  <span className={`px-2.5 py-1 text-[10px] font-bold rounded-full border backdrop-blur-md whitespace-nowrap shrink-0 ${
                     item.highlight
                       ? 'bg-emerald-400 text-black border-emerald-400 font-extrabold'
                       : 'bg-zinc-950/80 text-emerald-300 border-emerald-500/40'
