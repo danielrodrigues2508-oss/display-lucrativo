@@ -153,13 +153,16 @@ function Index() {
             </span>
           </h1>
 
-          <p className="mx-auto mt-5 max-w-2xl text-[1.0625rem] leading-relaxed text-zinc-200 sm:mt-6 sm:text-lg">
+          <p className="mx-auto mt-5 max-w-2xl sm:max-w-3xl text-[1.0625rem] leading-relaxed text-zinc-200 sm:mt-6 sm:text-lg text-balance">
             No seu tempo livre e sem largar o emprego. O método de quem vende display há 4
-            anos: aprenda a vender, configurar e tenha acesso ao meu fornecedor exclusivo.
+            anos: aprenda a vender, configurar e tenha acesso ao meu fornecedor&nbsp;exclusivo.
           </p>
 
           <div className="mt-9 flex flex-col items-center">
             <CtaButton className="max-w-md">QUERO COMEÇAR AGORA</CtaButton>
+            <p className="text-xs text-zinc-400 mt-3 flex items-center justify-center gap-1.5 font-medium select-none">
+              <span>🔒</span> Pagamento único de R$ 97 • Acesso Imediato • 7 Dias de Garantia
+            </p>
           </div>
         </div>
       </section>
@@ -200,7 +203,7 @@ function Index() {
             </Reveal>
 
             {/* Coluna 2: Card Fotográfico com o Display no Balcão */}
-            <Reveal delay={120} className="lg:col-span-5">
+            <Reveal delay={120} className="mt-6 lg:mt-0 lg:col-span-5">
               <div className="relative mx-auto max-w-md overflow-hidden rounded-2xl border border-emerald-500/20 bg-zinc-900/90 p-2 sm:p-3 shadow-xl lg:max-w-none">
                 <img
                   src="/images/pratica-balcao-nfc.jpg"
@@ -533,7 +536,7 @@ function Index() {
       </section>
 
       {/* ============ 08 — OFERTA COM MOCKUP 3D ============ */}
-      <section id="checkout" className="relative px-4 py-16 sm:px-6 lg:py-28">
+      <section id="oferta" className="relative px-4 py-16 sm:px-6 lg:py-28">
         <div
           aria-hidden
           className="pointer-events-none absolute inset-x-0 top-1/4 h-[420px] opacity-[0.18]"
@@ -695,8 +698,8 @@ function Index() {
                 COMEÇAR A VENDER HOJE
               </CtaButton>
             </div>
-            <p className="mt-4 text-sm text-zinc-400">
-              🔒 Acesso Imediato • Sem Mensalidade • 7 Dias de Garantia Incondicional
+            <p className="text-xs text-zinc-400 mt-3 flex items-center justify-center gap-1.5 font-medium select-none">
+              <span>🔒</span> Pagamento único de R$ 97 • Acesso Imediato • 7 Dias de Garantia
             </p>
           </Reveal>
         </div>

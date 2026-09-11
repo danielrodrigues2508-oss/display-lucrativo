@@ -189,10 +189,10 @@ export function Simulator() {
         {/* Micro-CTA de Conversão Secundário */}
         <div className="mt-6 pt-2">
           <a
-            href="#checkout"
+            href="#oferta"
             onClick={(e) => {
               e.preventDefault();
-              const el = document.getElementById("checkout");
+              const el = document.getElementById("oferta") || document.getElementById("checkout");
               if (el) {
                 el.scrollIntoView({ behavior: "smooth" });
               }
