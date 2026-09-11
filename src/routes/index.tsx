@@ -141,11 +141,11 @@ function Index() {
             🔥 Condição especial Aluno Fundador
           </span>
 
-          <div className="relative mt-4 -mb-3 sm:mt-6 sm:mb-0 max-h-[200px] sm:max-h-[320px] md:max-h-none overflow-hidden sm:overflow-visible">
+          <div className="relative mt-4 sm:mt-6 scale-[0.8] sm:scale-90 md:scale-100 origin-bottom pb-4 md:pb-0 mb-6 md:mb-0">
             <VideoFan />
           </div>
 
-          <h1 className="mx-auto mt-0 max-w-4xl font-display text-[2.1rem] leading-[1.03] font-extrabold text-balance sm:mt-4 sm:text-6xl lg:text-7xl">
+          <h1 className="relative z-10 mx-auto mt-4 md:mt-0 pt-4 md:pt-0 max-w-4xl font-display text-[2.1rem] leading-[1.03] font-extrabold text-balance sm:text-6xl lg:text-7xl">
             3 displays por dia.
             <br />
             <span className="text-lime-glow">
