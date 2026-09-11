@@ -1,14 +1,63 @@
 import { motion } from 'framer-motion';
 
 const modulesData = [
-  { id: '00', src: '/images/modulos/modulo-00.png', alt: 'Módulo 00 - Seu Display Demonstração' },
-  { id: '01', src: '/images/modulos/modulo-01.png', alt: 'Módulo 01 - Sem Isso Esquece' },
-  { id: '02', src: '/images/modulos/modulo-02.png', alt: 'Módulo 02 - Seus 3Mil Está Aqui' },
-  { id: '03', src: '/images/modulos/modulo-03.png', alt: 'Módulo 03 - Display Lucrativo' },
-  { id: '04', src: '/images/modulos/modulo-04.png', alt: 'Módulo 04 - Suas 10 Primeiras Vendas' },
-  { id: '05', src: '/images/modulos/modulo-05.png', alt: 'Módulo 05 - Display Interativo Nunca Vai Saturar' },
-  { id: '06', src: '/images/modulos/modulo-06.png', alt: 'Módulo 06 - Comunidade Display Lucrativo' },
-  { id: '08', src: '/images/modulos/modulo-08.png', alt: 'Próximo Nível 08 - Desafio 1K em 7 Dias' },
+  {
+    id: '01',
+    title: 'SEM ISSO ESQUECE',
+    tag: 'Mentalidade',
+    desc: 'Nosso Manifesto de ouro para focar apenas no que gera riqueza e cortar distrações.',
+    image: '/images/modulos/modulo-01-bg.png',
+  },
+  {
+    id: '02',
+    title: 'SEUS 3MIL ESTÁ AQUI',
+    tag: 'O Coração do Método',
+    desc: 'Você não vende "plaquinha". Domine a abordagem estratégica.',
+    image: '/images/modulos/modulo-02-bg.png',
+  },
+  {
+    id: '03',
+    title: 'DISPLAY LUCRATIVO',
+    tag: 'Operação Prática',
+    desc: 'Configurar o display no celular em 60 segundos e entregar com postura.',
+    image: '/images/modulos/modulo-03-bg.png',
+  },
+  {
+    id: '04',
+    title: 'SUAS 10 PRIMEIRAS VENDAS (F.A.C.I.L)',
+    tag: 'Tração Rápida',
+    desc: 'O método prático F.A.C.I.L e o raio-X dos comércios mais fáceis.',
+    image: '/images/modulos/modulo-04-bg.png',
+  },
+  {
+    id: '05',
+    title: 'DISPLAY INTERATIVO NUNCA VAI SATURAR',
+    tag: 'Blindagem de Mercado',
+    desc: 'Os 7 motivos reais para você ficar em paz com o mercado.',
+    image: '/images/modulos/modulo-05-bg.png',
+  },
+  {
+    id: '06',
+    title: 'COMUNIDADE | DISPLAY LUCRATIVO',
+    tag: 'Acompanhamento',
+    desc: 'Acesso ao grupo oficial de networking + Mentoria ao vivo mensal.',
+    image: '/images/modulos/modulo-06-bg.png',
+  },
+  {
+    id: '07',
+    title: 'PRÓXIMO NÍVEL 07',
+    tag: 'Ativação & Escala',
+    desc: 'O plano de ativação gratuito para colocar R$ 1.000 limpos no bolso.',
+    image: '/images/modulos/modulo-07-bg.png',
+  },
+  {
+    id: '08',
+    title: 'DESAFIO 1K EM 7 DIAS',
+    tag: 'Aceleração de Resultados',
+    desc: 'Plano intensivo para atingir os primeiros R$ 1.000 de lucro.',
+    image: '/images/modulos/modulo-08-bg.png',
+    highlight: true,
+  },
 ];
 
 export function ModulesCarousel() {
@@ -33,14 +82,50 @@ export function ModulesCarousel() {
         {fullCards.map((item, index) => (
           <div
             key={index}
-            className="w-[220px] sm:w-[250px] aspect-[9/16] rounded-2xl overflow-hidden flex-shrink-0 border border-zinc-800/80 hover:border-emerald-400/80 transition-all duration-300 shadow-lg hover:shadow-emerald-500/20 hover:scale-[1.02]"
+            className={`group relative w-[230px] sm:w-[260px] aspect-[9/16] rounded-2xl overflow-hidden flex-shrink-0 border transition-all duration-300 shadow-xl hover:scale-[1.02] ${
+              item.highlight
+                ? 'border-emerald-400/90 shadow-emerald-500/20'
+                : 'border-zinc-800/80 hover:border-emerald-500/50'
+            }`}
           >
+            {/* Imagem de Fundo Oficial */}
             <img
-              src={item.src}
-              alt={item.alt}
-              className="w-full h-full object-cover select-none pointer-events-none"
+              src={item.image}
+              alt={item.title}
+              className="absolute inset-0 w-full h-full object-cover select-none pointer-events-none transition-transform duration-500 group-hover:scale-105"
               loading="lazy"
             />
+
+            {/* Camada de Gradiente Escuro para Garantir Contraste Perfeito do Texto */}
+            <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/60 to-zinc-950/30" />
+
+            {/* Conteúdo com Badges, Título e Descrição */}
+            <div className="relative z-10 h-full p-5 flex flex-col justify-between">
+              <div>
+                <div className="flex items-center justify-between gap-2 mb-3">
+                  <span className={`text-[11px] font-bold uppercase tracking-wider ${item.highlight ? 'text-emerald-400' : 'text-zinc-300'}`}>
+                    Módulo {item.id}
+                  </span>
+                  <span className={`px-2.5 py-1 text-[10px] font-bold rounded-full border backdrop-blur-md ${
+                    item.highlight
+                      ? 'bg-emerald-400 text-black border-emerald-400'
+                      : 'bg-zinc-950/80 text-emerald-300 border-emerald-500/40'
+                  }`}>
+                    {item.tag}
+                  </span>
+                </div>
+
+                <h3 className="text-base sm:text-lg font-bold text-white leading-snug tracking-tight drop-shadow-md">
+                  {item.title}
+                </h3>
+              </div>
+
+              <div className="pt-3 border-t border-white/10">
+                <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed drop-shadow-sm">
+                  {item.desc}
+                </p>
+              </div>
+            </div>
           </div>
         ))}
       </motion.div>
