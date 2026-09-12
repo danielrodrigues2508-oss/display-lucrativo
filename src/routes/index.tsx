@@ -129,7 +129,7 @@ function Index() {
   return (
     <main className="relative overflow-x-hidden pb-0">
       {/* ============ 01 — HERO ============ */}
-      <section className="relative px-4 pt-4 pb-12 sm:px-6 sm:pt-6 md:pt-8 lg:pt-10 lg:pb-16">
+      <section className="relative px-4 pt-2 sm:pt-6 md:pt-10 lg:pt-10 pb-12 sm:pb-14 lg:pb-16">
         <div
           aria-hidden
           className="pointer-events-none absolute inset-x-0 top-0 h-[520px] opacity-[0.22]"
@@ -139,11 +139,11 @@ function Index() {
           }}
         />
         <div className="relative mx-auto max-w-5xl text-center">
-          <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-[color-mix(in_oklab,var(--lime)_8%,transparent)] px-4 py-2 text-xs sm:text-sm font-bold tracking-[0.16em] text-primary uppercase mt-10 sm:mt-6 md:mt-0 mb-1 sm:mb-2 md:mb-3">
+          <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-[color-mix(in_oklab,var(--lime)_8%,transparent)] px-4 py-2 text-xs sm:text-sm font-bold tracking-[0.16em] text-primary uppercase mt-4 sm:mt-6 mb-2 sm:mb-3">
             🔥 Condição especial Aluno Fundador
           </span>
 
-          <div className="relative mt-1 sm:mt-3 md:my-1 md:max-w-lg lg:max-w-xl mx-auto scale-[0.8] sm:scale-90 md:scale-90 origin-bottom md:origin-center pb-2 md:pb-0 mb-4 md:mb-0">
+          <div className="relative w-full max-w-[360px] sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto scale-100 md:scale-90 md:origin-center md:my-1 flex justify-center items-center pb-2 md:pb-0 mb-4 md:mb-0">
             <VideoFan />
           </div>
 
