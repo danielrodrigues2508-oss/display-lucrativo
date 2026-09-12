@@ -115,11 +115,10 @@ const DELIVERABLES = [
 ];
 
 const CHECKLIST = [
-  "Método Display Lucrativo Completo (Da abordagem ao fechamento em balcão)",
-  "Acesso Direto ao Fornecedor Exclusivo (Kits com Frete Grátis a partir de R$ 19/un)",
+  "Método Display Lucrativo Completo (Da abordagem ao fechamento)",
+  "Tenha acesso exclusivo ao fornecedor mais barato do Brasil (Kits com Frete Grátis a partir de R$ 17/un)",
   "Mentorias ao Vivo Mensais (Tira-dúvidas de campo direto comigo)",
   "Comunidade Display Lucrativo (Networking com outros operadores)",
-  "Condição Especial: Tabela de fábrica fechada (Pack Start, Pro e Master)",
 ];
 
 function Index() {
@@ -229,55 +228,61 @@ function Index() {
           </Reveal>
 
           <Reveal delay={70} className="mt-8 grid gap-5 lg:grid-cols-2">
-            <div className="surface-panel rounded-[1.75rem] border border-border p-6 sm:p-8">
-              <p className="font-display text-xl font-extrabold sm:text-2xl">
-                1 Display Interativo
-              </p>
-              <dl className="mt-6 space-y-3 text-sm sm:text-base">
-                <div className="flex items-center justify-between gap-4">
-                  <dt className="text-muted-foreground">Custo fornecedor</dt>
-                  <dd className="font-display font-bold tabular-nums">R$23,00</dd>
+            <div className="surface-panel flex flex-col justify-between rounded-[1.75rem] border border-border p-6 sm:p-8">
+              <div>
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
+                  <p className="font-display text-xl font-extrabold sm:text-2xl">
+                    Kit 10 Displays <span className="text-primary">(Pack Start)</span>
+                  </p>
+                  <span className="self-start sm:self-auto inline-flex rounded-full border border-primary/35 bg-[color-mix(in_oklab,var(--lime)_10%,transparent)] px-3.5 py-1.5 text-xs font-bold tracking-[0.14em] text-primary uppercase shrink-0">
+                    VALIDAÇÃO RÁPIDA
+                  </span>
                 </div>
-                <div className="flex items-center justify-between gap-4">
-                  <dt className="text-muted-foreground">Preço médio de venda</dt>
-                  <dd className="font-display font-bold tabular-nums">R$70,00 a R$80,00</dd>
-                </div>
-              </dl>
+                <dl className="mt-6 space-y-3 text-sm sm:text-base">
+                  <div className="flex items-center justify-between gap-4">
+                    <dt className="text-muted-foreground">Custo fornecedor</dt>
+                    <dd className="font-display font-bold tabular-nums">R$ 190,00 <span className="text-xs text-zinc-400 font-normal">(R$ 19,00/un com Frete Grátis)</span></dd>
+                  </div>
+                  <div className="flex items-center justify-between gap-2 text-sm sm:text-base">
+                    <dt className="text-muted-foreground">Venda das 10 peças (a R$ 70 - R$ 80 cada)</dt>
+                    <dd className="font-display font-bold tabular-nums shrink-0">R$ 700,00 a R$ 800,00</dd>
+                  </div>
+                </dl>
+              </div>
               <div className="mt-6 rounded-2xl border border-primary/30 bg-[color-mix(in_oklab,var(--lime)_8%,var(--ink))] px-5 py-4">
                 <p className="text-xs sm:text-sm font-bold tracking-[0.18em] text-primary uppercase">
                   Lucro no bolso
                 </p>
                 <p className="text-lime-glow mt-1 font-display text-2xl font-extrabold tabular-nums sm:text-3xl">
-                   + R$ 47,00 a R$ 57,00
+                   + R$ 510,00 a R$ 610,00
                 </p>
-                <p className="mt-1 text-sm text-zinc-300">Até 71% de margem</p>
+                <p className="mt-1 text-sm text-zinc-300">Lucro limpo no bolso</p>
               </div>
             </div>
 
-            {/* Card Lote 20 com cabeçalho flexível sem sobreposição */}
+            {/* Card Kit 30 (Pack Pro) */}
             <div className="surface-panel flex flex-col justify-between rounded-[1.75rem] border border-primary/40 p-6 shadow-[var(--shadow-deep)] sm:p-8">
               <div>
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
                   <p className="font-display text-xl font-extrabold sm:text-2xl">
-                    🚚 Lote 20 Displays{" "}
-                    <span className="text-primary">(frete grátis)</span>
+                    Kit 30 Displays <span className="text-primary">(Pack Pro)</span>
                   </p>
                   <span className="self-start sm:self-auto inline-flex rounded-full border border-primary/35 bg-[color-mix(in_oklab,var(--lime)_10%,transparent)] px-3.5 py-1.5 text-xs font-bold tracking-[0.14em] text-primary uppercase shrink-0">
-                    Recomendado / maior lucro
+                    ⭐ MAIS PEDIDO PELOS ALUNOS
                   </span>
                 </div>
 
                 <dl className="mt-6 space-y-3 text-sm sm:text-base">
                   <div className="flex items-center justify-between gap-4">
                     <dt className="text-muted-foreground">Custo fornecedor</dt>
-                    <dd className="font-display font-bold tabular-nums">R$460,00</dd>
+                    <dd className="font-display font-bold tabular-nums">R$ 540,00 <span className="text-xs text-zinc-400 font-normal">(R$ 18,00/un com Frete Grátis)</span></dd>
                   </div>
                   <div className="flex items-center justify-between gap-2 text-sm sm:text-base">
                     <dt className="text-muted-foreground">
-                      Venda das 20 peças (a R$ 70 - R$ 80 cada)
+                      Venda das 30 peças (a R$ 70 - R$ 80 cada)
                     </dt>
                     <dd className="font-display font-bold tabular-nums shrink-0">
-                      R$1.400,00 a R$1.600,00
+                      R$ 2.100,00 a R$ 2.400,00
                     </dd>
                   </div>
                 </dl>
@@ -288,9 +293,9 @@ function Index() {
                   Lucro no bolso
                 </p>
                 <p className="text-lime-glow mt-1 font-display text-2xl font-extrabold tabular-nums sm:text-3xl">
-                   + R$ 940,00 a R$ 1.140,00
+                   + R$ 1.560,00 a R$ 1.860,00
                 </p>
-                <p className="mt-1 text-sm text-zinc-300">Lucro 100% limpo</p>
+                <p className="mt-1 text-sm text-zinc-300">Margem e escala acelerada</p>
               </div>
             </div>
           </Reveal>
@@ -463,10 +468,10 @@ function Index() {
                   <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-4">
                     <div>
                       <h3 className="font-display text-2xl font-extrabold sm:text-3xl">
-                        Opção 1: Validação Rápida (Pack Start 10 un)
+                        Kit 1: Validação Rápida
                       </h3>
                       <p className="mt-2 text-sm text-zinc-300">
-                        Para quem quer validar o método na sua cidade com baixo investimento.
+                        Pack Start – Ideal para validar o método na sua cidade.
                       </p>
                     </div>
                     <span className="self-start sm:self-auto inline-flex rounded-full border border-emerald-500/35 bg-[color-mix(in_oklab,var(--lime)_10%,transparent)] px-3.5 py-1.5 text-xs font-bold tracking-[0.14em] text-primary uppercase shrink-0">
@@ -474,10 +479,27 @@ function Index() {
                     </span>
                   </div>
 
-                  <div className="hairline my-6" />
-                  <p className="leading-relaxed text-zinc-200">
-                    Você entra no método, aprende a abordar o comércio local e pede seu primeiro lote de 10 unidades por R$ 190 com FRETE GRÁTIS direto da fábrica (sai a R$ 19 a unidade). Vendendo a R$ 70 ou R$ 80 cada, você faz de R$ 700 a R$ 800 e já recupera o valor com lucro limpo no bolso.
-                  </p>
+                  <div className="hairline my-4" />
+                  <ul className="space-y-3 mt-4">
+                    <li className="flex items-start gap-3">
+                      <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                      <span className="leading-relaxed text-zinc-200">
+                        <strong className="text-foreground">Kit 10 un (R$ 19 cada):</strong> direto da fábrica com FRETE GRÁTIS.
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                      <span className="leading-relaxed text-zinc-200">
+                        Você entra no método, aprende o pitch e pede seu primeiro lote de 10 unidades com baixo investimento.
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                      <span className="leading-relaxed text-zinc-200">
+                        <strong className="text-foreground">Retorno rápido:</strong> vendendo a R$ 70 ou R$ 80 cada, você faz de R$ 700 a R$ 800 e já valida sua operação.
+                      </span>
+                    </li>
+                  </ul>
                 </div>
                 <button
                   type="button"
@@ -492,14 +514,13 @@ function Index() {
             <Reveal delay={90}>
               <div className="surface-panel relative flex h-full flex-col justify-between rounded-[1.75rem] border border-primary/50 p-6 shadow-[var(--shadow-deep)] sm:p-8">
                 <div>
-                  {/* Cabeçalho flexível sem sobreposição */}
                   <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-4">
                     <div>
                       <h3 className="font-display text-2xl font-extrabold text-lime-glow sm:text-3xl">
-                        Opção 2: Escala e Margem Máxima (Pack Pro e Master)
+                        Kit 2: Escala e Margem Máxima
                       </h3>
                       <p className="mt-2 text-sm text-zinc-300">
-                        Para quem já quer abastecer o comércio com o menor custo unitário.
+                        Pack Pro e Master – Para quem quer escalar as vendas com o menor custo.
                       </p>
                     </div>
                     <span className="self-start sm:self-auto inline-flex rounded-full border border-primary/35 bg-[color-mix(in_oklab,var(--lime)_10%,transparent)] px-3.5 py-1.5 text-xs font-bold tracking-[0.14em] text-primary uppercase shrink-0">
@@ -512,19 +533,19 @@ function Index() {
                     <li className="flex items-start gap-3">
                       <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
                       <span className="leading-relaxed text-zinc-200">
-                        <strong className="text-foreground">Pack Pro 30 un (R$ 540) com Frete Grátis:</strong> o combo mais pedido pelos alunos para cobrir avenidas comerciais inteiras.
+                        <strong className="text-foreground">Pack Pro 30 un (R$ 18 cada):</strong> ⭐ o combo mais pedido pelos alunos para cobrir comércios da região.
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
                       <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
                       <span className="leading-relaxed text-zinc-200">
-                        <strong className="text-foreground">Pack Master 50 un (R$ 850) com Frete Grátis:</strong> menor preço por unidade (R$ 17 cada) e lucro bruto de até R$ 4.000 no lote.
+                        <strong className="text-foreground">Pack Master 50 un (R$ 17 cada) com Frete Grátis:</strong> 🚀 menor preço por unidade e lucro altíssimo.
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
                       <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
                       <span className="leading-relaxed text-zinc-200">
-                        Acesso ao nosso roteiro de vendas para fechar lojas em lote.
+                        Nosso roteiro completo de vendas para fechar pedidos em lote no mesmo cliente.
                       </span>
                     </li>
                   </ul>
@@ -542,9 +563,9 @@ function Index() {
 
           {/* Destaque do Aviso de Ponto de Partida Estilizado */}
           <Reveal delay={120} className="mt-10">
-            <div className="mx-auto max-w-2xl rounded-2xl border border-primary/35 bg-zinc-900/90 p-5 text-center shadow-[0_0_35px_-12px_var(--lime)] backdrop-blur-sm">
+            <div className="mx-auto max-w-2xl text-balance rounded-2xl border border-primary/35 bg-zinc-900/90 p-5 text-center shadow-[0_0_35px_-12px_var(--lime)] backdrop-blur-sm">
               <p className="text-sm font-semibold text-zinc-100 sm:text-base leading-relaxed">
-                💡 <span className="text-primary font-bold">Importante:</span> Ao entrar hoje no treinamento por R$ 47, você tem acesso imediato à lista de fornecedores com todos esses lotes exclusivos e frete grátis liberado.
+                💡 <span className="text-primary font-bold">Importante:</span> Ao entrar hoje no treinamento por R$ 47, você tem acesso imediato à lista de fornecedores e com todos esses lotes exclusivos e frete grátis&nbsp;liberado.
               </p>
             </div>
           </Reveal>
