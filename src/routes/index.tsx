@@ -19,7 +19,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Aprenda a vender Display Interativo para o comércio local no seu tempo livre. Método, fornecedor exclusivo e mentorias ao vivo por R$47 à vista.",
+          "Aprenda a vender Display Interativo para o comércio local no seu tempo livre. Método, fornecedor mais barato do Brasil e mentorias ao vivo por R$47 à vista.",
       },
       {
         property: "og:title",
