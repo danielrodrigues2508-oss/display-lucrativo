@@ -235,10 +235,10 @@ function Index() {
             <div className="surface-panel flex flex-col justify-between rounded-[1.75rem] border border-border p-6 sm:p-8">
               <div>
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
-                  <p className="font-display text-xl font-extrabold sm:text-2xl">
-                    📦 Kit 10 Displays <br />
-                    <span className="text-zinc-400 font-normal text-sm sm:text-base">(Pack Start)</span>
-                  </p>
+                  <h3 className="text-xl sm:text-2xl font-bold text-white flex flex-col">
+                    <span className="flex items-center gap-2">📦 Kit 10 Displays</span>
+                    <span className="text-green-400 font-bold">(Pack Start)</span>
+                  </h3>
                   <span className="self-start sm:self-auto inline-flex rounded-full border border-primary/35 bg-[color-mix(in_oklab,var(--lime)_10%,transparent)] px-3.5 py-1.5 text-xs font-bold tracking-[0.14em] text-primary uppercase shrink-0">
                     ⚡ VALIDAÇÃO RÁPIDA
                   </span>
@@ -246,7 +246,7 @@ function Index() {
                 <div className="mt-6 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-sm sm:text-base">
                   <span className="text-muted-foreground">Custo por unidade:</span>
                   <span className="font-display font-bold text-zinc-100">
-                    a partir de R$ 17/un <span className="text-xs text-primary font-semibold">(com Frete Grátis)</span>
+                    R$ 19/un <span className="text-xs text-primary font-semibold">(com Frete Grátis)</span>
                   </span>
                 </div>
               </div>
@@ -264,9 +264,10 @@ function Index() {
             <div className="surface-panel flex flex-col justify-between rounded-[1.75rem] border border-primary/40 p-6 shadow-[var(--shadow-deep)] sm:p-8">
               <div>
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
-                  <p className="font-display text-xl font-extrabold sm:text-2xl">
-                    ⭐ Kit 30 Displays <span className="text-primary">(Pack Pro)</span>
-                  </p>
+                  <h3 className="text-xl sm:text-2xl font-bold text-white flex flex-col">
+                    <span className="flex items-center gap-2">⭐ Kit 30 Displays</span>
+                    <span className="text-green-400 font-bold">(Pack Pro)</span>
+                  </h3>
                   <span className="self-start sm:self-auto inline-flex rounded-full border border-primary/35 bg-[color-mix(in_oklab,var(--lime)_10%,transparent)] px-3.5 py-1.5 text-xs font-bold tracking-[0.14em] text-primary uppercase shrink-0">
                     ⭐ MAIS PEDIDO PELOS ALUNOS
                   </span>
@@ -275,7 +276,7 @@ function Index() {
                 <div className="mt-6 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-sm sm:text-base">
                   <span className="text-muted-foreground">Custo por unidade:</span>
                   <span className="font-display font-bold text-zinc-100">
-                    a partir de R$ 17/un <span className="text-xs text-primary font-semibold">(com Frete Grátis)</span>
+                    R$ 18/un <span className="text-xs text-primary font-semibold">(com Frete Grátis)</span>
                   </span>
                 </div>
               </div>
