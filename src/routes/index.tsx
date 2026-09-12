@@ -155,9 +155,8 @@ function Index() {
             </span>
           </h1>
 
-          <p className="mx-auto mt-5 max-w-2xl lg:max-w-3xl text-sm sm:text-base text-zinc-300 leading-relaxed sm:mt-6 text-balance">
-            No seu tempo livre e sem largar o emprego. O método de quem vende display há mais de 4
-            anos: aprenda a vender, configurar e tenha acesso ao meu fornecedor&nbsp;exclusivo.
+          <p className="max-w-2xl lg:max-w-3xl mx-auto mt-5 sm:mt-6 text-sm sm:text-base text-zinc-300 leading-relaxed text-center [text-wrap:balance]">
+            No seu tempo livre e sem largar o emprego. O método de quem vende display há mais de 4 anos: aprenda a vender, configurar e tenha acesso ao fornecedor mais barato do Brasil&nbsp;(a&nbsp;partir&nbsp;de&nbsp;R$&nbsp;17/un).
           </p>
 
           <div className="mt-9 flex flex-col items-center">
