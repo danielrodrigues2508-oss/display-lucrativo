@@ -83,8 +83,8 @@ const DELIVERABLES = [
   {
     id: "01",
     tag: "01",
-    title: "Acesso Direto ao Fornecedor Exclusivo",
-    desc: "Acesso direto à fábrica com modelos validados em kits fechados com FRETE GRÁTIS para todo o Brasil: Pack Start 10 un (R$ 190), Pack Pro 30 un (R$ 540) e Pack Master 50 un (R$ 850). Sem intermediários e com margem máxima no bolso.",
+    title: "Acesso Direto ao Fornecedor mais barato do país",
+    desc: "Kits com FRETE GRÁTIS para todo o Brasil a partir de R$ 17 cada. Sem intermediários e com margem máxima no bolso.",
     image: "/images/entrega-fornecedor.jpg?v=1",
     alt: "Estoque direto da fábrica e displays acrílicos",
   },
@@ -232,7 +232,7 @@ function Index() {
               <div>
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
                   <p className="font-display text-xl font-extrabold sm:text-2xl">
-                    Kit 10 Displays <span className="text-primary">(Pack Start)</span>
+                    📦 Kit 10 Displays <span className="text-primary">(Pack Start)</span>
                   </p>
                   <span className="self-start sm:self-auto inline-flex rounded-full border border-primary/35 bg-[color-mix(in_oklab,var(--lime)_10%,transparent)] px-3.5 py-1.5 text-xs font-bold tracking-[0.14em] text-primary uppercase shrink-0">
                     VALIDAÇÃO RÁPIDA
@@ -265,7 +265,7 @@ function Index() {
               <div>
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
                   <p className="font-display text-xl font-extrabold sm:text-2xl">
-                    Kit 30 Displays <span className="text-primary">(Pack Pro)</span>
+                    ⭐ Kit 30 Displays <span className="text-primary">(Pack Pro)</span>
                   </p>
                   <span className="self-start sm:self-auto inline-flex rounded-full border border-primary/35 bg-[color-mix(in_oklab,var(--lime)_10%,transparent)] px-3.5 py-1.5 text-xs font-bold tracking-[0.14em] text-primary uppercase shrink-0">
                     ⭐ MAIS PEDIDO PELOS ALUNOS
@@ -490,7 +490,7 @@ function Index() {
                     <li className="flex items-start gap-3">
                       <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
                       <span className="leading-relaxed text-zinc-200">
-                        Você entra no método, aprende o pitch e pede seu primeiro lote de 10 unidades com baixo investimento.
+                        Você entra no método, pede seu primeiro KIT direto da fábrica (a partir de R$ 17 cada) com FRETE GRÁTIS.
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
@@ -504,9 +504,9 @@ function Index() {
                 <button
                   type="button"
                   onClick={() => document.getElementById('oferta')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="w-full mt-6 py-2.5 px-4 rounded-lg bg-zinc-900 border border-zinc-700 hover:border-green-500/50 text-xs font-semibold text-zinc-200 transition-colors cursor-pointer"
+                  className="w-full mt-6 py-3.5 px-6 rounded-xl font-bold text-sm text-black bg-gradient-to-r from-green-400 to-emerald-500 hover:from-green-300 hover:to-emerald-400 shadow-[0_0_20px_rgba(34,197,94,0.3)] hover:shadow-[0_0_28px_rgba(34,197,94,0.5)] transition-all flex items-center justify-center gap-2 active:scale-[0.98] cursor-pointer uppercase tracking-wider"
                 >
-                  Selecionar este caminho →
+                  SELECIONAR ESTE CAMINHO →
                 </button>
               </div>
             </Reveal>
@@ -553,9 +553,9 @@ function Index() {
                 <button
                   type="button"
                   onClick={() => document.getElementById('oferta')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="w-full mt-6 py-2.5 px-4 rounded-lg bg-zinc-900 border border-zinc-700 hover:border-green-500/50 text-xs font-semibold text-zinc-200 transition-colors cursor-pointer"
+                  className="w-full mt-6 py-3.5 px-6 rounded-xl font-bold text-sm text-black bg-gradient-to-r from-green-400 to-emerald-500 hover:from-green-300 hover:to-emerald-400 shadow-[0_0_20px_rgba(34,197,94,0.3)] hover:shadow-[0_0_28px_rgba(34,197,94,0.5)] transition-all flex items-center justify-center gap-2 active:scale-[0.98] cursor-pointer uppercase tracking-wider"
                 >
-                  Selecionar este caminho →
+                  SELECIONAR ESTE CAMINHO →
                 </button>
               </div>
             </Reveal>
@@ -563,9 +563,9 @@ function Index() {
 
           {/* Destaque do Aviso de Ponto de Partida Estilizado */}
           <Reveal delay={120} className="mt-10">
-            <div className="mx-auto max-w-2xl text-balance rounded-2xl border border-primary/35 bg-zinc-900/90 p-5 text-center shadow-[0_0_35px_-12px_var(--lime)] backdrop-blur-sm">
-              <p className="text-sm font-semibold text-zinc-100 sm:text-base leading-relaxed">
-                💡 <span className="text-primary font-bold">Importante:</span> Ao entrar hoje no treinamento por R$ 47, você tem acesso imediato à lista de fornecedores e com todos esses lotes exclusivos e frete grátis&nbsp;liberado.
+            <div className="max-w-2xl mx-auto text-center text-sm md:text-base leading-relaxed px-4 py-3 rounded-xl border border-green-500/30 bg-green-950/20 text-zinc-200 text-balance">
+              <p>
+                💡 <span className="text-primary font-bold">Importante:</span> Ao entrar hoje na comunidade por apenas R$ 47, você tem acesso imediato ao fornecedor mais barato do país e ainda ganha frete&nbsp;grátis.
               </p>
             </div>
           </Reveal>
