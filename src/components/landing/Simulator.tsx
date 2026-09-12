@@ -138,7 +138,7 @@ export function Simulator() {
 
         <div className="mt-4 rounded-2xl border border-primary/30 bg-[color-mix(in_oklab,var(--lime)_7%,var(--ink))] p-4">
           <p className="font-display text-base font-extrabold sm:text-lg">
-            Cada Display vendido = <span className="text-lime-glow">R$47</span> de lucro bruto.
+            Cada Display vendido = <span className="text-lime-glow">R$ 52 a R$ 62</span> de lucro bruto.
           </p>
         </div>
 
@@ -199,8 +199,7 @@ export function Simulator() {
             }}
             className="group flex w-full items-center justify-center gap-2 rounded-2xl border border-primary/50 bg-primary/10 px-6 py-4 font-display text-sm font-extrabold text-primary shadow-[0_0_30px_-10px_var(--lime)] transition-all duration-300 hover:border-primary hover:bg-primary hover:text-primary-foreground hover:shadow-[0_0_50px_-8px_var(--lime)] hover:scale-[1.02] sm:text-base cursor-pointer"
           >
-            <span>Quero lucrar meus primeiros R$ 1.000</span>
-            <ArrowDown className="h-4 w-4 transition-transform group-hover:translate-y-0.5" />
+            <span>QUERO COMEÇAR A LUCRAR AGORA →</span>
           </a>
         </div>
 

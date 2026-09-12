@@ -176,7 +176,7 @@ function Index() {
             <h2 className="mt-4 font-display text-3xl leading-[1.08] font-extrabold text-balance sm:text-5xl">
               Todo lojista quer estar no topo do Google.{" "}
               <span className="text-primary">
-                Ele só não sabe como pedir a avaliação.
+                Ele só não sabe como conseguir mais avaliações.
               </span>
             </h2>
           </Reveal>
@@ -341,7 +341,7 @@ function Index() {
           <Reveal className="max-w-3xl">
             <SectionLabel>📦 O que você recebe</SectionLabel>
             <h2 className="mt-4 font-display text-3xl leading-[1.08] font-extrabold text-balance sm:text-5xl">
-              Tudo o que você precisa para começar a faturar no balcão.
+              Tudo o que você precisa para começar a faturar na sua região.
             </h2>
           </Reveal>
 
@@ -481,7 +481,7 @@ function Index() {
                     <li className="flex items-start gap-3">
                       <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
                       <span className="leading-relaxed text-zinc-200">
-                        Você entra no método, pede seu primeiro KIT direto da fábrica (a partir de R$ 17 cada) com FRETE GRÁTIS.
+                        Você entra no método e pede seu primeiro lote de 10 unidades direto da fábrica por R$ 19 cada (com acesso a lotes a partir de R$ 17) e FRETE GRÁTIS.
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
@@ -495,7 +495,7 @@ function Index() {
                 <button
                   type="button"
                   onClick={() => document.getElementById('oferta')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="w-full mt-6 py-3 px-5 rounded-xl bg-zinc-900/90 border border-green-500/40 hover:border-green-400 text-green-400 hover:text-green-300 font-semibold text-sm transition-all duration-200 flex items-center justify-center gap-2 hover:bg-zinc-800/80 cursor-pointer"
+                  className="w-full mt-6 py-3 px-5 rounded-xl bg-zinc-900 border border-green-500/50 hover:border-green-400 text-green-400 hover:text-green-300 font-bold text-xs uppercase tracking-wider transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer shadow-[0_0_15px_rgba(34,197,94,0.15)]"
                 >
                   Selecionar este caminho →
                 </button>
@@ -544,7 +544,7 @@ function Index() {
                 <button
                   type="button"
                   onClick={() => document.getElementById('oferta')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="w-full mt-6 py-3 px-5 rounded-xl bg-zinc-900/90 border border-green-500/40 hover:border-green-400 text-green-400 hover:text-green-300 font-semibold text-sm transition-all duration-200 flex items-center justify-center gap-2 hover:bg-zinc-800/80 cursor-pointer"
+                  className="w-full mt-6 py-3 px-5 rounded-xl bg-zinc-900 border border-green-500/50 hover:border-green-400 text-green-400 hover:text-green-300 font-bold text-xs uppercase tracking-wider transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer shadow-[0_0_15px_rgba(34,197,94,0.15)]"
                 >
                   Selecionar este caminho →
                 </button>
