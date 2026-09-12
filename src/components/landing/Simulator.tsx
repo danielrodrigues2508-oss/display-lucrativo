@@ -142,18 +142,6 @@ export function Simulator() {
           </p>
         </div>
 
-        <div className="mt-3 rounded-2xl border border-border bg-[color-mix(in_oklab,var(--surface-2)_80%,transparent)] p-4">
-          <p className="text-xs sm:text-sm font-bold tracking-[0.18em] text-muted-foreground uppercase">
-            Meta Recomendada
-          </p>
-          <p className="mt-1 font-display text-lg font-extrabold tabular-nums sm:text-xl">
-            78 Displays (3/dia em 26 dias) → <span className="text-lime-glow">R$ 3.666</span>
-          </p>
-          <p className="mt-1 text-sm text-zinc-300">
-            Mais de R$ 3.600 limpos no seu bolso dedicando 1 a 2 horas no fim do dia.
-          </p>
-        </div>
-
         <div className="mt-6">
           <p className="text-xs sm:text-sm font-bold tracking-[0.18em] text-muted-foreground uppercase">
             Simulação rápida (26 dias úteis)
