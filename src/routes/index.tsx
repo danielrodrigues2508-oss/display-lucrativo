@@ -129,7 +129,7 @@ function Index() {
   return (
     <main className="relative overflow-x-hidden pb-0">
       {/* ============ 01 — HERO ============ */}
-      <section className="relative px-4 pt-8 pb-14 sm:px-6 sm:pt-12 lg:pt-16 lg:pb-24">
+      <section className="relative px-4 pt-4 pb-14 sm:px-6 sm:pt-8 md:pt-12 lg:pt-16 lg:pb-24">
         <div
           aria-hidden
           className="pointer-events-none absolute inset-x-0 top-0 h-[520px] opacity-[0.22]"
@@ -139,11 +139,11 @@ function Index() {
           }}
         />
         <div className="relative mx-auto max-w-5xl text-center">
-          <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-[color-mix(in_oklab,var(--lime)_8%,transparent)] px-4 py-2 text-xs sm:text-sm font-bold tracking-[0.16em] text-primary uppercase">
+          <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-[color-mix(in_oklab,var(--lime)_8%,transparent)] px-4 py-2 text-xs sm:text-sm font-bold tracking-[0.16em] text-primary uppercase mb-1 sm:mb-3 md:mb-4">
             🔥 Condição especial Aluno Fundador
           </span>
 
-          <div className="relative mt-4 sm:mt-6 scale-[0.8] sm:scale-90 md:scale-100 origin-bottom pb-4 md:pb-0 mb-6 md:mb-0">
+          <div className="relative mt-1 sm:mt-3 md:mt-6 scale-[0.8] sm:scale-90 md:scale-100 origin-bottom pb-2 md:pb-0 mb-4 md:mb-0">
             <VideoFan />
           </div>
 

@@ -11,7 +11,7 @@ const heroCards = [
 
 export function HeroFan() {
   return (
-    <div className="relative flex items-center justify-center pt-8 pb-4 overflow-visible w-full max-w-5xl mx-auto h-[320px] sm:h-[380px] md:h-[420px]">
+    <div className="relative flex items-center justify-center pt-2 sm:pt-4 md:pt-8 pb-2 sm:pb-4 overflow-visible w-full max-w-5xl mx-auto h-[280px] sm:h-[350px] md:h-[420px]">
       <div className="flex items-center justify-center -space-x-10 sm:-space-x-12 md:-space-x-16">
         {heroCards.map((card, i) => (
           <motion.div
