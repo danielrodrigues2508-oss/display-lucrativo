@@ -236,10 +236,11 @@ function Index() {
               <div>
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
                   <p className="font-display text-xl font-extrabold sm:text-2xl">
-                    📦 Kit 10 Displays <span className="text-primary">(Pack Start)</span>
+                    📦 Kit 10 Displays <br />
+                    <span className="text-zinc-400 font-normal text-sm sm:text-base">(Pack Start)</span>
                   </p>
                   <span className="self-start sm:self-auto inline-flex rounded-full border border-primary/35 bg-[color-mix(in_oklab,var(--lime)_10%,transparent)] px-3.5 py-1.5 text-xs font-bold tracking-[0.14em] text-primary uppercase shrink-0">
-                    VALIDAÇÃO RÁPIDA
+                    ⚡ VALIDAÇÃO RÁPIDA
                   </span>
                 </div>
                 <div className="mt-6 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-sm sm:text-base">
@@ -249,13 +250,13 @@ function Index() {
                   </span>
                 </div>
               </div>
-              <div className="mt-6 flex flex-row items-center justify-between gap-4 rounded-2xl border border-primary/30 bg-[color-mix(in_oklab,var(--lime)_8%,var(--ink))] py-3 px-4 sm:px-5">
-                <p className="text-xs sm:text-sm font-bold tracking-[0.18em] text-primary uppercase shrink-0">
-                  Lucro no bolso
-                </p>
-                <p className="text-lime-glow font-display text-xl font-extrabold tabular-nums sm:text-2xl">
-                   + R$ 510,00 a R$ 610,00
-                </p>
+              <div className="mt-6 flex flex-row items-center justify-between gap-2 py-3 px-4 rounded-xl border border-green-500/30 bg-green-950/20">
+                <span className="text-xs sm:text-sm font-bold tracking-wider text-green-500 uppercase select-none">
+                  LUCRO NO BOLSO
+                </span>
+                <span className="text-sm sm:text-lg font-black text-green-400 whitespace-nowrap">
+                  + R$ 510,00 a R$ 610,00
+                </span>
               </div>
             </div>
 
@@ -279,13 +280,13 @@ function Index() {
                 </div>
               </div>
 
-              <div className="mt-6 flex flex-row items-center justify-between gap-4 rounded-2xl border border-primary/30 bg-[color-mix(in_oklab,var(--lime)_10%,var(--ink))] py-3 px-4 sm:px-5">
-                <p className="text-xs sm:text-sm font-bold tracking-[0.18em] text-primary uppercase shrink-0">
-                  Lucro no bolso
-                </p>
-                <p className="text-lime-glow font-display text-xl font-extrabold tabular-nums sm:text-2xl">
-                   + R$ 1.560,00 a R$ 1.860,00
-                </p>
+              <div className="mt-6 flex flex-row items-center justify-between gap-2 py-3 px-4 rounded-xl border border-green-500/30 bg-green-950/20">
+                <span className="text-xs sm:text-sm font-bold tracking-wider text-green-500 uppercase select-none">
+                  LUCRO NO BOLSO
+                </span>
+                <span className="text-sm sm:text-lg font-black text-green-400 whitespace-nowrap">
+                  + R$ 1.560,00 a R$ 1.860,00
+                </span>
               </div>
             </div>
           </Reveal>
@@ -523,7 +524,7 @@ function Index() {
                     <li className="flex items-start gap-3">
                       <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
                       <span className="leading-relaxed text-zinc-200">
-                        <strong className="text-foreground">Pack Pro 30 un (R$ 18 cada):</strong> ⭐ o combo mais pedido pelos alunos para cobrir comércios da região.
+                        <strong className="text-foreground">Pack Pro 30 un (R$ 18 cada):</strong> ⭐ o combo mais pedido pelos alunos que desejam lucrar mais.
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
@@ -535,7 +536,7 @@ function Index() {
                     <li className="flex items-start gap-3">
                       <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
                       <span className="leading-relaxed text-zinc-200">
-                        Nosso roteiro completo de vendas para fechar pedidos em lote no mesmo cliente.
+                        Nosso roteiro completo de vendas validado há mais de 4 anos para fechar pedidos rápidos.
                       </span>
                     </li>
                   </ul>
