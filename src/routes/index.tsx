@@ -147,11 +147,11 @@ function Index() {
             <VideoFan />
           </div>
 
-          <h1 className="relative z-10 mx-auto mt-4 md:mt-2 md:mb-3 pt-4 md:pt-0 max-w-4xl font-display text-[2.1rem] leading-[1.03] font-extrabold text-balance sm:text-6xl md:text-5xl lg:text-[54px] lg:leading-[1.08]">
-            3 displays por dia.
-            <br />
-            <span className="text-lime-glow">
-              Mais de R$ 3.000 limpos no seu bolso todo mês.
+          <h1 className="relative z-10 mx-auto mt-4 md:mt-2 md:mb-3 pt-4 md:pt-0 max-w-4xl text-3xl sm:text-4xl md:text-5xl lg:text-[54px] font-black tracking-tight text-center leading-[1.15]">
+            <span className="text-white block">3 displays por dia.</span>
+            <span className="text-green-400 block mt-1">
+              Mais de R$ 3.000 limpos <br className="hidden sm:inline" />
+              no seu bolso todo mês.
             </span>
           </h1>
 
