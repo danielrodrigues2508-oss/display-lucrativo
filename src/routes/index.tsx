@@ -15,7 +15,7 @@ import { ModulesCarousel } from "@/components/landing/ModulesCarousel";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Display Lucrativo | + R$3.000 por mês com 3 displays/dia" },
+      { title: "Display Lucrativo | + R$3.000 por mês com 2 displays/dia" },
       {
         name: "description",
         content:
@@ -23,7 +23,7 @@ export const Route = createFileRoute("/")({
       },
       {
         property: "og:title",
-        content: "Display Lucrativo | + R$3.000 por mês com 3 displays/dia",
+        content: "Display Lucrativo | + R$3.000 por mês com 2 displays/dia",
       },
       {
         property: "og:description",
@@ -149,7 +149,7 @@ function Index() {
 
           <h1 className="relative z-10 mx-auto mt-4 md:mt-2 md:mb-3 pt-4 md:pt-0 max-w-4xl font-black tracking-tight text-center leading-[1.12] mb-4">
             <span className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-[54px] block mb-1">
-              3 displays por dia.
+              2 displays por dia.
             </span>
             <span 
               className="text-[#5efc27] text-3xl sm:text-4xl md:text-5xl lg:text-[54px] font-black block"
@@ -709,7 +709,7 @@ function Index() {
               { n: "1 a 2 horas", t: "livres no seu dia" },
               {
                 n: "+ R$ 3.000",
-                t: "limpos no mês vendendo apenas 3 displays por dia",
+                t: "limpos no mês vendendo apenas 2 displays por dia",
               },
             ].map((item) => (
               <div key={item.n}>
