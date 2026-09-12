@@ -83,7 +83,11 @@ const DELIVERABLES = [
   {
     id: "01",
     tag: "01",
-    title: "Acesso Direto ao Fornecedor mais barato do país",
+    title: (
+      <>
+        Acesso Direto ao Fornecedor <br className="hidden sm:inline" /> mais barato do Brasil
+      </>
+    ),
     desc: "Kits com FRETE GRÁTIS para todo o Brasil a partir de R$ 17 cada. Sem intermediários e com margem máxima no bolso.",
     image: "/images/entrega-fornecedor.jpg?v=1",
     alt: "Estoque direto da fábrica e displays acrílicos",
@@ -238,25 +242,20 @@ function Index() {
                     VALIDAÇÃO RÁPIDA
                   </span>
                 </div>
-                <dl className="mt-6 space-y-3 text-sm sm:text-base">
-                  <div className="flex items-center justify-between gap-4">
-                    <dt className="text-muted-foreground">Custo fornecedor</dt>
-                    <dd className="font-display font-bold tabular-nums">R$ 190,00 <span className="text-xs text-zinc-400 font-normal">(R$ 19,00/un com Frete Grátis)</span></dd>
-                  </div>
-                  <div className="flex items-center justify-between gap-2 text-sm sm:text-base">
-                    <dt className="text-muted-foreground">Venda das 10 peças (a R$ 70 - R$ 80 cada)</dt>
-                    <dd className="font-display font-bold tabular-nums shrink-0">R$ 700,00 a R$ 800,00</dd>
-                  </div>
-                </dl>
+                <div className="mt-6 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-sm sm:text-base">
+                  <span className="text-muted-foreground">Custo por unidade:</span>
+                  <span className="font-display font-bold text-zinc-100">
+                    a partir de R$ 17/un <span className="text-xs text-primary font-semibold">(com Frete Grátis)</span>
+                  </span>
+                </div>
               </div>
-              <div className="mt-6 rounded-2xl border border-primary/30 bg-[color-mix(in_oklab,var(--lime)_8%,var(--ink))] px-5 py-4">
-                <p className="text-xs sm:text-sm font-bold tracking-[0.18em] text-primary uppercase">
+              <div className="mt-6 flex flex-row items-center justify-between gap-4 rounded-2xl border border-primary/30 bg-[color-mix(in_oklab,var(--lime)_8%,var(--ink))] py-3 px-4 sm:px-5">
+                <p className="text-xs sm:text-sm font-bold tracking-[0.18em] text-primary uppercase shrink-0">
                   Lucro no bolso
                 </p>
-                <p className="text-lime-glow mt-1 font-display text-2xl font-extrabold tabular-nums sm:text-3xl">
+                <p className="text-lime-glow font-display text-xl font-extrabold tabular-nums sm:text-2xl">
                    + R$ 510,00 a R$ 610,00
                 </p>
-                <p className="mt-1 text-sm text-zinc-300">Lucro limpo no bolso</p>
               </div>
             </div>
 
@@ -272,30 +271,21 @@ function Index() {
                   </span>
                 </div>
 
-                <dl className="mt-6 space-y-3 text-sm sm:text-base">
-                  <div className="flex items-center justify-between gap-4">
-                    <dt className="text-muted-foreground">Custo fornecedor</dt>
-                    <dd className="font-display font-bold tabular-nums">R$ 540,00 <span className="text-xs text-zinc-400 font-normal">(R$ 18,00/un com Frete Grátis)</span></dd>
-                  </div>
-                  <div className="flex items-center justify-between gap-2 text-sm sm:text-base">
-                    <dt className="text-muted-foreground">
-                      Venda das 30 peças (a R$ 70 - R$ 80 cada)
-                    </dt>
-                    <dd className="font-display font-bold tabular-nums shrink-0">
-                      R$ 2.100,00 a R$ 2.400,00
-                    </dd>
-                  </div>
-                </dl>
+                <div className="mt-6 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-sm sm:text-base">
+                  <span className="text-muted-foreground">Custo por unidade:</span>
+                  <span className="font-display font-bold text-zinc-100">
+                    a partir de R$ 17/un <span className="text-xs text-primary font-semibold">(com Frete Grátis)</span>
+                  </span>
+                </div>
               </div>
 
-              <div className="mt-6 rounded-2xl border border-primary/30 bg-[color-mix(in_oklab,var(--lime)_10%,var(--ink))] px-5 py-4">
-                <p className="text-xs sm:text-sm font-bold tracking-[0.18em] text-primary uppercase">
+              <div className="mt-6 flex flex-row items-center justify-between gap-4 rounded-2xl border border-primary/30 bg-[color-mix(in_oklab,var(--lime)_10%,var(--ink))] py-3 px-4 sm:px-5">
+                <p className="text-xs sm:text-sm font-bold tracking-[0.18em] text-primary uppercase shrink-0">
                   Lucro no bolso
                 </p>
-                <p className="text-lime-glow mt-1 font-display text-2xl font-extrabold tabular-nums sm:text-3xl">
+                <p className="text-lime-glow font-display text-xl font-extrabold tabular-nums sm:text-2xl">
                    + R$ 1.560,00 a R$ 1.860,00
                 </p>
-                <p className="mt-1 text-sm text-zinc-300">Margem e escala acelerada</p>
               </div>
             </div>
           </Reveal>
@@ -504,9 +494,9 @@ function Index() {
                 <button
                   type="button"
                   onClick={() => document.getElementById('oferta')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="w-full mt-6 py-3.5 px-6 rounded-xl font-bold text-sm text-black bg-gradient-to-r from-green-400 to-emerald-500 hover:from-green-300 hover:to-emerald-400 shadow-[0_0_20px_rgba(34,197,94,0.3)] hover:shadow-[0_0_28px_rgba(34,197,94,0.5)] transition-all flex items-center justify-center gap-2 active:scale-[0.98] cursor-pointer uppercase tracking-wider"
+                  className="w-full mt-6 py-3 px-5 rounded-xl bg-zinc-900/90 border border-green-500/40 hover:border-green-400 text-green-400 hover:text-green-300 font-semibold text-sm transition-all duration-200 flex items-center justify-center gap-2 hover:bg-zinc-800/80 cursor-pointer"
                 >
-                  SELECIONAR ESTE CAMINHO →
+                  Selecionar este caminho →
                 </button>
               </div>
             </Reveal>
@@ -553,9 +543,9 @@ function Index() {
                 <button
                   type="button"
                   onClick={() => document.getElementById('oferta')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="w-full mt-6 py-3.5 px-6 rounded-xl font-bold text-sm text-black bg-gradient-to-r from-green-400 to-emerald-500 hover:from-green-300 hover:to-emerald-400 shadow-[0_0_20px_rgba(34,197,94,0.3)] hover:shadow-[0_0_28px_rgba(34,197,94,0.5)] transition-all flex items-center justify-center gap-2 active:scale-[0.98] cursor-pointer uppercase tracking-wider"
+                  className="w-full mt-6 py-3 px-5 rounded-xl bg-zinc-900/90 border border-green-500/40 hover:border-green-400 text-green-400 hover:text-green-300 font-semibold text-sm transition-all duration-200 flex items-center justify-center gap-2 hover:bg-zinc-800/80 cursor-pointer"
                 >
-                  SELECIONAR ESTE CAMINHO →
+                  Selecionar este caminho →
                 </button>
               </div>
             </Reveal>
