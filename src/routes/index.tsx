@@ -147,11 +147,18 @@ function Index() {
             <VideoFan />
           </div>
 
-          <h1 className="relative z-10 mx-auto mt-4 md:mt-2 md:mb-3 pt-4 md:pt-0 max-w-4xl text-3xl sm:text-4xl md:text-5xl lg:text-[54px] font-black tracking-tight text-center leading-[1.15]">
-            <span className="text-white block">3 displays por dia.</span>
-            <span className="text-green-400 block mt-1">
-              <span className="whitespace-nowrap block">Mais de R$ 3.000 limpos</span>
-              <span className="whitespace-nowrap block">no seu bolso todo mês.</span>
+          <h1 className="relative z-10 mx-auto mt-4 md:mt-2 md:mb-3 pt-4 md:pt-0 max-w-4xl font-black tracking-tight text-center leading-[1.12] mb-4">
+            <span className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-[54px] block mb-1">
+              3 displays por dia.
+            </span>
+            <span 
+              className="text-[#5efc27] text-3xl sm:text-4xl md:text-5xl lg:text-[54px] font-black block"
+              style={{
+                filter: 'drop-shadow(0 0 25px rgba(94, 252, 39, 0.45)) drop-shadow(0 0 50px rgba(94, 252, 39, 0.2))'
+              }}
+            >
+              <span className="block whitespace-nowrap">Mais de R$ 3.000 limpos</span>
+              <span className="block whitespace-nowrap">no seu bolso todo mês.</span>
             </span>
           </h1>
 

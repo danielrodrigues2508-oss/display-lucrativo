@@ -3,8 +3,8 @@
  */
 export const CHECKOUT_URL = "https://checkout.exemplo.com/display-lucrativo";
 
-/** Lucro bruto por Display vendido (R$67 de venda - R$20 de custo). */
-export const LUCRO_POR_DISPLAY = 47;
+/** Lucro bruto por Display vendido (R$80 de venda - R$18 de custo). */
+export const LUCRO_POR_DISPLAY = 62;
 
 export const brl = (value: number) =>
   value.toLocaleString("pt-BR", {
