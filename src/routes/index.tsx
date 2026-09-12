@@ -19,7 +19,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Aprenda a vender Display Interativo para o comércio local no seu tempo livre. Método, fornecedor exclusivo a R$23 e mentorias ao vivo por R$97 à vista.",
+          "Aprenda a vender Display Interativo para o comércio local no seu tempo livre. Método, fornecedor exclusivo e mentorias ao vivo por R$47 à vista.",
       },
       {
         property: "og:title",
@@ -28,7 +28,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "Sem estoque e sem experiência. Lucro de R$47 a R$57 por display vendido. Condição de Membro Fundador: R$97 pagamento único.",
+          "Sem estoque e sem experiência. Lucro de R$47 a R$57 por display vendido. Condição de Membro Fundador: R$47 pagamento único.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -55,16 +55,16 @@ const FAQ = [
     a: "Com certeza. Você só precisa de 1 a 2 horas livres no final do dia ou no sábado. Comércios locais continuam abertos no fim da tarde e à noite, que é o melhor horário para falar com o dono.",
   },
   {
-    q: "Como recebo meu Display de Demonstração?",
-    a: "Assim que entrar na área de membros, você solicita sua peça. Nós bancamos a produção física direto com o fornecedor e você cobre apenas o frete. A partir de 20 unidades, o frete é 100% grátis.",
+    q: "Como recebo o contato do fornecedor?",
+    a: "Assim que entrar na área de membros, você tem acesso imediato aos contatos e catálogos diretos da fábrica para pedir os lotes com FRETE GRÁTIS para todo o Brasil (Pack Start, Pro e Master).",
   },
   {
     q: "Preciso comprar estoque para começar?",
-    a: "Não. Com o display de demonstração na mão você apresenta, recebe o dinheiro do cliente e só depois faz o pedido com a fábrica. Zero risco de estoque parado.",
+    a: "Não. Você pode apresentar o display, receber o dinheiro do cliente e só depois fazer o pedido do lote com a fábrica com frete grátis. Zero risco de estoque parado.",
   },
   {
     q: "Tem mensalidade ou fidelidade?",
-    a: "Nenhuma. O pagamento é único (R$ 97 à vista).",
+    a: "Nenhuma. O pagamento é único (R$ 47 à vista).",
   },
   {
     q: "E se eu entrar e não conseguir vender nada?",
@@ -84,7 +84,7 @@ const DELIVERABLES = [
     id: "01",
     tag: "01",
     title: "Acesso Direto ao Fornecedor Exclusivo",
-    desc: "Preço de fábrica direto da fonte (R$23 a unidade), produção sob demanda sem necessidade de estoque e frete grátis a partir de 20 peças.",
+    desc: "Acesso direto à fábrica com modelos validados em kits fechados com FRETE GRÁTIS para todo o Brasil: Pack Start 10 un (R$ 190), Pack Pro 30 un (R$ 540) e Pack Master 50 un (R$ 850). Sem intermediários e com margem máxima no bolso.",
     image: "/images/entrega-fornecedor.jpg?v=1",
     alt: "Estoque direto da fábrica e displays acrílicos",
   },
@@ -116,11 +116,10 @@ const DELIVERABLES = [
 
 const CHECKLIST = [
   "Método Display Lucrativo Completo (Da abordagem ao fechamento em balcão)",
-  "Acesso Direto ao Fornecedor Exclusivo (Preço de fábrica a R$ 23 a unidade)",
+  "Acesso Direto ao Fornecedor Exclusivo (Kits com Frete Grátis a partir de R$ 19/un)",
   "Mentorias ao Vivo Mensais (Tira-dúvidas de campo direto comigo)",
   "Comunidade Display Lucrativo (Networking com outros operadores)",
-  "Bônus Fundador: 1 Display de Demonstração Bancado por Nós",
-  "Condição Especial: Opção de Escala com Frete Grátis e Call Exclusiva",
+  "Condição Especial: Tabela de fábrica fechada (Pack Start, Pro e Master)",
 ];
 
 function Index() {
@@ -153,15 +152,15 @@ function Index() {
             </span>
           </h1>
 
-          <p className="mx-auto mt-5 max-w-xl text-sm sm:text-base leading-snug sm:leading-relaxed text-zinc-200 sm:mt-6 text-balance">
-            No seu tempo livre e sem largar o emprego. O método de quem vende display há 4
+          <p className="mx-auto mt-5 max-w-2xl lg:max-w-3xl text-sm sm:text-base text-zinc-300 leading-relaxed sm:mt-6 text-balance">
+            No seu tempo livre e sem largar o emprego. O método de quem vende display há mais de 4
             anos: aprenda a vender, configurar e tenha acesso ao meu fornecedor&nbsp;exclusivo.
           </p>
 
           <div className="mt-9 flex flex-col items-center">
             <CtaButton className="max-w-md">QUERO COMEÇAR AGORA</CtaButton>
             <p className="text-[11px] sm:text-xs text-zinc-400 mt-2.5 flex flex-wrap items-center justify-center gap-1 font-medium select-none text-center">
-              <span>🔒</span> <span className="whitespace-nowrap">Pagamento único de R$ 97</span> • <span className="whitespace-nowrap">Acesso Imediato</span> • <span className="whitespace-nowrap">7 Dias de Garantia</span>
+              <span>🔒</span> <span className="whitespace-nowrap">Pagamento único de R$ 47</span> • <span className="whitespace-nowrap">Acesso Imediato</span> • <span className="whitespace-nowrap">7 Dias de Garantia</span>
             </p>
           </div>
         </div>
@@ -461,22 +460,23 @@ function Index() {
             <Reveal>
               <div className="surface-panel flex h-full flex-col justify-between rounded-[1.75rem] border border-border p-6 sm:p-8">
                 <div>
-                  <h3 className="font-display text-2xl font-extrabold sm:text-3xl">
-                    Opção 1: O Teste Seguro
-                  </h3>
-                  <p className="mt-2 text-sm text-zinc-300">
-                    Para quem quer levantar caixa rápido com pouco dinheiro.
-                  </p>
+                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-4">
+                    <div>
+                      <h3 className="font-display text-2xl font-extrabold sm:text-3xl">
+                        Opção 1: Validação Rápida (Pack Start 10 un)
+                      </h3>
+                      <p className="mt-2 text-sm text-zinc-300">
+                        Para quem quer validar o método na sua cidade com baixo investimento.
+                      </p>
+                    </div>
+                    <span className="self-start sm:self-auto inline-flex rounded-full border border-emerald-500/35 bg-[color-mix(in_oklab,var(--lime)_10%,transparent)] px-3.5 py-1.5 text-xs font-bold tracking-[0.14em] text-primary uppercase shrink-0">
+                      IDEAL PARA COMEÇAR
+                    </span>
+                  </div>
+
                   <div className="hairline my-6" />
                   <p className="leading-relaxed text-zinc-200">
-                    Nós bancamos a produção do seu primeiro{" "}
-                    <span className="font-semibold text-foreground">
-                      Display de Demonstração.
-                    </span>{" "}
-                    Enquanto a peça viaja até a sua casa, você já vai afiando o machado
-                    assistindo às aulas do método. Você só paga a etiqueta de frete para o seu
-                    endereço. Chegou, configurou, vendeu no primeiro comércio da sua rua,
-                    colocou o lucro no bolso e já tem caixa para o próximo passo.
+                    Você entra no método, aprende a abordar o comércio local e pede seu primeiro lote de 10 unidades por R$ 190 com FRETE GRÁTIS direto da fábrica (sai a R$ 19 a unidade). Vendendo a R$ 70 ou R$ 80 cada, você faz de R$ 700 a R$ 800 e já recupera o valor com lucro limpo no bolso.
                   </p>
                 </div>
                 <button
@@ -496,40 +496,35 @@ function Index() {
                   <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-4">
                     <div>
                       <h3 className="font-display text-2xl font-extrabold text-lime-glow sm:text-3xl">
-                        Opção 2: O Plano Escala 7 Dias
+                        Opção 2: Escala e Margem Máxima (Pack Pro e Master)
                       </h3>
                       <p className="mt-2 text-sm text-zinc-300">
-                        Para quem quer acelerar os resultados desde o início.
+                        Para quem já quer abastecer o comércio com o menor custo unitário.
                       </p>
                     </div>
                     <span className="self-start sm:self-auto inline-flex rounded-full border border-primary/35 bg-[color-mix(in_oklab,var(--lime)_10%,transparent)] px-3.5 py-1.5 text-xs font-bold tracking-[0.14em] text-primary uppercase shrink-0">
-                      🔥 Para escalar rápido
+                      🔥 MAIOR MARGEM E LUCRO
                     </span>
                   </div>
 
                   <div className="hairline my-4" />
-                  <p className="leading-relaxed text-zinc-200">
-                    Se você já quer entrar no jogo grande e fazer seu primeiro pedido a partir
-                    de 20 unidades direto com a fábrica:
-                  </p>
-                  <ul className="mt-5 space-y-3">
+                  <ul className="space-y-3 mt-4">
                     <li className="flex items-start gap-3">
                       <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
                       <span className="leading-relaxed text-zinc-200">
-                        <span className="font-semibold text-foreground">
-                          Frete 100% grátis
-                        </span>{" "}
-                        da fábrica até a sua porta.
+                        <strong className="text-foreground">Pack Pro 30 un (R$ 540) com Frete Grátis:</strong> o combo mais pedido pelos alunos para cobrir avenidas comerciais inteiras.
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
                       <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
                       <span className="leading-relaxed text-zinc-200">
-                        <span className="font-semibold text-foreground">
-                          Call exclusiva de alinhamento comigo:
-                        </span>{" "}
-                        um encontro ao vivo em grupo fechado no Zoom, para desenharmos "o plano
-                        escala" para zerar suas 20 peças ou mais em até 7 dias.
+                        <strong className="text-foreground">Pack Master 50 un (R$ 850) com Frete Grátis:</strong> menor preço por unidade (R$ 17 cada) e lucro bruto de até R$ 4.000 no lote.
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                      <span className="leading-relaxed text-zinc-200">
+                        Acesso ao nosso roteiro de vendas para fechar lojas em lote.
                       </span>
                     </li>
                   </ul>
@@ -549,7 +544,7 @@ function Index() {
           <Reveal delay={120} className="mt-10">
             <div className="mx-auto max-w-2xl rounded-2xl border border-primary/35 bg-zinc-900/90 p-5 text-center shadow-[0_0_35px_-12px_var(--lime)] backdrop-blur-sm">
               <p className="text-sm font-semibold text-zinc-100 sm:text-base leading-relaxed">
-                💡 <span className="text-primary font-bold">Importante:</span> Ao entrar hoje no treinamento por R$ 97, você decide lá dentro qual dos dois caminhos quer seguir.
+                💡 <span className="text-primary font-bold">Importante:</span> Ao entrar hoje no treinamento por R$ 47, você tem acesso imediato à lista de fornecedores com todos esses lotes exclusivos e frete grátis liberado.
               </p>
             </div>
           </Reveal>
@@ -597,10 +592,10 @@ function Index() {
 
               <div className="mx-auto mt-10 max-w-md rounded-[1.5rem] border border-primary/30 bg-[color-mix(in_oklab,var(--ink)_75%,transparent)] p-6">
                 <p className="text-sm font-medium text-zinc-300 sm:text-base">
-                  De <span className="line-through decoration-2">R$ 297,00</span> por apenas:
+                  De <span className="line-through decoration-2">R$ 197,00</span> por apenas:
                 </p>
                 <p className="text-lime-glow mt-2 font-display text-5xl leading-none font-extrabold sm:text-6xl">
-                  R$97,00
+                  R$47,00
                   <span className="font-display text-xl font-bold sm:text-2xl"> à vista</span>
                 </p>
                 <p className="mt-3 text-sm text-zinc-300">
@@ -712,7 +707,7 @@ function Index() {
               🔥 Condição membro fundador (pagamento único)
             </span>
             <p className="mt-5 font-display text-2xl font-extrabold sm:text-3xl">
-              Apenas <span className="text-lime-glow">R$ 97 à vista</span> no Pix ou Cartão
+              Apenas <span className="text-lime-glow">R$ 47 à vista</span> no Pix ou Cartão
             </p>
             <div className="mt-7 w-full max-w-md">
               <CtaButton className="w-full max-w-md shadow-[0_0_70px_-10px_var(--lime)]">
@@ -720,7 +715,7 @@ function Index() {
               </CtaButton>
             </div>
             <p className="text-[11px] sm:text-xs text-zinc-400 mt-2.5 flex flex-wrap items-center justify-center gap-1 font-medium select-none text-center">
-              <span>🔒</span> <span className="whitespace-nowrap">Pagamento único de R$ 97</span> • <span className="whitespace-nowrap">Acesso Imediato</span> • <span className="whitespace-nowrap">7 Dias de Garantia</span>
+              <span>🔒</span> <span className="whitespace-nowrap">Pagamento único de R$ 47</span> • <span className="whitespace-nowrap">Acesso Imediato</span> • <span className="whitespace-nowrap">7 Dias de Garantia</span>
             </p>
           </Reveal>
         </div>
