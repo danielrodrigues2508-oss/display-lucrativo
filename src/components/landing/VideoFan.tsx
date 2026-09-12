@@ -11,8 +11,8 @@ const heroCards = [
 
 export function HeroFan() {
   return (
-    <div className="relative flex items-center justify-center pt-2 sm:pt-4 md:pt-8 pb-2 sm:pb-4 overflow-visible w-full max-w-5xl mx-auto h-[280px] sm:h-[350px] md:h-[420px]">
-      <div className="flex items-center justify-center -space-x-10 sm:-space-x-12 md:-space-x-16">
+    <div className="relative flex items-center justify-center pt-2 sm:pt-4 md:pt-4 pb-2 sm:pb-2 overflow-visible w-full max-w-5xl mx-auto h-[280px] sm:h-[340px] md:h-[370px]">
+      <div className="flex items-center justify-center -space-x-10 sm:-space-x-12 md:-space-x-14">
         {heroCards.map((card, i) => (
           <motion.div
             key={card.id}
@@ -36,7 +36,7 @@ export function HeroFan() {
               transition: { duration: 0.2 },
             }}
             style={{ zIndex: i + 1 }}
-            className="w-28 sm:w-36 md:w-44 aspect-[9/16] rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-zinc-900 flex-shrink-0 cursor-pointer origin-bottom"
+            className="w-28 sm:w-34 md:w-40 aspect-[9/16] rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-zinc-900 flex-shrink-0 cursor-pointer origin-bottom"
           >
             <video
               src={card.videoSrc}

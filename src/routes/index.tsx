@@ -129,7 +129,7 @@ function Index() {
   return (
     <main className="relative overflow-x-hidden pb-0">
       {/* ============ 01 — HERO ============ */}
-      <section className="relative px-4 pt-4 pb-14 sm:px-6 sm:pt-8 md:pt-12 lg:pt-16 lg:pb-24">
+      <section className="relative px-4 pt-4 pb-12 sm:px-6 sm:pt-6 md:pt-8 lg:pt-10 lg:pb-16">
         <div
           aria-hidden
           className="pointer-events-none absolute inset-x-0 top-0 h-[520px] opacity-[0.22]"
@@ -139,15 +139,15 @@ function Index() {
           }}
         />
         <div className="relative mx-auto max-w-5xl text-center">
-          <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-[color-mix(in_oklab,var(--lime)_8%,transparent)] px-4 py-2 text-xs sm:text-sm font-bold tracking-[0.16em] text-primary uppercase mt-6 sm:mt-4 md:mt-0 mb-2 sm:mb-3 md:mb-6">
+          <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-[color-mix(in_oklab,var(--lime)_8%,transparent)] px-4 py-2 text-xs sm:text-sm font-bold tracking-[0.16em] text-primary uppercase mt-10 sm:mt-6 md:mt-0 mb-1 sm:mb-2 md:mb-3">
             🔥 Condição especial Aluno Fundador
           </span>
 
-          <div className="relative mt-1 sm:mt-3 md:mt-6 scale-[0.8] sm:scale-90 md:scale-100 origin-bottom pb-2 md:pb-0 mb-4 md:mb-0">
+          <div className="relative mt-1 sm:mt-3 md:my-1 md:max-w-lg lg:max-w-xl mx-auto scale-[0.8] sm:scale-90 md:scale-90 origin-bottom md:origin-center pb-2 md:pb-0 mb-4 md:mb-0">
             <VideoFan />
           </div>
 
-          <h1 className="relative z-10 mx-auto mt-4 md:mt-0 pt-4 md:pt-0 max-w-4xl font-display text-[2.1rem] leading-[1.03] font-extrabold text-balance sm:text-6xl lg:text-7xl">
+          <h1 className="relative z-10 mx-auto mt-4 md:mt-2 md:mb-3 pt-4 md:pt-0 max-w-4xl font-display text-[2.1rem] leading-[1.03] font-extrabold text-balance sm:text-6xl md:text-5xl lg:text-[54px] lg:leading-[1.08]">
             3 displays por dia.
             <br />
             <span className="text-lime-glow">
@@ -155,11 +155,11 @@ function Index() {
             </span>
           </h1>
 
-          <p className="max-w-2xl lg:max-w-3xl mx-auto mt-5 sm:mt-6 text-sm sm:text-base text-zinc-300 leading-relaxed text-center [text-wrap:balance]">
+          <p className="max-w-2xl lg:max-w-3xl mx-auto mt-4 sm:mt-5 md:mt-2 text-sm sm:text-base text-zinc-300 leading-relaxed text-center [text-wrap:balance]">
             No seu tempo livre e sem largar o emprego. O método de quem vende display há mais de 4 anos: aprenda a vender, configurar e tenha acesso ao fornecedor mais barato do Brasil&nbsp;(a&nbsp;partir&nbsp;de&nbsp;R$&nbsp;17/un).
           </p>
 
-          <div className="mt-9 flex flex-col items-center">
+          <div className="mt-6 md:mt-6 flex flex-col items-center">
             <CtaButton className="max-w-md">QUERO COMEÇAR AGORA</CtaButton>
             <p className="text-[11px] sm:text-xs text-zinc-400 mt-2.5 flex flex-wrap items-center justify-center gap-1 font-medium select-none text-center">
               <span>🔒</span> <span className="whitespace-nowrap">Pagamento único de R$ 47</span> • <span className="whitespace-nowrap">Acesso Imediato</span> • <span className="whitespace-nowrap">7 Dias de Garantia</span>
