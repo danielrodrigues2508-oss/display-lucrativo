@@ -85,7 +85,7 @@ const PRESETS = [
 ];
 
 export function Simulator() {
-  const [perDay, setPerDay] = useState(3);
+  const [perDay, setPerDay] = useState(2);
   const [days, setDays] = useState(26);
 
   const total = perDay * days;

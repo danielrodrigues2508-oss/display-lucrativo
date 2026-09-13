@@ -261,7 +261,7 @@ function Index() {
                   LUCRO NO BOLSO
                 </span>
                 <span className="text-sm sm:text-lg font-black text-green-400 whitespace-nowrap">
-                  + R$ 510,00 a R$ 610,00
+                  R$ 610,00
                 </span>
               </div>
             </div>
@@ -292,7 +292,7 @@ function Index() {
                   LUCRO NO BOLSO
                 </span>
                 <span className="text-sm sm:text-lg font-black text-green-400 whitespace-nowrap">
-                  + R$ 1.560,00 a R$ 1.860,00
+                  R$ 1.560,00
                 </span>
               </div>
             </div>
@@ -488,13 +488,13 @@ function Index() {
                     <li className="flex items-start gap-3">
                       <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
                       <span className="leading-relaxed text-zinc-200">
-                        Você entra no método e pede seu primeiro lote de 10 unidades direto da fábrica por R$ 19 cada (com acesso a lotes a partir de R$ 17) e FRETE GRÁTIS.
+                        Você entra no método e pede seu primeiro lote de 10 unidades direto da fábrica por R$ 19 cada (com acesso a Kits a partir de R$ 17) e FRETE GRÁTIS.
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
                       <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
                       <span className="leading-relaxed text-zinc-200">
-                        <strong className="text-foreground">Retorno rápido:</strong> vendendo a R$ 70 ou R$ 80 cada, você faz de R$ 700 a R$ 800 e já valida sua operação.
+                        <strong className="text-foreground">Retorno rápido:</strong> vendendo a R$ 80 cada, você faz R$ 800 e já valida sua operação.
                       </span>
                     </li>
                   </ul>
