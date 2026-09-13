@@ -96,7 +96,7 @@ const DELIVERABLES = [
     id: "02",
     tag: "02",
     title: "Método Display Lucrativo",
-    desc: "O passo a passo completo de quem vende na rua: abordagens práticas que funcionam no comércio local, técnicas de fechamento e o processo rápido para configurar o display no celular.",
+    desc: "Mais de 4 anos de campo resumidos em um passo a passo: as abordagens que os lojistas compram na hora, técnicas de fechamento e como configurar o display em segundos.",
     image: "/images/entrega-metodo.jpg?v=1",
     alt: "Área de membros e método prático",
   },
