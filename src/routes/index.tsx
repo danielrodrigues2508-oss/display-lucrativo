@@ -481,6 +481,12 @@ function Index() {
                     <li className="flex items-start gap-3">
                       <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
                       <span className="leading-relaxed text-zinc-200">
+                        <strong className="text-foreground">Kit 10 un (R$ 19 cada):</strong> direto da fábrica com FRETE GRÁTIS.
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                      <span className="leading-relaxed text-zinc-200">
                         Você entra no método e pede seu primeiro lote de 10 unidades direto da fábrica por R$ 19 cada e FRETE GRÁTIS.
                       </span>
                     </li>
