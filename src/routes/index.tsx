@@ -205,8 +205,7 @@ function Index() {
 
               <p className="mt-8 mb-6 md:mb-0 font-display text-lg font-extrabold text-balance italic sm:text-2xl">
                 Você não vende acrílico. Você entrega o jeito mais rápido pro lojista{" "}
-                <span className="text-lime-glow">dominar as buscas da região</span> sem
-                precisar implorar nada pra ninguém.
+                <span className="text-lime-glow">dominar as buscas da região.</span>
               </p>
             </Reveal>
 
@@ -488,7 +487,7 @@ function Index() {
                     <li className="flex items-start gap-3">
                       <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
                       <span className="leading-relaxed text-zinc-200">
-                        Você entra no método e pede seu primeiro lote de 10 unidades direto da fábrica por R$ 19 cada (com acesso a Kits a partir de R$ 17) e FRETE GRÁTIS.
+                        Você entra no método e pede seu primeiro lote de 10 unidades direto da fábrica por R$ 19 cada e FRETE GRÁTIS.
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
